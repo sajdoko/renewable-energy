@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * The header for RenewableEnergy.
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
@@ -28,7 +28,7 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 <div class="hfeed site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'renewable_energy' ); ?></a>
 
@@ -69,12 +69,12 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'walker'          => new renewable_energy_WP_Bootstrap_Navwalker(),
+						'walker'          => new Renewable_Energy_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-			<?php if ( 'container' == $container ) : ?>
+		<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
-			<?php endif; ?>
+		<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 
