@@ -2,12 +2,12 @@
 /**
  * Sidebar - hero setup.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 ?>
 
-<?php if ( is_active_sidebar( 'hero' ) ) : ?>
+<?php if ( is_active_sidebar('hero') ) : ?>
 
 	<!-- ******************* The Hero Widget Area ******************* -->
 
@@ -15,7 +15,7 @@
 
 			<div class="carousel-inner" role="listbox">
 
-			<?php dynamic_sidebar( 'hero' ); ?>
+			<?php dynamic_sidebar('hero'); ?>
 
 			</div>
 
@@ -23,7 +23,7 @@
 			    
 			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Previous', 'renewable_energy' ); ?></span>
+			    <span class="sr-only"><?php esc_html_e('Previous', 'renewable_energy'); ?></span>
 			 
 			 </a>
 			 
@@ -31,7 +31,7 @@
 			    
 			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Next', 'renewable_energy' ); ?></span>
+			    <span class="sr-only"><?php esc_html_e('Next', 'renewable_energy'); ?></span>
 			  
 			</a>
 

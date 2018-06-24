@@ -4,22 +4,22 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
-$container = get_theme_mod( 'renewable_energy_container_type' );
+$container = get_theme_mod('renewable_energy_container_type');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<?php wp_head(); ?>
 </head>
 
@@ -30,11 +30,11 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'renewable_energy' ); ?></a>
+		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'renewable_energy'); ?></a>
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
-		<?php if ( 'container' == $container ) : ?>
+		<?php if ('container' == $container ) : ?>
 			<div class="container" >
 		<?php endif; ?>
 
@@ -43,11 +43,11 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 
 						<?php if ( is_front_page() && is_home() ) : ?>
 
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" itemprop="url"><?php bloginfo('name'); ?></a></h1>
 							
 						<?php else : ?>
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
 						
 						<?php endif; ?>
 						
@@ -72,7 +72,7 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 						'walker'          => new Renewable_Energy_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-		<?php if ( 'container' == $container ) : ?>
+		<?php if ('container' == $container ) : ?>
 			</div><!-- .container -->
 		<?php endif; ?>
 

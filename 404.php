@@ -2,19 +2,19 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 get_header();
 
-$container   = get_theme_mod( 'renewable_energy_container_type' );
-$sidebar_pos = get_theme_mod( 'renewable_energy_sidebar_position' );
+$container   = get_theme_mod('renewable_energy_container_type');
+$sidebar_pos = get_theme_mod('renewable_energy_sidebar_position');
 
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+ <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -26,49 +26,47 @@ $sidebar_pos = get_theme_mod( 'renewable_energy_sidebar_position' );
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'renewable_energy' ); ?></h1>
+							<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'renewable_energy'); ?></h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'renewable_energy' ); ?></p>
+						<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'renewable_energy'); ?></p>
 
-							<?php get_search_form(); ?>
+						<?php get_search_form(); ?>
 
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+						<?php the_widget('WP_Widget_Recent_Posts'); ?>
 
-							<?php if ( renewable_energy_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+						<?php if (renewable_energy_categorized_blog()) ://Only show the widget if site has multiple categories.?>
 
-								<div class="widget widget_categories">
+							<div class="widget widget_categories">
 
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'renewable_energy' ); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'renewable_energy'); ?></h2>
 
-									<ul>
-										<?php
-										wp_list_categories( array(
-											'orderby'    => 'count',
-											'order'      => 'DESC',
-											'show_count' => 1,
-											'title_li'   => '',
-											'number'     => 10,
-										) );
-										?>
-									</ul>
+								<ul>
+									<?php
+									wp_list_categories( array(
+										'orderby'    => 'count',
+										'order'      => 'DESC',
+										'show_count' => 1,
+										'title_li'   => '',
+										'number'     => 10,
+									) );
+									?>
+								</ul>
 
-								</div><!-- .widget -->
+							</div><!-- .widget -->
 
-							<?php endif; ?>
+						<?php endif; ?>
 
-							<?php
+						<?php
 
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'renewable_energy' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+						/* translators: %1$s: smiley */
+						$archive_content = '<p>' . sprintf( esc_html__('Try looking in the monthly archives. %1$s', 'renewable_energy'), convert_smilies(':)') ) . '</p>';
+						the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
-							the_widget( 'WP_Widget_Tag_Cloud' );
+						the_widget('WP_Widget_Tag_Cloud');
 							?>
 
 						</div><!-- .page-content -->

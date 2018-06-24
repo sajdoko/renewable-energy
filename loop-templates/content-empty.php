@@ -2,7 +2,7 @@
 /**
  * Content empty partial template.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 the_content();

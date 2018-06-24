@@ -16,13 +16,13 @@
  * @version 	3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit; // Exit if accessed directly
 }
 
 global $comment;
 $rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 
-if ( $rating && 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) {
+if ( $rating && 'yes' === get_option('woocommerce_enable_review_rating') ) {
 	echo wc_get_rating_html( $rating );
 }

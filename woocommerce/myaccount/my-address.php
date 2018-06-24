@@ -17,20 +17,20 @@
  * @version 	3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit; // Exit if accessed directly
 }
 
 $customer_id = get_current_user_id();
 
 if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
-	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing address', 'renewable_energy' ),
-		'shipping' => __( 'Shipping address', 'renewable_energy' ),
+	$get_addresses = apply_filters('woocommerce_my_account_get_addresses', array(
+		'billing' => __('Billing address', 'renewable_energy'),
+		'shipping' => __('Shipping address', 'renewable_energy'),
 	), $customer_id );
 } else {
-	$get_addresses = apply_filters( 'woocommerce_my_account_get_addresses', array(
-		'billing' => __( 'Billing address', 'renewable_energy' ),
+	$get_addresses = apply_filters('woocommerce_my_account_get_addresses', array(
+		'billing' => __('Billing address', 'renewable_energy'),
 	), $customer_id );
 }
 
@@ -39,7 +39,7 @@ $col    = 1;
 ?>
 
 <p>
-	<?php echo apply_filters( 'woocommerce_my_account_my_address_description', __( 'The following addresses will be used on the checkout page by default.', 'renewable_energy' ) ); ?>
+	<?php echo apply_filters('woocommerce_my_account_my_address_description', __('The following addresses will be used on the checkout page by default.', 'renewable_energy') ); ?>
 </p>
 
 <?php if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) echo '<div class="u-columns woocommerce-Addresses col2-set addresses">'; ?>
@@ -49,11 +49,11 @@ $col    = 1;
 	<div class="u-column woocommerce-Address">
 		<header class="woocommerce-Address-title title">
 			<h3><?php echo $title; ?></h3>
-			<a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit"><?php _e( 'Edit', 'renewable_energy' ); ?></a>
+			<a href="<?php echo esc_url( wc_get_endpoint_url('edit-address', $name ) ); ?>" class="edit"><?php _e('Edit', 'renewable_energy'); ?></a>
 		</header>
 		<address>
 			<?php
-				$address = apply_filters( 'woocommerce_my_account_my_address_formatted_address', array(
+				$address = apply_filters('woocommerce_my_account_my_address_formatted_address', array(
 					'first_name'  => get_user_meta( $customer_id, $name . '_first_name', true ),
 					'last_name'   => get_user_meta( $customer_id, $name . '_last_name', true ),
 					'company'     => get_user_meta( $customer_id, $name . '_company', true ),
@@ -68,7 +68,7 @@ $col    = 1;
 				$formatted_address = WC()->countries->get_formatted_address( $address );
 
 				if ( ! $formatted_address )
-					_e( 'You have not set up this type of address yet.', 'renewable_energy' );
+					_e('You have not set up this type of address yet.', 'renewable_energy');
 				else
 					echo $formatted_address;
 			?>

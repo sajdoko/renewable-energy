@@ -16,7 +16,7 @@
  * @version 	3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit; // Exit if accessed directly
 }
 
@@ -28,5 +28,5 @@ if ( ! $post->post_excerpt ) {
 
 ?>
 <div itemprop="description" class="lead">
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+	<?php echo apply_filters('woocommerce_short_description', $post->post_excerpt ) ?>
 </div>

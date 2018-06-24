@@ -8,12 +8,12 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 get_header();
 
-$container   = get_theme_mod( 'renewable_energy_container_type' );
+$container   = get_theme_mod('renewable_energy_container_type');
 ?>
 
 <div class="wrapper" id="index-wrapper">
@@ -23,7 +23,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php get_template_part('global-templates/left-sidebar-check'); ?>
 
 			<main class="site-main" id="main">
 
@@ -40,14 +40,14 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
+						get_template_part('loop-templates/content', get_post_format() );
 						?>
 
 					<?php endwhile; ?>
 
 				<?php else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php get_template_part('loop-templates/content', 'none'); ?>
 
 				<?php endif; ?>
 
@@ -59,7 +59,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 		</div><!-- #primary -->
 
 		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		<?php get_template_part('global-templates/right-sidebar-check'); ?>
 		
 
 	</div><!-- .row -->

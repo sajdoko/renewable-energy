@@ -2,7 +2,7 @@
 /**
  * Boostrap 4 pagination
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 /**
@@ -21,7 +21,7 @@ function renewable_energy_pagination() {
 		return;
 	}
 
-	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$paged = get_query_var('paged') ? absint( get_query_var('paged') ) : 1;
 	$max   = intval( $wp_query->max_num_pages );
 
 	/**    Add current page to the array */
@@ -49,14 +49,14 @@ function renewable_energy_pagination() {
 		printf( // WPCS: XSS OK.
 			'<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
 		$class,
-		esc_url( get_pagenum_link( 1 ) ), '1' );
+		esc_url( get_pagenum_link( 1 ) ), '1');
 
 		/**    Previous Post Link */
 		if ( get_previous_posts_link() ) {
 			printf( // WPCS: XSS OK.
 				'<li class="page-item"><span class="page-link">%1$s</span></li> ' . "\n",
 			get_previous_posts_link(  // WPCS: XSS OK.
-			 '<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>' ) );
+			 '<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>') );
 		}
 
 		if ( ! in_array( 2, $links ) ) {
@@ -78,7 +78,7 @@ function renewable_energy_pagination() {
 	if ( get_next_posts_link() ) {
 		printf( // WPCS: XSS OK.
 			'<li class="page-item"><span class="page-link">%s</span></li>' . "\n",
-			get_next_posts_link( '<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>' ) );
+			get_next_posts_link('<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>') );
 	}
 
 	// Link to last page, plus ellipses if necessary.

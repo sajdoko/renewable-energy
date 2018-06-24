@@ -16,17 +16,17 @@
  * @version 3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit;
 }
 
 wc_print_notices();
 
-do_action( 'woocommerce_before_checkout_form', $checkout );
+do_action('woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
 if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_user_logged_in() ) {
-	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'renewable_energy' ) );
+	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'renewable_energy') );
 	return;
 }
 
@@ -36,32 +36,32 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
-		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+		<?php do_action('woocommerce_checkout_before_customer_details'); ?>
 
 		<div class="row" id="customer_details">
 			<div class="col-12 col-sm-7 ">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				<?php do_action('woocommerce_checkout_billing'); ?>
 			</div>
 
 			<div class="col-12 col-sm-5">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				<?php do_action('woocommerce_checkout_shipping'); ?>
 			</div>
 		</div>
 
-		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+		<?php do_action('woocommerce_checkout_after_customer_details'); ?>
 
 	<?php endif; ?>
 
-	<h3 id="order_review_heading"><?php _e( 'Your order', 'renewable_energy' ); ?></h3>
+	<h3 id="order_review_heading"><?php _e('Your order', 'renewable_energy'); ?></h3>
 
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+	<?php do_action('woocommerce_checkout_before_order_review'); ?>
 
 	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+		<?php do_action('woocommerce_checkout_order_review'); ?>
 	</div>
 
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
+	<?php do_action('woocommerce_checkout_after_order_review'); ?>
 
 </form>
 
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<?php do_action('woocommerce_after_checkout_form', $checkout ); ?>

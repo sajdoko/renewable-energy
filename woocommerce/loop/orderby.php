@@ -16,7 +16,7 @@
  * @version 	3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit; // Exit if accessed directly
 }
 
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 		// Keep query string vars intact
 		foreach ( $_GET as $key => $val ) {
-			if ( 'orderby' === $key || 'submit' === $key ) {
+			if ('orderby' === $key || 'submit' === $key ) {
 				continue;
 			}
 			if ( is_array( $val ) ) {

@@ -2,7 +2,7 @@
 /**
  * Renewable Energy functions and definitions
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 /**

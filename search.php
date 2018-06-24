@@ -2,12 +2,12 @@
 /**
  * The template for displaying search results pages.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 get_header();
 
-$container   = get_theme_mod( 'renewable_energy_container_type' );
+$container   = get_theme_mod('renewable_energy_container_type');
 
 ?>
 
@@ -18,7 +18,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php get_template_part('global-templates/left-sidebar-check'); ?>
 
 			<main class="site-main" id="main">
 
@@ -28,8 +28,8 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 						
 							<h1 class="page-title"><?php printf(
 							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'renewable_energy' ),
-								'<span>' . get_search_query() . '</span>' ); ?></h1>
+							 esc_html__('Search Results for: %s', 'renewable_energy'),
+								'<span>' . get_search_query() . '</span>'); ?></h1>
 
 					</header><!-- .page-header -->
 
@@ -42,14 +42,14 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 						 * If you want to overload this in a child theme then include a file
 						 * called content-search.php and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', 'search' );
+						get_template_part('loop-templates/content', 'search');
 						?>
 
 					<?php endwhile; ?>
 
 				<?php else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+					<?php get_template_part('loop-templates/content', 'none'); ?>
 
 				<?php endif; ?>
 
@@ -61,7 +61,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 		</div><!-- #primary -->
 
 		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		<?php get_template_part('global-templates/right-sidebar-check'); ?>
 
 	</div><!-- .row -->
 

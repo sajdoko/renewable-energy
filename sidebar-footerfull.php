@@ -2,14 +2,14 @@
 /**
  * Sidebar setup for footer full.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
-$container   = get_theme_mod( 'renewable_energy_container_type' );
+$container   = get_theme_mod('renewable_energy_container_type');
 
 ?>
 
-<?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
+<?php if ( is_active_sidebar('footerfull') ) : ?>
 
 	<!-- ******************* The Footer Full-width Widget Area ******************* -->
 
@@ -19,7 +19,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 
 			<div class="row">
 
-				<?php dynamic_sidebar( 'footerfull' ); ?>
+				<?php dynamic_sidebar('footerfull'); ?>
 
 			</div>
 

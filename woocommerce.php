@@ -7,12 +7,12 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 get_header();
 
-$container   = get_theme_mod( 'renewable_energy_container_type' );
+$container   = get_theme_mod('renewable_energy_container_type');
 
 
 ?>
@@ -24,7 +24,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 		<div class="row">
 
 			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+			<?php get_template_part('global-templates/left-sidebar-check'); ?>
 
 			<main class="site-main" id="main">
 
@@ -34,7 +34,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 				$template_path = ''; 
 				$default_path = untrailingslashit( plugin_dir_path(__FILE__) ) . '\woocommerce';
 
-					if ( is_singular( 'product' ) ) {
+					if ( is_singular('product') ) {
 
 						woocommerce_content();
 
@@ -55,7 +55,7 @@ $container   = get_theme_mod( 'renewable_energy_container_type' );
 		</div><!-- #primary -->
 
 		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		<?php get_template_part('global-templates/right-sidebar-check'); ?>
 
 	</div><!-- .row -->
 

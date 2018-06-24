@@ -16,21 +16,21 @@
  * @version 	3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit;
 }
 
-$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'renewable_energy' ) : __( 'Shipping address', 'renewable_energy' );
+$page_title = ('billing' === $load_address ) ? __('Billing address', 'renewable_energy') : __('Shipping address', 'renewable_energy');
 
-do_action( 'woocommerce_before_edit_account_address_form' ); ?>
+do_action('woocommerce_before_edit_account_address_form'); ?>
 
 <?php if ( ! $load_address ) : ?>
-	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
+	<?php wc_get_template('myaccount/my-address.php'); ?>
 <?php else : ?>
 
 	<form method="post">
 
-		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h3>
+		<h3><?php echo apply_filters('woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h3>
 
 		<div class="woocommerce-address-fields">
 			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
@@ -49,8 +49,8 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
 			<p>
-				<input type="submit" class="btn btn-outline-primary" name="save_address" value="<?php esc_attr_e( 'Save address', 'renewable_energy' ); ?>" />
-				<?php wp_nonce_field( 'woocommerce-edit_address' ); ?>
+				<input type="submit" class="btn btn-outline-primary" name="save_address" value="<?php esc_attr_e('Save address', 'renewable_energy'); ?>" />
+				<?php wp_nonce_field('woocommerce-edit_address'); ?>
 				<input type="hidden" name="action" value="edit_address" />
 			</p>
 		</div>
@@ -59,4 +59,4 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>
+<?php do_action('woocommerce_after_edit_account_address_form'); ?>

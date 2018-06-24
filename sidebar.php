@@ -2,16 +2,16 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar('sidebar-1') ) {
 	return;
 }
 ?>
 
 <div class="col-md-4 widget-area" id="secondary" role="complementary">
 
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php dynamic_sidebar('sidebar-1'); ?>
 
 </div><!-- #secondary -->

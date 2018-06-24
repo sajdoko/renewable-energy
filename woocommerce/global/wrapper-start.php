@@ -16,15 +16,15 @@
  * @version 	3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit; // Exit if accessed directly
 }
 
 // load container setting
-$container = get_theme_mod( 'renewable_energy_container_type' );
+$container = get_theme_mod('renewable_energy_container_type');
 
 // if we use container-fluid add some margin
-if ( 'container-fluid' === $container ) {
+if ('container-fluid' === $container ) {
 	echo '<div class="wrapper" id="page-wrapper"><div class="' . $container . '" id="content" tabindex="-1"> <div class="row mx-1">';
 } else {
 	echo '<div class="wrapper" id="page-wrapper"><div class="' . $container . '" id="content" tabindex="-1"> <div class="row">';

@@ -2,7 +2,7 @@
 /**
  * Custom header setup.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 function renewable_energy_custom_header_setup() {
@@ -24,8 +24,8 @@ function renewable_energy_custom_header_setup() {
 	 *     @type string $flex-height     		Flex support for height of header.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'renewable_energy_custom_header_args', array(
-		'default-image'      => get_parent_theme_file_uri( '/img/header.jpg' ),
+	add_theme_support('custom-header', apply_filters('renewable_energy_custom_header_args', array(
+		'default-image'      => get_parent_theme_file_uri('/img/header.jpg'),
 		'width'              => 2000,
 		'height'             => 1200,
 		'flex-height'        => true,
@@ -35,8 +35,8 @@ function renewable_energy_custom_header_setup() {
 		'default-image' => array(
 			'url'           => '%s/img/header.jpg',
 			'thumbnail_url' => '%s/img/header.jpg',
-			'description'   => __( 'Default Header Image', 'renewable_energy' ),
+			'description'   => __('Default Header Image', 'renewable_energy'),
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'renewable_energy_custom_header_setup' );
+add_action('after_setup_theme', 'renewable_energy_custom_header_setup');

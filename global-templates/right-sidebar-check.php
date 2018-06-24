@@ -2,14 +2,14 @@
 /**
  * Right sidebar check.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 ?>
 
-<?php $sidebar_pos = get_theme_mod( 'renewable_energy_sidebar_position' ); ?>
+<?php $sidebar_pos = get_theme_mod('renewable_energy_sidebar_position'); ?>
 
-<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+<?php if ('right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
-  <?php get_sidebar( 'right' ); ?>
+  <?php get_sidebar('right'); ?>
 
 <?php endif; ?>

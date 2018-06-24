@@ -4,11 +4,11 @@
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 get_header();
-$container = get_theme_mod( 'renewable_energy_container_type' );
+$container = get_theme_mod('renewable_energy_container_type');
 ?>
 
 <div class="wrapper" id="full-width-page-wrapper">
@@ -23,7 +23,7 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php get_template_part('loop-templates/content', 'page'); ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.

@@ -3,15 +3,15 @@
  * Adapted from Edward McIntyre's wp_bootstrap_navwalker class.
  * Removed support for glyphicon and added support for Font Awesome.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit;
 }
 
-if (! class_exists ( 'Renewable_Energy_WP_Bootstrap_Navwalker' )) :
+if (! class_exists ('Renewable_Energy_WP_Bootstrap_Navwalker')) :
 
 /**
  * Class WP_Bootstrap_Navwalker
@@ -61,19 +61,19 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 		 * comparison that is not case sensitive. The strcasecmp() function returns
 		 * a 0 if the strings are equal.
 		 */
-		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
+		if ( strcasecmp( $item->attr_title, 'divider') == 0 && $depth === 1 ) {
 			$output .= $indent . '<li class="dropdown-divider" role="presentation">';
-		} else if ( strcasecmp( $item->title, 'divider' ) == 0 && $depth === 1 ) {
+		} else if ( strcasecmp( $item->title, 'divider') == 0 && $depth === 1 ) {
 			$output .= $indent . '<li class="dropdown-divider" role="presentation">';
-		} else if ( strcasecmp( $item->attr_title, 'dropdown-header' ) == 0 && $depth === 1 ) {
+		} else if ( strcasecmp( $item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
 			$output .= $indent . '<li class="dropdown-header" role="presentation">' . esc_html( $item->title );
-		} else if ( strcasecmp( $item->attr_title, 'disabled' ) == 0 ) {
+		} else if ( strcasecmp( $item->attr_title, 'disabled') == 0 ) {
 			$output .= $indent . '<li class="disabled" role="presentation"><a href="#">' . esc_html( $item->title ) . '</a>';
 		} else {
 			$class_names = $value = '';
 			$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
 			$classes[]   = 'nav-item menu-item-' . $item->ID;
-			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+			$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 			/*
 			if ( $args->has_children )
 			  $class_names .= ' dropdown';
@@ -83,21 +83,21 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			} elseif ( $args->has_children && $depth > 0 ) {
 				$class_names .= ' dropdown-submenu';
 			}
-			if ( in_array( 'current-menu-item', $classes ) ) {
+			if ( in_array('current-menu-item', $classes ) ) {
 				$class_names .= ' active';
 			}
 			// remove Font Awesome icon from classes array and save the icon
 			// we will add the icon back in via a <span> below so it aligns with
 			// the menu item
-			if ( in_array( 'fa', $classes ) ) {
-				$key         = array_search( 'fa', $classes );
+			if ( in_array('fa', $classes ) ) {
+				$key         = array_search('fa', $classes );
 				$icon        = $classes[ $key + 1 ];
 				$class_names = str_replace( $classes[ $key + 1 ], '', $class_names );
 				$class_names = str_replace( $classes[ $key ], '', $class_names );
 			}
 
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-			$id          = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
+			$id          = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 			$id          = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 			$output .= $indent . '<li' . $id . $value . $class_names . '>';
 			$atts           = array();
@@ -114,11 +114,11 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 				$atts['href']  = ! empty( $item->url ) ? $item->url : '';
 				$atts['class'] = 'nav-link';
 			}
-			$atts       = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
+			$atts       = apply_filters('nav_menu_link_attributes', $atts, $item, $args );
 			$attributes = '';
 			foreach ( $atts as $attr => $value ) {
 				if ( ! empty( $value ) ) {
-					$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+					$value = ('href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
 					$attributes .= ' ' . $attr . '="' . $value . '"';
 				}
 			}
@@ -129,11 +129,11 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			} else {
 				$item_output .= '<a' . $attributes . '>';
 			}
-			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title,
+			$item_output .= $args->link_before . apply_filters('the_title', $item->title,
 					$item->ID ) . $args->link_after;
 			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
 			$item_output .= $args->after;
-			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+			$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 	}
 
@@ -182,7 +182,7 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 *
 	 */
 	public static function fallback( $args ) {
-		if ( current_user_can( 'manage_options' ) ) {
+		if ( current_user_can('manage_options') ) {
 			extract( $args );
 			$fb_output = null;
 			if ( $container ) {
@@ -203,7 +203,7 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 				$fb_output .= ' id="' . $menu_id . '"';
 			}
 			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">Add a menu</a></li>';
+			$fb_output .= '<li><a href="' . admin_url('nav-menus.php') . '">Add a menu</a></li>';
 			$fb_output .= '</ul>';
 			if ( $container ) {
 				$fb_output .= '</' . $container . '>';

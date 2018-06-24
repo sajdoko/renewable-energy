@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 ?>
@@ -10,11 +10,11 @@
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php echo get_the_post_thumbnail( $post->ID, 'large'); ?>
 
 	<div class="entry-content">
 
@@ -22,7 +22,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'renewable_energy' ),
+			'before' => '<div class="page-links">' . __('Pages:', 'renewable_energy'),
 			'after'  => '</div>',
 		) );
 		?>
@@ -31,7 +31,7 @@
 
 	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'renewable_energy' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __('Edit', 'renewable_energy'), '<span class="edit-link">', '</span>'); ?>
 
 	</footer><!-- .entry-footer -->
 

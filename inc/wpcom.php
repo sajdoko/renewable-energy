@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 /**
@@ -27,14 +27,14 @@ function renewable_energy_wpcom_setup() {
 	}
 	
 	/* Add WP.com print styles */
-	add_theme_support( 'print-styles' );
+	add_theme_support('print-styles');
 }
-add_action( 'after_setup_theme', 'renewable_energy_wpcom_setup' );
+add_action('after_setup_theme', 'renewable_energy_wpcom_setup');
 
 /*
  * WordPress.com-specific styles
  */
 function renewable_energy_wpcom_styles() {
-	wp_enqueue_style( 'renewable-energy-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', '20160411' );
+	wp_enqueue_style('renewable-energy-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', '20160411');
 }
-add_action( 'wp_enqueue_scripts', 'renewable_energy_wpcom_styles' );
+add_action('wp_enqueue_scripts', 'renewable_energy_wpcom_styles');

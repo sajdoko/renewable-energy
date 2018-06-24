@@ -5,29 +5,29 @@
  * @deprecated  2.6.0 this template file is no longer used. My Account shortcode uses orders.php.
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
 	exit;
 }
 
-$my_orders_columns = apply_filters( 'woocommerce_my_account_my_orders_columns', array(
-	'order-number'  => __( 'Order', 'renewable_energy' ),
-	'order-date'    => __( 'Date', 'renewable_energy' ),
-	'order-status'  => __( 'Status', 'renewable_energy' ),
-	'order-total'   => __( 'Total', 'renewable_energy' ),
+$my_orders_columns = apply_filters('woocommerce_my_account_my_orders_columns', array(
+	'order-number'  => __('Order', 'renewable_energy'),
+	'order-date'    => __('Date', 'renewable_energy'),
+	'order-status'  => __('Status', 'renewable_energy'),
+	'order-total'   => __('Total', 'renewable_energy'),
 	'order-actions' => '&nbsp;',
 ) );
 
-$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
+$customer_orders = get_posts( apply_filters('woocommerce_my_account_my_orders_query', array(
 	'numberposts' => $order_count,
 	'meta_key'    => '_customer_user',
 	'meta_value'  => get_current_user_id(),
-	'post_type'   => wc_get_order_types( 'view-orders' ),
+	'post_type'   => wc_get_order_types('view-orders'),
 	'post_status' => array_keys( wc_get_order_statuses() )
 ) ) );
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Orders', 'renewable_energy' ) ); ?></h2>
+	<h2><?php echo apply_filters('woocommerce_my_account_my_orders_title', __('Recent Orders', 'renewable_energy') ); ?></h2>
 
 	<table class="shop_table shop_table_responsive my_account_orders table-hover table-striped">
 
@@ -47,37 +47,37 @@ if ( $customer_orders ) : ?>
 				<tr class="order">
 					<?php foreach ( $my_orders_columns as $column_id => $column_name ) : ?>
 						<td class="<?php echo esc_attr( $column_id ); ?>" data-title="<?php echo esc_attr( $column_name ); ?>">
-							<?php if ( has_action( 'woocommerce_my_account_my_orders_column_' . $column_id ) ) : ?>
-								<?php do_action( 'woocommerce_my_account_my_orders_column_' . $column_id, $order ); ?>
+							<?php if ( has_action('woocommerce_my_account_my_orders_column_' . $column_id ) ) : ?>
+								<?php do_action('woocommerce_my_account_my_orders_column_' . $column_id, $order ); ?>
 
-							<?php elseif ( 'order-number' === $column_id ) : ?>
+							<?php elseif ('order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x( '#', 'hash before order number', 'renewable_energy' ) . $order->get_order_number(); ?>
+									<?php echo _x('#', 'hash before order number', 'renewable_energy') . $order->get_order_number(); ?>
 								</a>
 
-							<?php elseif ( 'order-date' === $column_id ) : ?>
-								<time datetime="<?php echo date( 'Y-m-d', strtotime( $order->order_date ) ); ?>" title="<?php echo esc_attr( strtotime( $order->order_date ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></time>
+							<?php elseif ('order-date' === $column_id ) : ?>
+								<time datetime="<?php echo date('Y-m-d', strtotime( $order->order_date ) ); ?>" title="<?php echo esc_attr( strtotime( $order->order_date ) ); ?>"><?php echo date_i18n( get_option('date_format'), strtotime( $order->order_date ) ); ?></time>
 
-							<?php elseif ( 'order-status' === $column_id ) : ?>
+							<?php elseif ('order-status' === $column_id ) : ?>
 								<?php echo wc_get_order_status_name( $order->get_status() ); ?>
 
-							<?php elseif ( 'order-total' === $column_id ) : ?>
-								<?php echo sprintf( _n( '%s for %s item', '%s for %s items', $item_count, 'renewable_energy' ), $order->get_formatted_order_total(), $item_count ); ?>
+							<?php elseif ('order-total' === $column_id ) : ?>
+								<?php echo sprintf( _n('%s for %s item', '%s for %s items', $item_count, 'renewable_energy'), $order->get_formatted_order_total(), $item_count ); ?>
 
-							<?php elseif ( 'order-actions' === $column_id ) : ?>
+							<?php elseif ('order-actions' === $column_id ) : ?>
 								<?php
 									$actions = array(
 										'pay'    => array(
 											'url'  => $order->get_checkout_payment_url(),
-											'name' => __( 'Pay', 'renewable_energy' )
+											'name' => __('Pay', 'renewable_energy')
 										),
 										'view'   => array(
 											'url'  => $order->get_view_order_url(),
-											'name' => __( 'View', 'renewable_energy' )
+											'name' => __('View', 'renewable_energy')
 										),
 										'cancel' => array(
-											'url'  => $order->get_cancel_order_url( wc_get_page_permalink( 'myaccount' ) ),
-											'name' => __( 'Cancel', 'renewable_energy' )
+											'url'  => $order->get_cancel_order_url( wc_get_page_permalink('myaccount') ),
+											'name' => __('Cancel', 'renewable_energy')
 										)
 									);
 
@@ -85,11 +85,11 @@ if ( $customer_orders ) : ?>
 										unset( $actions['pay'] );
 									}
 
-									if ( ! in_array( $order->get_status(), apply_filters( 'woocommerce_valid_order_statuses_for_cancel', array( 'pending', 'failed' ), $order ) ) ) {
+									if ( ! in_array( $order->get_status(), apply_filters('woocommerce_valid_order_statuses_for_cancel', array('pending', 'failed'), $order ) ) ) {
 										unset( $actions['cancel'] );
 									}
 
-									if ( $actions = apply_filters( 'woocommerce_my_account_my_orders_actions', $actions, $order ) ) {
+									if ( $actions = apply_filters('woocommerce_my_account_my_orders_actions', $actions, $order ) ) {
 										foreach ( $actions as $key => $action ) {
 											echo '<a href="' . esc_url( $action['url'] ) . '" class="btn btn-outline-primary ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 										}

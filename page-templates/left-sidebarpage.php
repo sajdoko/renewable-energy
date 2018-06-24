@@ -4,11 +4,11 @@
  *
  * This template can be used to override the default template and sidebar setup
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 get_header();
-$container = get_theme_mod( 'renewable_energy_container_type' );
+$container = get_theme_mod('renewable_energy_container_type');
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -17,17 +17,17 @@ $container = get_theme_mod( 'renewable_energy_container_type' );
 
 		<div class="row">
 
-			<?php get_sidebar( 'left' ); ?>
+			<?php get_sidebar('left'); ?>
 
 			<div
-				class="<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
+				class="<?php if ( is_active_sidebar('left-sidebar') ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area"
 				id="primary">
 
 				<main class="site-main" id="main" role="main">
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+						<?php get_template_part('loop-templates/content', 'page'); ?>
 
 						<?php
 						// If comments are open or we have at least one comment, load up the comment template.

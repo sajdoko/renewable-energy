@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package  renewable_energy
+ * @package Renewable_Energy
  */
 
 /*
@@ -13,7 +13,7 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
+if (post_password_required()) {
 	return;
 }
 ?>
@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 				if ( 1 === (int)$comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'renewable_energy' ),
+						esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'renewable_energy'),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
@@ -52,19 +52,19 @@ if ( post_password_required() ) {
 
 		</h2><!-- .comments-title -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option('page_comments') ) : // are there comments to navigate through. ?>
 			
 			<nav class="comment-navigation" id="comment-nav-above">
 				
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'renewable_energy' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'renewable_energy'); ?></h1>
 				
 				<?php if ( get_previous_comments_link() ) { ?>
-					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'renewable_energy' ) ); ?></div>
+					<div class="nav-previous"><?php previous_comments_link( __('&larr; Older Comments',
+					'renewable_energy') ); ?></div>
 				<?php }
 					if ( get_next_comments_link() ) { ?>
-					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'renewable_energy' ) ); ?></div>
+					<div class="nav-next"><?php next_comments_link( __('Newer Comments &rarr;',
+					'renewable_energy') ); ?></div>
 				<?php } ?>
 
 			</nav><!-- #comment-nav-above -->
@@ -82,19 +82,19 @@ if ( post_password_required() ) {
 
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option('page_comments') ) : // are there comments to navigate through. ?>
 			
 			<nav class="comment-navigation" id="comment-nav-below">
 				
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'renewable_energy' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'renewable_energy'); ?></h1>
 				
 				<?php if ( get_previous_comments_link() ) { ?>
-					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'renewable_energy' ) ); ?></div>
+					<div class="nav-previous"><?php previous_comments_link( __('&larr; Older Comments',
+					'renewable_energy') ); ?></div>
 				<?php }
 					if ( get_next_comments_link() ) { ?>
-					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'renewable_energy' ) ); ?></div>
+					<div class="nav-next"><?php next_comments_link( __('Newer Comments &rarr;',
+					'renewable_energy') ); ?></div>
 				<?php } ?>
 
 			</nav><!-- #comment-nav-below -->
@@ -105,10 +105,10 @@ if ( post_password_required() ) {
 
 	<?php
 	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments') ) :
 		?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'renewable_energy' ); ?></p>
+		<p class="no-comments"><?php esc_html_e('Comments are closed.', 'renewable_energy'); ?></p>
 
 	<?php endif; ?>
 
