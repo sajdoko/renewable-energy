@@ -3,7 +3,7 @@
 function ocdi_import_files() {
     return array(
       array(
-        'import_file_name'             => 'Demo Import',
+        'import_file_name'             => 'Default Demo',
         // 'categories'                   => array( 'Category 1', 'Category 2' ),
         'local_import_file'            => trailingslashit( get_template_directory() ) . '/inc/import-demo/demo-contents/renewable-energy-demo-content.xml',
         'local_import_widget_file'     => trailingslashit( get_template_directory() ) . '/inc/import-demo/demo-contents/renewable-energy-widgets.wie',
@@ -22,12 +22,12 @@ function ocdi_import_files() {
   }
   add_filter( 'pt-ocdi/import_files', 'ocdi_import_files' );
 
-  function ocdi_after_import_setup() {
+  function ocdi_after_import_create_menus() {
 	// Assign menus to their locations.
 	$main_menu = get_term_by( 'name', 'Main Menu', 'nav_menu' );
 
 	set_theme_mod( 'nav_menu_locations', array(
-			'main-menu' => $main_menu->term_id,
+			'primary' => $main_menu->term_id,
 		)
 	);
 	// Assign front page and posts page (blog page).
@@ -39,7 +39,8 @@ function ocdi_import_files() {
 	update_option( 'page_for_posts', $blog_page_id->ID );
 
 }
-add_action( 'pt-ocdi/after_import', 'ocdi_after_import_setup' );
+add_action( 'pt-ocdi/after_import', 'ocdi_after_import_create_menus' );
+    
 
 add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 

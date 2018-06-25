@@ -32,7 +32,7 @@ if ( ! function_exists('renewable_energy_theme_customize_register') ) {
 	 */
 	function renewable_energy_theme_customize_register( $wp_customize ) {
 
-		// Theme layout settings.
+	// Theme layout settings SECTION.
 		$wp_customize->add_section('renewable_energy_theme_layout_options', array(
 			'title'       => __('Theme Layout Settings', 'renewable_energy'),
 			'capability'  => 'edit_theme_options',
@@ -52,15 +52,15 @@ if ( ! function_exists('renewable_energy_theme_customize_register') ) {
             //return input if valid or return default option
             return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
              
-        }
-
+		}
+		
+	// Begins Container Width
 		$wp_customize->add_setting('renewable_energy_container_type', array(
 			'default'           => 'container',
 			'type'              => 'theme_mod',
 			'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
 			'capability'        => 'edit_theme_options',
 		) );
-
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
@@ -77,7 +77,8 @@ if ( ! function_exists('renewable_energy_theme_customize_register') ) {
 					'priority'    => '10',
 				)
 			) );
-
+	// Ends Container Width
+	// Begins Sidebar Positioning
 		$wp_customize->add_setting('renewable_energy_sidebar_position', array(
 			'default'           => 'right',
 			'type'              => 'theme_mod',
@@ -105,6 +106,68 @@ if ( ! function_exists('renewable_energy_theme_customize_register') ) {
 					'priority'    => '20',
 				)
 			) );
+	// Ends Sidebar Positioning
+	// Begins Display Hero Widget
+		$wp_customize->add_setting('renewable_energy_show_hero_widget', array(
+			'default'           => 'yes',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'renewable_energy_show_hero_widget', array(
+					'label'       => __('Display Hero Widget', 'renewable_energy'),
+					//'description' => __( "Choose if you want to Display Hero Widget.", 'renewable_energy'),
+					'section'     => 'renewable_energy_theme_layout_options',
+					'settings'    => 'renewable_energy_show_hero_widget',
+					'type'        => 'select',
+					'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
+					'choices'     => array(
+						'yes' => __('Yes', 'renewable_energy'),
+						'no'  => __('No', 'renewable_energy'),
+					),
+					'priority'    => '21',
+				)
+			) );
+	// Ends Display Hero Widget
+
+	// Home Slider Oprions SECTION.
+		$wp_customize->add_section('renewable_energy_home_slider_options', array(
+			'title'       => __('Home Slider Options', 'renewable_energy'),
+			'capability'  => 'edit_theme_options',
+			'description' => __('Configure Home Slider Settings', 'renewable_energy'),
+			'priority'    => 161,
+		) );
+		
+	// Begins Display Home Slider
+		$wp_customize->add_setting('renewable_energy_show_slider', array(
+			'default'           => 'yes',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'sanitize_text_field',
+			'capability'        => 'edit_theme_options',
+		) );
+
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize,
+				'renewable_energy_show_slider', array(
+					'label'       => __('Display Home Slider', 'renewable_energy'),
+					//'description' => __( "Choose if you want to Display Home Slider.", 'renewable_energy'),
+					'section'     => 'renewable_energy_home_slider_options',
+					'settings'    => 'renewable_energy_show_slider',
+					'type'        => 'select',
+					'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
+					'choices'     => array(
+						'yes' => __('Yes', 'renewable_energy'),
+						'no'  => __('No', 'renewable_energy'),
+					),
+					'priority'    => '21',
+				)
+			) );
+	// Ends Display Home Slider
 	}
 } // endif function_exists('renewable_energy_theme_customize_register').
 add_action('customize_register', 'renewable_energy_theme_customize_register');
