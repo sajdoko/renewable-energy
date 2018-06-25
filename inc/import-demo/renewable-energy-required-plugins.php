@@ -72,10 +72,20 @@ function renewable_energy_register_required_plugins() {
 		// 	'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		// ),
 		array(
+			'name'        => 'One Click Demo Import',
+			'slug'        => 'one-click-demo-import',
+			'required'    => true, // If false, the plugin is only 'recommended' instead of required
+		),
+		array(
 			'name'        => 'Contact Form 7',
 			'slug'        => 'contact-form-7',
-			//'is_callable' => 'wpseo_init',
-			'required'    => true, // If false, the plugin is only 'recommended' instead of required
+			'required'    => false, // If false, the plugin is only 'recommended' instead of required
+		),
+		array(
+			'name'        => 'WordPress SEO by Yoast',
+			'slug'        => 'wordpress-seo',
+			'is_callable' => 'wpseo_init',
+			'required'    => false, // If false, the plugin is only 'recommended' instead of required
 		),
 		// This is an example of how to include a plugin from an arbitrary external source in your theme.
 		// array(
@@ -108,11 +118,6 @@ function renewable_energy_register_required_plugins() {
 		// By setting 'is_callable' to either a function from that plugin or a class method
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
-		array(
-			'name'        => 'WordPress SEO by Yoast',
-			'slug'        => 'wordpress-seo',
-			'is_callable' => 'wpseo_init',
-		),
 
 	);
 

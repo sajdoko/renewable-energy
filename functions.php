@@ -22,6 +22,11 @@ require_once get_template_directory() . '/inc/import-demo/class-tgm-plugin-activ
 require_once get_template_directory() . '/inc/import-demo/renewable-energy-required-plugins.php';
 
 /**
+ * One Click Demo Import.
+ */
+require get_template_directory() . '/inc/import-demo/one-click-demo-import.php';
+
+/**
  * Register widget area.
  */
 require get_template_directory() . '/inc/widgets.php';
