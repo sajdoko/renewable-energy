@@ -16,6 +16,12 @@ require get_template_directory() . '/inc/theme-settings.php';
 require get_template_directory() . '/inc/setup.php';
 
 /**
+ * TGM Plugin Activation
+ */
+require_once get_template_directory() . '/inc/import-demo/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/import-demo/renewable-energy-required-plugins.php';
+
+/**
  * Register widget area.
  */
 require get_template_directory() . '/inc/widgets.php';
