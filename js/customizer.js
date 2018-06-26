@@ -39,4 +39,11 @@
 			}
 		} );
 	} );
+
+	wp.customize("renewable_energy_footer_copyright_content", function(value) {
+		value.bind(function(to) {
+			$("#renewable_energy_footer_copyright_content").text(to);
+		} );
+	});
+
 } )( jQuery );

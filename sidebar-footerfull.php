@@ -6,10 +6,11 @@
  */
 
 $container   = get_theme_mod('renewable_energy_container_type');
+$show_footer_widget   = get_theme_mod('renewable_energy_show_footer_widget');
 
 ?>
 
-<?php if ( is_active_sidebar('footerfull') ) : ?>
+<?php if ( is_active_sidebar('footerfull') && $show_footer_widget == 'yes' ) : ?>
 
 	<!-- ******************* The Footer Full-width Widget Area ******************* -->
 

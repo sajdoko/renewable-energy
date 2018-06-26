@@ -9,45 +9,37 @@
 
 $the_theme = wp_get_theme();
 $container = get_theme_mod('renewable_energy_container_type');
+$show_footer_copyright = get_theme_mod('renewable_energy_show_footer_copyright');
+$footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content');
 ?>
 
 <?php get_sidebar('footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<?php if ($show_footer_copyright == 'yes') : ?>
+	<div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="<?php echo esc_attr( $container ); ?>">
 
-		<div class="row">
+			<div class="row">
 
-			<div class="col-md-12">
+				<div class="col-md-12">
 
-				<footer class="site-footer" id="colophon">
+					<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+						<div class="site-info">
+							<?php echo $footer_copyright_content; ?>
+						</div><!-- .site-info -->
 
-							<a href="<?php  echo esc_url( __('http://wordpress.org/', 'renewable_energy') ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__('Proudly powered by %s', 'renewable_energy'),'WordPress'); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__('Theme: %1$s by %2$s.', 'renewable_energy'), $the_theme->get('Name'), '<a href="'.esc_url( __('http://renewable_energy.com', 'renewable_energy')).'">renewable_energy.com</a>'); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__('Version: %1$s', 'renewable_energy'), $the_theme->get('Version')); ?>)
-					</div><!-- .site-info -->
+					</footer><!-- #colophon -->
 
-				</footer><!-- #colophon -->
+				</div><!--col end -->
 
-			</div><!--col end -->
+			</div><!-- row end -->
 
-		</div><!-- row end -->
+		</div><!-- container end -->
 
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
+	</div><!-- wrapper end -->
+<?php endif; ?>
 
 </div><!-- #page we need this extra closing tag here -->
 
