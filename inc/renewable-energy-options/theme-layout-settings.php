@@ -7,10 +7,10 @@
 
 // Theme layout settings SECTION.
     $wp_customize->add_section('renewable_energy_theme_layout_options', array(
-        'title'       => __('Theme Layout Settings', 'renewable_energy'),
+        'title'       => __('Renewable Energy Settings', 'renewable_energy'),
         'capability'  => 'edit_theme_options',
         'description' => __('Container width and sidebar defaults', 'renewable_energy'),
-        'priority'    => 160,
+        'priority'    => 161,
     ) );
 
     

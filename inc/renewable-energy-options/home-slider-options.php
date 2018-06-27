@@ -8,7 +8,7 @@
 $wp_customize->add_panel( 'renewable_energy_home_slider_options', array(
     'title' => __( 'Home Slider Options' ),
     //'description' => 'Nuk ka', // Include html tags such as <p>.
-    'priority' => 160, // Mixed with top-level-section hierarchy.
+    'priority'    => 162,
 ) );
 
 
@@ -17,7 +17,6 @@ $wp_customize->add_section('renewable_energy_first_slider_options', array(
     'title'       => __('First Slider', 'renewable_energy'),
     'capability'  => 'edit_theme_options',
     'panel'       => 'renewable_energy_home_slider_options',
-    'priority'    => 161,
 ) );
 
 // Home Slider Options SECTION.
@@ -25,7 +24,6 @@ $wp_customize->add_section('renewable_energy_second_slider_options', array(
     'title'       => __('Second Slider', 'renewable_energy'),
     'capability'  => 'edit_theme_options',
     'panel'       => 'renewable_energy_home_slider_options',
-    'priority'    => 162,
 ) );
 
 

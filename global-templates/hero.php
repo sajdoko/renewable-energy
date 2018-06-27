@@ -27,11 +27,11 @@ $second_slider_backgrownd_image  = get_theme_mod('renewable_energy_second_slider
 
 		<?php if ($show_slider == 'yes') : ?>
 		<!-- ******************* The Hero Slider Area ******************* -->
-		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		<div id="heroCarouselControls" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 				<?php if ($enable_first_slider == 'yes') : ?>
 					<div class="carousel-item">
-						<div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="border-top: 1px solid rgba(255,255,255,.1); background-image: url(<?php echo $first_slider_backgrownd_image; ?>);">
+						<div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="border-top: 1px solid rgba(255,255,255,.1); background-image: url(<?php echo $first_slider_backgrownd_image; ?>);background-size: cover;">
 							<div class="container py-5">
 								<div class="row">
 									<div class="col-md-7">
@@ -47,7 +47,7 @@ $second_slider_backgrownd_image  = get_theme_mod('renewable_energy_second_slider
 				<?php endif; ?>
 				<?php if ($enable_second_slider == 'yes') : ?>
 					<div class="carousel-item">
-						<div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="border-top: 1px solid rgba(255,255,255,.1); background-image: url(<?php echo $second_slider_backgrownd_image; ?>);">
+						<div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="border-top: 1px solid rgba(255,255,255,.1); background-image: url(<?php echo $second_slider_backgrownd_image; ?>); background-size: cover;">
 							<div class="container py-5">
 								<div class="row">
 									<div class="col-md-7">
@@ -63,18 +63,22 @@ $second_slider_backgrownd_image  = get_theme_mod('renewable_energy_second_slider
 				<?php endif; ?>
 			</div>
 			<?php if ($enable_first_slider == 'yes' && $enable_second_slider == 'yes') : ?>
-				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<a class="carousel-control-prev" href="#heroCarouselControls" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">
 						<?php esc_html_e('Previous', 'renewable_energy'); ?>
 					</span>
 				</a>
-				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<a class="carousel-control-next" href="#heroCarouselControls" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">
 						<?php esc_html_e('Next', 'renewable_energy'); ?>
 					</span>
 				</a>
+				<ol class="carousel-indicators">
+					<li data-target="#heroCarouselControls" data-slide-to="0" class=""></li>
+					<li data-target="#heroCarouselControls" data-slide-to="1" class=""></li>
+				</ol>
 			<?php endif; ?>
 		</div>
 		<!-- .carousel -->
