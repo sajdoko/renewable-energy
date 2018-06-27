@@ -68,17 +68,6 @@ if ( ! function_exists('renewable_energy_widgets_init') ) {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
-
-		register_sidebar( array(
-			'name'          => __('Hero Slider', 'renewable_energy'),
-			'id'            => 'hero',
-			'description'   => 'Hero slider area. Place two or more widgets here and they will slide!',
-			'before_widget' => '<div class="carousel-item">',
-			'after_widget'  => '</div>',
-			'before_title'  => '',
-			'after_title'   => '',
-		) );
-
 		register_sidebar( array(
 			'name'          => __('Hero Static', 'renewable_energy'),
 			'id'            => 'statichero',

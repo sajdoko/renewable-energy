@@ -3927,3 +3927,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 	}
 })();
 
+( function() {
+    jQuery(".carousel-item").first().addClass("active");
+})();
