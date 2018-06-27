@@ -10459,6 +10459,17 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.navbar-brand {
+  margin-right: 5rem; }
+
+.nav-link {
+  font-size: 1.5rem; }
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem; } }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
