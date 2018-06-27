@@ -10465,6 +10465,17 @@ a.skip-link {
 .nav-link {
   font-size: 1.5rem; }
 
+.static-hero-widget img {
+  margin: .5rem 0; }
+
+.static-hero-widget p {
+  font-size: 1.2rem; }
+
+.static-hero-widget .widget-title {
+  border-bottom: 0.2rem solid #20c997;
+  text-align: center;
+  line-height: 2.5rem; }
+
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 1rem;
