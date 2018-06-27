@@ -1,21 +1,21 @@
 {
   "name": "renewable_energy",
   "version": "0.8.0",
-  "homepage": "http://renewable_energy.com",
+  "homepage": "https://github.com/sajdoko/renewable-energy",
   "authors": [
     "Sajmir Doko <sajdoko@gmail.com>"
   ],
-  "description": "RenewableEnergy is a Bootstrap and underscores based WordPress theme framework.",
+  "description": "Renewable Energy is a Wordpress theme designed for renewable energy and sustainable energy companies.",
   "moduleType": "globals",
   "main": [
     "sass/theme.scss"
   ],
   "keywords": [
-    "bootstrap",
-    "underscores",
+    "energy",
+    "solar",
     "wordpress",
-    "_s",
-    "sass"
+    "renewable",
+    "bootstrap"
   ],
   "license": "GPL-2.0",
   "ignore": [
