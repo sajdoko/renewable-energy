@@ -27,7 +27,7 @@ $footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_con
 					<footer class="site-footer" id="colophon">
 
 						<div class="site-info">
-							<?php echo $footer_copyright_content; ?>
+							<span class="footer-copyright">Copyright &copy; <?php echo date("Y");?><?php echo ' ' . $footer_copyright_content; ?></span>
 						</div><!-- .site-info -->
 
 					</footer><!-- #colophon -->
