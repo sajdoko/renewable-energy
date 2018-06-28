@@ -43,6 +43,10 @@ $footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_con
 
 </div><!-- #page we need this extra closing tag here -->
 
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="left">
+	<i class="fa fa-chevron-up" aria-hidden="true"></i>
+</a>
+
 <?php wp_footer(); ?>
 
 </body>
