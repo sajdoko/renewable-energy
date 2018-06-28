@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.9.6" created="2018-06-25 14:27" -->
+<!-- generator="WordPress/4.9.6" created="2018-06-28 18:24" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Renewable Energy - Wordpress Theme</title>
 	<link>http://energy.com</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Mon, 25 Jun 2018 14:27:48 +0000</pubDate>
+	<pubDate>Thu, 28 Jun 2018 18:24:23 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://energy.com</wp:base_site_url>
@@ -38,17 +38,102 @@
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[sajdoko]]></wp:author_login><wp:author_email><![CDATA[sajdoko@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[sajdoko]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 	<wp:category>
+		<wp:term_id>7</wp:term_id>
+		<wp:category_nicename><![CDATA[hydropower]]></wp:category_nicename>
+		<wp:category_parent><![CDATA[]]></wp:category_parent>
+		<wp:cat_name><![CDATA[Hydropower]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
+		<wp:term_id>5</wp:term_id>
+		<wp:category_nicename><![CDATA[solar-energy]]></wp:category_nicename>
+		<wp:category_parent><![CDATA[]]></wp:category_parent>
+		<wp:cat_name><![CDATA[Solar Energy]]></wp:cat_name>
+	</wp:category>
+	<wp:category>
 		<wp:term_id>1</wp:term_id>
 		<wp:category_nicename><![CDATA[uncategorized]]></wp:category_nicename>
 		<wp:category_parent><![CDATA[]]></wp:category_parent>
 		<wp:cat_name><![CDATA[Uncategorized]]></wp:cat_name>
 	</wp:category>
+	<wp:category>
+		<wp:term_id>6</wp:term_id>
+		<wp:category_nicename><![CDATA[wind-power]]></wp:category_nicename>
+		<wp:category_parent><![CDATA[]]></wp:category_parent>
+		<wp:cat_name><![CDATA[Wind Power]]></wp:cat_name>
+	</wp:category>
+	<wp:tag>
+		<wp:term_id>9</wp:term_id>
+		<wp:tag_slug><![CDATA[energy]]></wp:tag_slug>
+		<wp:tag_name><![CDATA[Energy]]></wp:tag_name>
+	</wp:tag>
+	<wp:tag>
+		<wp:term_id>8</wp:term_id>
+		<wp:tag_slug><![CDATA[hydropower]]></wp:tag_slug>
+		<wp:tag_name><![CDATA[Hydropower]]></wp:tag_name>
+	</wp:tag>
+	<wp:tag>
+		<wp:term_id>10</wp:term_id>
+		<wp:tag_slug><![CDATA[renewable]]></wp:tag_slug>
+		<wp:tag_name><![CDATA[renewable]]></wp:tag_name>
+	</wp:tag>
+	<wp:tag>
+		<wp:term_id>11</wp:term_id>
+		<wp:tag_slug><![CDATA[solar]]></wp:tag_slug>
+		<wp:tag_name><![CDATA[solar]]></wp:tag_name>
+	</wp:tag>
+	<wp:tag>
+		<wp:term_id>12</wp:term_id>
+		<wp:tag_slug><![CDATA[wind]]></wp:tag_slug>
+		<wp:tag_name><![CDATA[Wind]]></wp:tag_name>
+	</wp:tag>
 	<wp:term>
-		<wp:term_id><![CDATA[2]]></wp:term_id>
+		<wp:term_id><![CDATA[9]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[energy]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Energy]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[7]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[hydropower]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Hydropower]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[8]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[hydropower]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Hydropower]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[4]]></wp:term_id>
 		<wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>
 		<wp:term_slug><![CDATA[main-menu]]></wp:term_slug>
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
 		<wp:term_name><![CDATA[Main Menu]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[10]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[renewable]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[renewable]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[11]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[solar]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[solar]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[5]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[solar-energy]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Solar Energy]]></wp:term_name>
 	</wp:term>
 	<wp:term>
 		<wp:term_id><![CDATA[1]]></wp:term_id>
@@ -57,50 +142,25 @@
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
 		<wp:term_name><![CDATA[Uncategorized]]></wp:term_name>
 	</wp:term>
-	<wp:term><wp:term_id>2</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name>
+	<wp:term>
+		<wp:term_id><![CDATA[12]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[post_tag]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[wind]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Wind]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[6]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[category]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[wind-power]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Wind Power]]></wp:term_name>
+	</wp:term>
+	<wp:term><wp:term_id>4</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name>
 </wp:term>
 
 	<generator>https://wordpress.org/?v=4.9.6</generator>
 
-	<item>
-		<title>Hello world!</title>
-		<link>http://energy.com/2018/06/25/hello-world/</link>
-		<pubDate>Mon, 25 Jun 2018 07:54:16 +0000</pubDate>
-		<dc:creator><![CDATA[sajdoko]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/?p=1</guid>
-		<description></description>
-		<content:encoded><![CDATA[Welcome to WordPress. This is your first post. Edit or delete it, then start writing!]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>1</wp:post_id>
-		<wp:post_date><![CDATA[2018-06-25 07:54:16]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2018-06-25 07:54:16]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[hello-world]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
-		<wp:comment>
-			<wp:comment_id>3</wp:comment_id>
-			<wp:comment_author><![CDATA[A WordPress Commenter]]></wp:comment_author>
-			<wp:comment_author_email><![CDATA[wapuu@wordpress.example]]></wp:comment_author_email>
-			<wp:comment_author_url>https://wordpress.org/</wp:comment_author_url>
-			<wp:comment_author_IP><![CDATA[]]></wp:comment_author_IP>
-			<wp:comment_date><![CDATA[2018-06-25 07:54:16]]></wp:comment_date>
-			<wp:comment_date_gmt><![CDATA[2018-06-25 07:54:16]]></wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Hi, this is a comment.
-To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.
-Commenter avatars come from <a href=\"https://gravatar.com\" rel=\"nofollow\">Gravatar</a>.]]></wp:comment_content>
-			<wp:comment_approved><![CDATA[1]]></wp:comment_approved>
-			<wp:comment_type><![CDATA[]]></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-		</wp:comment>
-	</item>
 	<item>
 		<title>Home</title>
 		<link>http://energy.com/</link>
@@ -108,15 +168,7 @@ Commenter avatars come from <a href=\"https://gravatar.com\" rel=\"nofollow\">Gr
 		<dc:creator><![CDATA[sajdoko]]></dc:creator>
 		<guid isPermaLink="false">http://energy.com/?page_id=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:
-
-<blockquote>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)</blockquote>
-
-...or something like this:
-
-<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>
-
-As a new WordPress user, you should go to <a href="http://energy.com/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!]]></content:encoded>
+		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>2</wp:post_id>
 		<wp:post_date><![CDATA[2018-06-25 07:54:16]]></wp:post_date>
@@ -132,7 +184,11 @@ As a new WordPress user, you should go to <a href="http://energy.com/wp-admin/">
 		<wp:is_sticky>0</wp:is_sticky>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+			<wp:meta_value><![CDATA[page-templates/home.php]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -233,7 +289,7 @@ As a new WordPress user, you should go to <a href="http://energy.com/wp-admin/">
 		<wp:post_name><![CDATA[10]]></wp:post_name>
 		<wp:status><![CDATA[publish]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>2</wp:menu_order>
+		<wp:menu_order>4</wp:menu_order>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
@@ -269,6 +325,823 @@ As a new WordPress user, you should go to <a href="http://energy.com/wp-admin/">
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>cropped-app-fav.png</title>
+		<link>http://energy.com/cropped-app-fav-png/</link>
+		<pubDate>Wed, 27 Jun 2018 12:24:39 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/cropped-app-fav.png</guid>
+		<description></description>
+		<content:encoded><![CDATA[http://energy.com/wp-content/uploads/2018/06/cropped-app-fav.png]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>84</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 12:24:39]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 12:24:39]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[cropped-app-fav-png]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/cropped-app-fav.png]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/cropped-app-fav.png]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_context]]></wp:meta_key>
+			<wp:meta_value><![CDATA[custom-logo]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1024;s:6:"height";i:1024;s:4:"file";s:27:"2018/06/cropped-app-fav.png";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"cropped-app-fav-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:27:"cropped-app-fav-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:27:"cropped-app-fav-768x768.png";s:5:"width";i:768;s:6:"height";i:768;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>logo</title>
+		<link>http://energy.com/logo/</link>
+		<pubDate>Wed, 27 Jun 2018 12:31:39 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/logo.png</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>86</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 12:31:39]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 12:31:39]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[logo]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/logo.png]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/logo.png]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:185;s:6:"height";i:55;s:4:"file";s:16:"2018/06/logo.png";s:5:"sizes";a:1:{s:9:"thumbnail";a:4:{s:4:"file";s:15:"logo-150x55.png";s:5:"width";i:150;s:6:"height";i:55;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>wind-energy</title>
+		<link>http://energy.com/wind-energy/</link>
+		<pubDate>Wed, 27 Jun 2018 13:07:03 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/wind-energy.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>89</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 13:07:03]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 13:07:03]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[wind-energy]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/wind-energy.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/wind-energy.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:350;s:6:"height";i:200;s:4:"file";s:23:"2018/06/wind-energy.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"wind-energy-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:23:"wind-energy-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>solar-energy</title>
+		<link>http://energy.com/solar-energy/</link>
+		<pubDate>Wed, 27 Jun 2018 13:07:03 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/solar-energy.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>90</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 13:07:03]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 13:07:03]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[solar-energy]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/solar-energy.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/solar-energy.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:350;s:6:"height";i:200;s:4:"file";s:24:"2018/06/solar-energy.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"solar-energy-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:24:"solar-energy-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>hydropower</title>
+		<link>http://energy.com/hydropower/</link>
+		<pubDate>Wed, 27 Jun 2018 13:48:09 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/hydropower.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>93</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 13:48:09]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 13:48:09]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[hydropower]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/hydropower.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/hydropower.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:350;s:6:"height";i:200;s:4:"file";s:22:"2018/06/hydropower.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:22:"hydropower-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"hydropower-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>hydropower-blog</title>
+		<link>http://energy.com/2018/06/27/in-hac-habitasse-platea-dictumst/hydropower-blog/</link>
+		<pubDate>Wed, 27 Jun 2018 14:19:46 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/hydropower-blog.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>100</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 14:19:46]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 14:19:46]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[hydropower-blog]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>98</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/hydropower-blog.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/hydropower-blog.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:571;s:4:"file";s:27:"2018/06/hydropower-blog.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"hydropower-blog-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:27:"hydropower-blog-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:27:"hydropower-blog-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>solar-energy-blog</title>
+		<link>http://energy.com/2018/06/27/praesent-congue-erat-at-massa/solar-energy-blog/</link>
+		<pubDate>Wed, 27 Jun 2018 14:24:39 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/solar-energy-blog.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>102</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 14:24:39]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 14:24:39]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[solar-energy-blog]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>101</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/solar-energy-blog.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/solar-energy-blog.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:571;s:4:"file";s:29:"2018/06/solar-energy-blog.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:29:"solar-energy-blog-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:29:"solar-energy-blog-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:29:"solar-energy-blog-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>wind-energy-blog</title>
+		<link>http://energy.com/2018/06/27/donec-vitae-orci-sed-dolor/wind-energy-blog/</link>
+		<pubDate>Wed, 27 Jun 2018 14:29:28 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/wind-energy-blog.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>105</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 14:29:28]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 14:29:28]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[wind-energy-blog]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>104</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/wind-energy-blog.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/wind-energy-blog.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:571;s:4:"file";s:28:"2018/06/wind-energy-blog.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"wind-energy-blog-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"wind-energy-blog-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:28:"wind-energy-blog-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>second-featurette</title>
+		<link>http://energy.com/about-us/second-featurette/</link>
+		<pubDate>Thu, 28 Jun 2018 10:16:40 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>120</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:16:40]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:16:40]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[second-featurette]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>131</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/second-featurette.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:445;s:6:"height";i:500;s:4:"file";s:29:"2018/06/second-featurette.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:29:"second-featurette-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:29:"second-featurette-267x300.jpg";s:5:"width";i:267;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>first-featurette</title>
+		<link>http://energy.com/about-us/first-featurette/</link>
+		<pubDate>Thu, 28 Jun 2018 10:16:51 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>121</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:16:51]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:16:51]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[first-featurette]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>131</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/first-featurette.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:445;s:6:"height";i:500;s:4:"file";s:28:"2018/06/first-featurette.jpg";s:5:"sizes";a:2:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"first-featurette-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"first-featurette-267x300.jpg";s:5:"width";i:267;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>first-slide</title>
+		<link>http://energy.com/first-slide/</link>
+		<pubDate>Thu, 28 Jun 2018 10:31:46 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/first-slide.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>126</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:31:46]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:31:46]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[first-slide]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/first-slide.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/first-slide.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1924;s:6:"height";i:425;s:4:"file";s:23:"2018/06/first-slide.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"first-slide-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"first-slide-300x66.jpg";s:5:"width";i:300;s:6:"height";i:66;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:23:"first-slide-768x170.jpg";s:5:"width";i:768;s:6:"height";i:170;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:24:"first-slide-1024x226.jpg";s:5:"width";i:1024;s:6:"height";i:226;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>second-slide</title>
+		<link>http://energy.com/second-slide/</link>
+		<pubDate>Thu, 28 Jun 2018 10:32:05 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/second-slide.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>128</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:32:05]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:32:05]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[second-slide]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/second-slide.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2018/06/second-slide.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1924;s:6:"height";i:425;s:4:"file";s:24:"2018/06/second-slide.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"second-slide-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:23:"second-slide-300x66.jpg";s:5:"width";i:300;s:6:"height";i:66;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:24:"second-slide-768x170.jpg";s:5:"width";i:768;s:6:"height";i:170;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:25:"second-slide-1024x226.jpg";s:5:"width";i:1024;s:6:"height";i:226;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>About Us</title>
+		<link>http://energy.com/about-us/</link>
+		<pubDate>Thu, 28 Jun 2018 10:48:42 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?page_id=131</guid>
+		<description></description>
+		<content:encoded><![CDATA[Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Pellentesque commodo eros a enim. Morbi nec metus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi.
+
+Pellentesque posuere. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Quisque id odio. Nulla sit amet est. Maecenas malesuada.
+
+Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Vivamus euismod mauris. Vivamus consectetuer hendrerit lacus. Aliquam eu nunc.<img class="size-full wp-image-121 alignright" src="http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg" alt="" width="445" height="500" />
+
+Nullam quis ante. Ut a nisl id ante tempus hendrerit. Praesent blandit laoreet nibh. Ut a nisl id ante tempus hendrerit. Praesent venenatis metus at tortor pulvinar varius.
+
+In ac felis quis tortor malesuada pretium. Cras id dui. Nullam accumsan lorem in dui. Etiam sit amet orci eget eros faucibus tincidunt. Aenean imperdiet.
+
+Nam adipiscing. Sed cursus turpis vitae tortor. Phasellus tempus. Vivamus quis mi. Etiam vitae tortor.
+
+Maecenas malesuada. Curabitur blandit mollis lacus. Nullam vel sem. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Phasellus gravida semper nisi.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Nullam dictum felis eu pede mollis pretium.
+
+Curabitur at lacus ac velit ornare lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam accumsan lorem in dui. Ut a nisl id ante tempus hendrerit. Praesent ac sem eget est egestas volutpat.
+
+Fusce a quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Pellentesque ut neque. Cras id dui.
+
+Fusce vel dui. Nam at tortor in tellus interdum sagittis. Aliquam lobortis. Sed in libero ut nibh placerat accumsan. Etiam imperdiet imperdiet orci.
+
+&nbsp;
+
+<img class="size-full wp-image-120 alignleft" src="http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg" alt="" width="445" height="500" />
+
+Nunc nonummy metus. Sed fringilla mauris sit amet nibh. Quisque id odio. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Vivamus aliquet elit ac nisl.
+
+Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Suspendisse non nisl sit amet velit hendrerit rutrum. In auctor lobortis lacus. Nunc nec neque.
+
+Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Phasellus magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.
+
+Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nunc sed turpis. Duis lobortis massa imperdiet quam. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
+
+Suspendisse eu ligula. Morbi vestibulum volutpat enim. Donec vitae orci sed dolor rutrum auctor. Praesent nec nisl a purus blandit viverra. Ut tincidunt tincidunt erat.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>131</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:48:42]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:48:42]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[about-us]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page-templates/fullwidthpage.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://energy.com/2018/06/28/133/</link>
+		<pubDate>Thu, 28 Jun 2018 10:48:54 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?p=133</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>133</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:48:54]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:48:54]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[133]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[131]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://energy.com/2018/06/28/138/</link>
+		<pubDate>Thu, 28 Jun 2018 10:53:35 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?p=138</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>138</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:53:35]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:53:35]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[138]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>5</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[136]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://energy.com/2018/06/28/139/</link>
+		<pubDate>Thu, 28 Jun 2018 10:53:35 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?p=139</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>139</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:53:35]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:53:35]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[139]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[134]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>In hac habitasse platea dictumst</title>
+		<link>http://energy.com/2018/06/27/in-hac-habitasse-platea-dictumst/</link>
+		<pubDate>Wed, 27 Jun 2018 14:18:33 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?p=98</guid>
+		<description></description>
+		<content:encoded><![CDATA[Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Morbi nec metus. Fusce pharetra convallis urna. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec posuere vulputate arcu.
+
+Vivamus quis mi. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Curabitur nisi. Fusce fermentum. Donec mollis hendrerit risus.
+
+Donec sodales sagittis magna. Duis vel nibh at velit scelerisque suscipit. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Sed libero. Nam pretium turpis et arcu.
+
+Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Fusce vulputate eleifend sapien. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Suspendisse non nisl sit amet velit hendrerit rutrum. Praesent venenatis metus at tortor pulvinar varius.
+
+&nbsp;
+
+Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Fusce ac felis sit amet ligula pharetra condimentum. In hac habitasse platea dictumst. Praesent adipiscing.
+
+Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Cras non dolor. Vivamus in erat ut urna cursus vestibulum. Curabitur suscipit suscipit tellus.
+
+Aenean viverra rhoncus pede. Sed hendrerit. Maecenas vestibulum mollis diam. Curabitur ullamcorper ultricies nisi.
+
+Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lobortis. Quisque id mi. Nulla facilisi.
+
+Praesent egestas neque eu enim. Sed in libero ut nibh placerat accumsan. Cras non dolor. Nam pretium turpis et arcu.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>98</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 14:18:33]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 14:18:33]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[in-hac-habitasse-platea-dictumst]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="energy"><![CDATA[Energy]]></category>
+		<category domain="category" nicename="hydropower"><![CDATA[Hydropower]]></category>
+		<category domain="post_tag" nicename="hydropower"><![CDATA[Hydropower]]></category>
+		<category domain="post_tag" nicename="renewable"><![CDATA[renewable]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[100]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Praesent congue erat at massa</title>
+		<link>http://energy.com/2018/06/27/praesent-congue-erat-at-massa/</link>
+		<pubDate>Wed, 27 Jun 2018 14:24:46 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?p=101</guid>
+		<description></description>
+		<content:encoded><![CDATA[Etiam ut purus mattis mauris sodales aliquam. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Fusce a quam. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Nunc nonummy metus.
+
+Praesent venenatis metus at tortor pulvinar varius. Phasellus viverra nulla ut metus varius laoreet. Morbi mattis ullamcorper velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede.
+
+Praesent ac massa at ligula laoreet iaculis. Praesent vestibulum dapibus nibh. Vestibulum eu odio. Sed lectus. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.
+
+Nam eget dui. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Etiam vitae tortor. Praesent congue erat at massa. Fusce a quam.
+
+Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Vestibulum suscipit nulla quis orci. Vivamus laoreet. Pellentesque commodo eros a enim. Etiam iaculis nunc ac metus.
+
+Cras dapibus. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.. Ut id nisl quis enim dignissim sagittis.
+
+Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum. Sed fringilla mauris sit amet nibh. Fusce vel dui. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna.
+
+Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Aliquam lobortis. Nam at tortor in tellus interdum sagittis. Praesent nonummy mi in odio.
+
+Quisque id mi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus gravida semper nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.
+
+Nunc interdum lacus sit amet orci. Quisque id odio. Nullam cursus lacinia erat. Ut tincidunt tincidunt erat.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>101</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 14:24:46]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 14:24:46]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[praesent-congue-erat-at-massa]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="energy"><![CDATA[Energy]]></category>
+		<category domain="post_tag" nicename="renewable"><![CDATA[renewable]]></category>
+		<category domain="post_tag" nicename="solar"><![CDATA[solar]]></category>
+		<category domain="category" nicename="solar-energy"><![CDATA[Solar Energy]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[102]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Donec vitae orci sed dolor</title>
+		<link>http://energy.com/2018/06/27/donec-vitae-orci-sed-dolor/</link>
+		<pubDate>Wed, 27 Jun 2018 14:29:34 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?p=104</guid>
+		<description></description>
+		<content:encoded><![CDATA[Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Vivamus consectetuer hendrerit lacus. Etiam vitae tortor. Nunc nonummy metus. Praesent adipiscing.
+
+Nunc nec neque. Etiam feugiat lorem non metus. Vestibulum eu odio. Nam commodo suscipit quam. In ac felis quis tortor malesuada pretium.
+
+Proin magna. Nullam accumsan lorem in dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis ante odio sit amet eros. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Curabitur vestibulum aliquam leo. Phasellus viverra nulla ut metus varius laoreet.
+
+Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Nunc nonummy metus. In ut quam vitae odio lacinia tincidunt. In consectetuer turpis ut velit.Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Vestibulum dapibus nunc ac augue. Donec sodales sagittis magna. Praesent vestibulum dapibus nibh. Nunc nulla.
+
+Suspendisse potenti. Pellentesque commodo eros a enim. Ut varius tincidunt libero. Praesent blandit laoreet nibh. Praesent congue erat at massa.
+
+Ut a nisl id ante tempus hendrerit. Praesent egestas neque eu enim. Aenean vulputate eleifend tellus. Vivamus aliquet elit ac nisl. Etiam iaculis nunc ac metus.
+
+Maecenas nec odio et ante tincidunt tempus. Curabitur blandit mollis lacus. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aenean viverra rhoncus pede. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>104</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-27 14:29:34]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-27 14:29:34]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[donec-vitae-orci-sed-dolor]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="energy"><![CDATA[Energy]]></category>
+		<category domain="post_tag" nicename="renewable"><![CDATA[renewable]]></category>
+		<category domain="post_tag" nicename="wind"><![CDATA[Wind]]></category>
+		<category domain="category" nicename="wind-power"><![CDATA[Wind Power]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[105]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Services</title>
+		<link>http://energy.com/services/</link>
+		<pubDate>Thu, 28 Jun 2018 10:53:04 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?page_id=134</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>134</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:53:04]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:53:04]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[services]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page-templates/fullwidthpage.php]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Contact Us</title>
+		<link>http://energy.com/contact-us/</link>
+		<pubDate>Thu, 28 Jun 2018 10:53:18 +0000</pubDate>
+		<dc:creator><![CDATA[sajdoko]]></dc:creator>
+		<guid isPermaLink="false">http://energy.com/?page_id=136</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>136</wp:post_id>
+		<wp:post_date><![CDATA[2018-06-28 10:53:18]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2018-06-28 10:53:18]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[contact-us]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page-templates/fullwidthpage.php]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
