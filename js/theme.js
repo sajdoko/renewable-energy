@@ -3927,7 +3927,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 	}
 })();
 
-(function( $ ) {
+(function ($) {
 
     // Carousel Slide
     $(".carousel-item").first().addClass("active");
@@ -3947,5 +3947,14 @@ Object.defineProperty(exports, '__esModule', { value: true });
         }, 600);
         return false;
     });
-    
-})( jQuery );
+})(jQuery);
+
+// preloader
+document.body.onload = function () {
+    setTimeout(function () {
+        var preloader = document.getElementById('loader');
+        if (!preloader.classList.contains('done')) {
+            preloader.classList.add('done');
+        }
+    }, 1000)
+}

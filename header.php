@@ -8,6 +8,7 @@
  */
 
 $container = get_theme_mod('renewable_energy_container_type');
+$show_preloader = get_theme_mod('renewable_energy_show_preloader');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -24,6 +25,12 @@ $container = get_theme_mod('renewable_energy_container_type');
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php if ($show_preloader == 'yes') : ?>
+	<div class="loader-body" id="loader">
+		<div class="loader"></div>
+	</div>
+<?php endif; ?>
 
 <div class="hfeed site" id="page">
 
