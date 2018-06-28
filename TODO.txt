@@ -1,0 +1,6 @@
+- Add Services Page
+- Add Contact Page
+- Add Languages Files
+- Add Social to Customizer
+- Add Contacts to Customizer
+- Edit Footer Wiget
