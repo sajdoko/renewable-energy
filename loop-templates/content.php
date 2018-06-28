@@ -46,5 +46,5 @@
 		<?php renewable_energy_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
-
+	<hr class="divider">
 </article><!-- #post-## -->

@@ -92,6 +92,44 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
     ) 
 );
 // Ends First Featurette Description
+// Begins First Featurette Button Text
+$wp_customize->add_setting('renewable_energy_first_featurette_button_text', array(
+    'default'           => 'First Button',
+    'type'              => 'theme_mod',
+    'sanitize_callback' => 'sanitize_text_field',
+    'capability'        => 'edit_theme_options',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize,
+        'renewable_energy_first_featurette_button_text', array(
+            'label'       => __('First Featurette Button Text', 'renewable_energy'),
+            'section'     => 'renewable_energy_first_featurette_options',
+            'settings'    => 'renewable_energy_first_featurette_button_text',
+            'type'        => 'text',
+            'priority'    => '25',
+        )
+    ) 
+);
+// Ends First Featurette Button Text
+// Begins First Featurette Button Link
+$wp_customize->add_setting('renewable_energy_first_featurette_button_link', array(
+    'default'           => '/',
+    'type'              => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw',
+    'capability'        => 'edit_theme_options',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize,
+        'renewable_energy_first_featurette_button_link', array(
+            'label'       => __('First Featurette Button Link', 'renewable_energy'),
+            'section'     => 'renewable_energy_first_featurette_options',
+            'settings'    => 'renewable_energy_first_featurette_button_link',
+            'type'        => 'url',
+            'priority'    => '26',
+        )
+    ) 
+);
+// Ends First Featurette Button Link
 // Begins First Featurette Backgrownd Image
 $wp_customize->add_setting('renewable_energy_first_featurette_backgrownd_image', array(
     'default'           => '',
@@ -178,6 +216,44 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
     ) 
 );
 // Ends Second Featurette Description
+// Begins Second Featurette Button Text
+$wp_customize->add_setting('renewable_energy_second_featurette_button_text', array(
+    'default'           => 'Second Button',
+    'type'              => 'theme_mod',
+    'sanitize_callback' => 'sanitize_text_field',
+    'capability'        => 'edit_theme_options',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize,
+        'renewable_energy_second_featurette_button_text', array(
+            'label'       => __('Second Featurette Button Text', 'renewable_energy'),
+            'section'     => 'renewable_energy_second_featurette_options',
+            'settings'    => 'renewable_energy_second_featurette_button_text',
+            'type'        => 'text',
+            'priority'    => '25',
+        )
+    ) 
+);
+// Ends Second Featurette Button Text
+// Begins Second Featurette Button Link
+$wp_customize->add_setting('renewable_energy_second_featurette_button_link', array(
+    'default'           => '/',
+    'type'              => 'theme_mod',
+    'sanitize_callback' => 'esc_url_raw',
+    'capability'        => 'edit_theme_options',
+) );
+
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize,
+        'renewable_energy_second_featurette_button_link', array(
+            'label'       => __('Second Featurette Button Link', 'renewable_energy'),
+            'section'     => 'renewable_energy_second_featurette_options',
+            'settings'    => 'renewable_energy_second_featurette_button_link',
+            'type'        => 'url',
+            'priority'    => '26',
+        )
+    ) 
+);
+// Ends Second Featurette Button Link
 // Begins Second Featurette Backgrownd Image
 $wp_customize->add_setting('renewable_energy_second_featurette_backgrownd_image', array(
     'default'           => '',

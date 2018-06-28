@@ -17,6 +17,16 @@
     text-align: center;
     line-height: 2.5rem;
 }
+#secondary img, article img, figure, img.wp-post-image {
+    margin: 1rem 0;
+}
+
+.divider {
+    margin-bottom: 3rem;
+    margin-top: 0;
+    color: $primary;
+    border-top: .1rem solid $primary;
+  }
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 1rem;
@@ -28,7 +38,7 @@
 ------------------------- */
 
 .featurette-divider {
-    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+    margin: 3rem 0; /* Space out the Bootstrap <hr> more */
     color: $primary;
     border-top: .1rem solid $primary;
   }
