@@ -1,3 +1,2 @@
-- Add Languages Files
 - Add Social to Customizer
 - Add Contacts to Customizer
