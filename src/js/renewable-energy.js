@@ -18,7 +18,6 @@
         }, 600);
         return false;
     });
-})(jQuery);
 
 // preloader
 document.body.onload = function () {
@@ -29,3 +28,4 @@ document.body.onload = function () {
         }
     }, 1000)
 }
+})(jQuery);
