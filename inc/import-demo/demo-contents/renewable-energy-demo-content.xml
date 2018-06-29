@@ -243,46 +243,11 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>cropped-app-fav.png</title>
-		<link>http://energy.com/cropped-app-fav-png/</link>
-		<pubDate>Wed, 27 Jun 2018 12:24:39 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/cropped-app-fav.png</guid>
-		<description></description>
-		<content:encoded><![CDATA[http://energy.com/wp-content/uploads/2018/06/cropped-app-fav.png]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>84</wp:post_id>
-		<wp:post_date><![CDATA[2018-06-27 12:24:39]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2018-06-27 12:24:39]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[cropped-app-fav-png]]></wp:post_name>
-		<wp:status><![CDATA[inherit]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[attachment]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/cropped-app-fav.png]]></wp:attachment_url>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2018/06/cropped-app-fav.png]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_attachment_context]]></wp:meta_key>
-			<wp:meta_value><![CDATA[custom-logo]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1024;s:6:"height";i:1024;s:4:"file";s:27:"2018/06/cropped-app-fav.png";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:27:"cropped-app-fav-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:27:"cropped-app-fav-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";}s:12:"medium_large";a:4:{s:4:"file";s:27:"cropped-app-fav-768x768.png";s:5:"width";i:768;s:6:"height";i:768;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>logo</title>
 		<link>http://energy.com/logo/</link>
 		<pubDate>Wed, 27 Jun 2018 12:31:39 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/logo.png</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/logo.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -298,7 +263,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/logo.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/logo.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/logo.png]]></wp:meta_value>
@@ -313,7 +278,7 @@
 		<link>http://energy.com/wind-energy/</link>
 		<pubDate>Wed, 27 Jun 2018 13:07:03 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/wind-energy.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/wind-energy.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -329,7 +294,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/wind-energy.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/wind-energy.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/wind-energy.jpg]]></wp:meta_value>
@@ -344,7 +309,7 @@
 		<link>http://energy.com/solar-energy/</link>
 		<pubDate>Wed, 27 Jun 2018 13:07:03 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/solar-energy.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/solar-energy.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -360,7 +325,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/solar-energy.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/solar-energy.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/solar-energy.jpg]]></wp:meta_value>
@@ -375,7 +340,7 @@
 		<link>http://energy.com/hydropower/</link>
 		<pubDate>Wed, 27 Jun 2018 13:48:09 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/hydropower.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/hydropower.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -391,7 +356,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/hydropower.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/hydropower.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/hydropower.jpg]]></wp:meta_value>
@@ -406,7 +371,7 @@
 		<link>http://energy.com/2018/06/27/in-hac-habitasse-platea-dictumst/hydropower-blog/</link>
 		<pubDate>Wed, 27 Jun 2018 14:19:46 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/hydropower-blog.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/hydropower-blog.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -422,7 +387,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/hydropower-blog.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/hydropower-blog.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/hydropower-blog.jpg]]></wp:meta_value>
@@ -437,7 +402,7 @@
 		<link>http://energy.com/2018/06/27/praesent-congue-erat-at-massa/solar-energy-blog/</link>
 		<pubDate>Wed, 27 Jun 2018 14:24:39 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/solar-energy-blog.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/solar-energy-blog.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -453,7 +418,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/solar-energy-blog.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/solar-energy-blog.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/solar-energy-blog.jpg]]></wp:meta_value>
@@ -468,7 +433,7 @@
 		<link>http://energy.com/2018/06/27/donec-vitae-orci-sed-dolor/wind-energy-blog/</link>
 		<pubDate>Wed, 27 Jun 2018 14:29:28 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/wind-energy-blog.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/wind-energy-blog.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -484,7 +449,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/wind-energy-blog.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/wind-energy-blog.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/wind-energy-blog.jpg]]></wp:meta_value>
@@ -499,7 +464,7 @@
 		<link>http://energy.com/about-us/second-featurette/</link>
 		<pubDate>Thu, 28 Jun 2018 10:16:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/second-featurette.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -515,7 +480,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/second-featurette.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/second-featurette.jpg]]></wp:meta_value>
@@ -530,7 +495,7 @@
 		<link>http://energy.com/about-us/first-featurette/</link>
 		<pubDate>Thu, 28 Jun 2018 10:16:51 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-featurette.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -546,7 +511,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-featurette.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/first-featurette.jpg]]></wp:meta_value>
@@ -561,7 +526,7 @@
 		<link>http://energy.com/first-slide/</link>
 		<pubDate>Thu, 28 Jun 2018 10:31:46 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/first-slide.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-slide.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -577,7 +542,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/first-slide.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-slide.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/first-slide.jpg]]></wp:meta_value>
@@ -592,7 +557,7 @@
 		<link>http://energy.com/second-slide/</link>
 		<pubDate>Thu, 28 Jun 2018 10:32:05 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://energy.com/wp-content/uploads/2018/06/second-slide.jpg</guid>
+		<guid isPermaLink="false">/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/second-slide.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -608,7 +573,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://energy.com/wp-content/uploads/2018/06/second-slide.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/second-slide.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2018/06/second-slide.jpg]]></wp:meta_value>
@@ -629,7 +594,7 @@
 
 Pellentesque posuere. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Quisque id odio. Nulla sit amet est. Maecenas malesuada.
 
-Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Vivamus euismod mauris. Vivamus consectetuer hendrerit lacus. Aliquam eu nunc.<img class="size-full wp-image-121 alignright" src="http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg" alt="" width="445" height="500" />
+Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Vivamus euismod mauris. Vivamus consectetuer hendrerit lacus. Aliquam eu nunc.<img class="size-full wp-image-121 alignright" src="/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-featurette.jpg" alt="" width="445" height="500" />
 
 Nullam quis ante. Ut a nisl id ante tempus hendrerit. Praesent blandit laoreet nibh. Ut a nisl id ante tempus hendrerit. Praesent venenatis metus at tortor pulvinar varius.
 
@@ -649,7 +614,7 @@ Fusce vel dui. Nam at tortor in tellus interdum sagittis. Aliquam lobortis. Sed 
 
 &nbsp;
 
-<img class="size-full wp-image-120 alignleft" src="http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg" alt="" width="445" height="500" />
+<img class="size-full wp-image-120 alignleft" src="/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/second-featurette.jpg" alt="" width="445" height="500" />
 
 Nunc nonummy metus. Sed fringilla mauris sit amet nibh. Quisque id odio. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Vivamus aliquet elit ac nisl.
 
@@ -744,7 +709,7 @@ Suspendisse eu ligula. Morbi vestibulum volutpat enim. Donec vitae orci sed dolo
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://energy.com/?page_id=134</guid>
 		<description></description>
-		<content:encoded><![CDATA[<h2>Vestibulum fringilla pede sit amet<img class="size-full wp-image-121 alignright" src="http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg" alt="" width="445" height="500" /></h2>
+		<content:encoded><![CDATA[<h2>Vestibulum fringilla pede sit amet<img class="size-full wp-image-121 alignright" src="/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-featurette.jpg" alt="" width="445" height="500" /></h2>
 &nbsp;
 
 Pellentesque dapibus hendrerit tortor. Etiam feugiat lorem non metus. Praesent congue erat at massa. Phasellus viverra nulla ut metus varius laoreet. Nam adipiscing.
@@ -759,7 +724,7 @@ Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus,
 
 &nbsp;
 
-<img class="size-full wp-image-120 alignleft" src="http://energy.com/wp-content/uploads/2018/06/second-featurette.jpg" alt="" width="445" height="500" />
+<img class="size-full wp-image-120 alignleft" src="/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/second-featurette.jpg" alt="" width="445" height="500" />
 
 &nbsp;
 <h2>Aliquam lorem ante dapibus in</h2>
@@ -781,7 +746,7 @@ Donec sodales sagittis magna. Nam commodo suscipit quam. Morbi ac felis. Nullam 
 
 &nbsp;
 
-<img class="size-full wp-image-121 alignright" src="http://energy.com/wp-content/uploads/2018/06/first-featurette.jpg" alt="" width="445" height="500" />
+<img class="size-full wp-image-121 alignright" src="/wp-content/themes/renewable-energy/inc/import-demo/demo-contents/img/first-featurette.jpg" alt="" width="445" height="500" />
 <h2></h2>
 <h2>Vestibulum suscipit nulla quis orci</h2>
 Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Suspendisse eu ligula. Sed aliquam ultrices mauris.
