@@ -10,10 +10,10 @@ if ( ! defined('ABSPATH') ) {
 }
 
 $my_orders_columns = apply_filters('woocommerce_my_account_my_orders_columns', array(
-	'order-number'  => __('Order', 'renewable_energy'),
-	'order-date'    => __('Date', 'renewable_energy'),
-	'order-status'  => __('Status', 'renewable_energy'),
-	'order-total'   => __('Total', 'renewable_energy'),
+	'order-number'  => __('Order', 'renewable-energy'),
+	'order-date'    => __('Date', 'renewable-energy'),
+	'order-status'  => __('Status', 'renewable-energy'),
+	'order-total'   => __('Total', 'renewable-energy'),
 	'order-actions' => '&nbsp;',
 ) );
 
@@ -27,7 +27,7 @@ $customer_orders = get_posts( apply_filters('woocommerce_my_account_my_orders_qu
 
 if ( $customer_orders ) : ?>
 
-	<h2><?php echo apply_filters('woocommerce_my_account_my_orders_title', __('Recent Orders', 'renewable_energy') ); ?></h2>
+	<h2><?php echo apply_filters('woocommerce_my_account_my_orders_title', __('Recent Orders', 'renewable-energy') ); ?></h2>
 
 	<table class="shop_table shop_table_responsive my_account_orders table-hover table-striped">
 
@@ -52,7 +52,7 @@ if ( $customer_orders ) : ?>
 
 							<?php elseif ('order-number' === $column_id ) : ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
-									<?php echo _x('#', 'hash before order number', 'renewable_energy') . $order->get_order_number(); ?>
+									<?php echo _x('#', 'hash before order number', 'renewable-energy') . $order->get_order_number(); ?>
 								</a>
 
 							<?php elseif ('order-date' === $column_id ) : ?>
@@ -62,22 +62,22 @@ if ( $customer_orders ) : ?>
 								<?php echo wc_get_order_status_name( $order->get_status() ); ?>
 
 							<?php elseif ('order-total' === $column_id ) : ?>
-								<?php echo sprintf( _n('%s for %s item', '%s for %s items', $item_count, 'renewable_energy'), $order->get_formatted_order_total(), $item_count ); ?>
+								<?php echo sprintf( _n('%s for %s item', '%s for %s items', $item_count, 'renewable-energy'), $order->get_formatted_order_total(), $item_count ); ?>
 
 							<?php elseif ('order-actions' === $column_id ) : ?>
 								<?php
 									$actions = array(
 										'pay'    => array(
 											'url'  => $order->get_checkout_payment_url(),
-											'name' => __('Pay', 'renewable_energy')
+											'name' => __('Pay', 'renewable-energy')
 										),
 										'view'   => array(
 											'url'  => $order->get_view_order_url(),
-											'name' => __('View', 'renewable_energy')
+											'name' => __('View', 'renewable-energy')
 										),
 										'cancel' => array(
 											'url'  => $order->get_cancel_order_url( wc_get_page_permalink('myaccount') ),
-											'name' => __('Cancel', 'renewable_energy')
+											'name' => __('Cancel', 'renewable-energy')
 										)
 									);
 

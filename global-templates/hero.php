@@ -66,13 +66,13 @@ $second_slider_backgrownd_image  = get_theme_mod('renewable_energy_second_slider
 				<a class="carousel-control-prev" href="#heroCarouselControls" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">
-						<?php esc_html_e('Previous', 'renewable_energy'); ?>
+						<?php esc_html_e('Previous', 'renewable-energy'); ?>
 					</span>
 				</a>
 				<a class="carousel-control-next" href="#heroCarouselControls" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">
-						<?php esc_html_e('Next', 'renewable_energy'); ?>
+						<?php esc_html_e('Next', 'renewable-energy'); ?>
 					</span>
 				</a>
 				<ol class="carousel-indicators">

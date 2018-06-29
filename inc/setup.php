@@ -24,9 +24,9 @@ if ( ! function_exists('renewable_energy_setup') ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on renewable_energy, use a find and replace
-		 * to change 'renewable_energy' to the name of your theme in all the template files
+		 * to change 'renewable-energy' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain('renewable_energy', get_template_directory() . '/languages');
+		load_theme_textdomain('renewable-energy', get_template_directory() . '/languages');
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
@@ -41,7 +41,7 @@ if ( ! function_exists('renewable_energy_setup') ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __('Primary Menu', 'renewable_energy'),
+			'primary' => __('Primary Menu', 'renewable-energy'),
 		) );
 
 		/*
@@ -119,7 +119,7 @@ if ( ! function_exists('renewable_energy_all_excerpts_get_more_link') ) {
 	function renewable_energy_all_excerpts_get_more_link( $post_excerpt ) {
 
 		return $post_excerpt . ' [...]<p><a class="btn btn-secondary renewable-energy-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __('Read More...',
-		'renewable_energy') . '</a></p>';
+		'renewable-energy') . '</a></p>';
 	}
 }
 add_filter('wp_trim_excerpt', 'renewable_energy_all_excerpts_get_more_link');

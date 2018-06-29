@@ -30,7 +30,7 @@ $container   = get_theme_mod('renewable_energy_container_type');
 						$author_name ) : get_userdata( intval( $author ) );
 					?>
 
-					<h1><?php esc_html_e('About:', 'renewable_energy'); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
+					<h1><?php esc_html_e('About:', 'renewable-energy'); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
 
 					<?php if ( ! empty( $curauth->ID ) ) : ?>
 						<?php echo get_avatar( $curauth->ID ); ?>
@@ -38,19 +38,19 @@ $container   = get_theme_mod('renewable_energy_container_type');
 
 					<dl>
 						<?php if ( ! empty( $curauth->user_url ) ) : ?>
-							<dt><?php esc_html_e('Website', 'renewable_energy'); ?></dt>
+							<dt><?php esc_html_e('Website', 'renewable-energy'); ?></dt>
 							<dd>
 								<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 							</dd>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $curauth->user_description ) ) : ?>
-							<dt><?php esc_html_e('Profile', 'renewable_energy'); ?></dt>
+							<dt><?php esc_html_e('Profile', 'renewable-energy'); ?></dt>
 							<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 						<?php endif; ?>
 					</dl>
 
-					<h2><?php esc_html_e('Posts by', 'renewable_energy'); ?> <?php echo esc_html( $curauth->nickname ); ?>
+					<h2><?php esc_html_e('Posts by', 'renewable-energy'); ?> <?php echo esc_html( $curauth->nickname ); ?>
 						:</h2>
 
 				</header><!-- .page-header -->
@@ -62,10 +62,10 @@ $container   = get_theme_mod('renewable_energy_container_type');
 						<?php while ( have_posts() ) : the_post(); ?>
 							<li>
 								<a rel="bookmark" href="<?php the_permalink() ?>"
-								   title="<?php esc_html_e('Permanent Link:', 'renewable_energy'); ?> <?php the_title(); ?>">
+								   title="<?php esc_html_e('Permanent Link:', 'renewable-energy'); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
 								<?php renewable_energy_posted_on(); ?> <?php esc_html_e('in',
-								'renewable_energy'); ?> <?php the_category('&'); ?>
+								'renewable-energy'); ?> <?php the_category('&'); ?>
 							</li>
 						<?php endwhile; ?>
 

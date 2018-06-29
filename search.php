@@ -28,7 +28,7 @@ $container   = get_theme_mod('renewable_energy_container_type');
 						
 							<h1 class="page-title"><?php printf(
 							/* translators:*/
-							 esc_html__('Search Results for: %s', 'renewable_energy'),
+							 esc_html__('Search Results for: %s', 'renewable-energy'),
 								'<span>' . get_search_query() . '</span>'); ?></h1>
 
 					</header><!-- .page-header -->

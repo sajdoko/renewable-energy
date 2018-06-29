@@ -6,7 +6,7 @@
  */
 
 $wp_customize->add_panel( 'renewable_energy_home_slider_options', array(
-    'title' => __( 'Home Slider Options' ),
+    'title' => __( 'Home Slider Options', 'renewable-energy' ),
     //'description' => 'Nuk ka', // Include html tags such as <p>.
     'priority'    => 162,
 ) );
@@ -14,14 +14,14 @@ $wp_customize->add_panel( 'renewable_energy_home_slider_options', array(
 
 // Home Slider Options SECTION.
 $wp_customize->add_section('renewable_energy_first_slider_options', array(
-    'title'       => __('First Slider', 'renewable_energy'),
+    'title'       => __('First Slider', 'renewable-energy'),
     'capability'  => 'edit_theme_options',
     'panel'       => 'renewable_energy_home_slider_options',
 ) );
 
 // Home Slider Options SECTION.
 $wp_customize->add_section('renewable_energy_second_slider_options', array(
-    'title'       => __('Second Slider', 'renewable_energy'),
+    'title'       => __('Second Slider', 'renewable-energy'),
     'capability'  => 'edit_theme_options',
     'panel'       => 'renewable_energy_home_slider_options',
 ) );
@@ -40,14 +40,14 @@ $wp_customize->add_setting('renewable_energy_enable_first_slider', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_enable_first_slider', array(
-            'label'       => __('Enable First Slider', 'renewable_energy'),
+            'label'       => __('Enable First Slider', 'renewable-energy'),
             'section'     => 'renewable_energy_first_slider_options',
             'settings'    => 'renewable_energy_enable_first_slider',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '22',
         )
@@ -64,7 +64,7 @@ $wp_customize->add_setting('renewable_energy_first_slider_title', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_slider_title', array(
-            'label'       => __('First Slider Title', 'renewable_energy'),
+            'label'       => __('First Slider Title', 'renewable-energy'),
             'section'     => 'renewable_energy_first_slider_options',
             'settings'    => 'renewable_energy_first_slider_title',
             'type'        => 'text',
@@ -83,7 +83,7 @@ $wp_customize->add_setting('renewable_energy_first_slider_description', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_slider_description', array(
-            'label'       => __('First Slider Description', 'renewable_energy'),
+            'label'       => __('First Slider Description', 'renewable-energy'),
             'section'     => 'renewable_energy_first_slider_options',
             'settings'    => 'renewable_energy_first_slider_description',
             'type'        => 'textarea',
@@ -102,7 +102,7 @@ $wp_customize->add_setting('renewable_energy_first_slider_button_link', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_slider_button_link', array(
-            'label'       => __('First Slider Button Link', 'renewable_energy'),
+            'label'       => __('First Slider Button Link', 'renewable-energy'),
             'section'     => 'renewable_energy_first_slider_options',
             'settings'    => 'renewable_energy_first_slider_button_link',
             'type'        => 'url',
@@ -121,7 +121,7 @@ $wp_customize->add_setting('renewable_energy_first_slider_button_text', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_slider_button_text', array(
-            'label'       => __('First Slider Button Text', 'renewable_energy'),
+            'label'       => __('First Slider Button Text', 'renewable-energy'),
             'section'     => 'renewable_energy_first_slider_options',
             'settings'    => 'renewable_energy_first_slider_button_text',
             'type'        => 'text',
@@ -140,7 +140,7 @@ $wp_customize->add_setting('renewable_energy_first_slider_backgrownd_image', arr
 
 $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize,
         'renewable_energy_first_slider_backgrownd_image', array(
-            'label'       => __('First Slider Backgrownd Image', 'renewable_energy'),
+            'label'       => __('First Slider Backgrownd Image', 'renewable-energy'),
             'section'     => 'renewable_energy_first_slider_options',
             'settings'    => 'renewable_energy_first_slider_backgrownd_image',
             'priority'    => '27',
@@ -164,14 +164,14 @@ $wp_customize->add_setting('renewable_energy_enable_second_slider', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_enable_second_slider', array(
-            'label'       => __('Enable Second Slider', 'renewable_energy'),
+            'label'       => __('Enable Second Slider', 'renewable-energy'),
             'section'     => 'renewable_energy_second_slider_options',
             'settings'    => 'renewable_energy_enable_second_slider',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '22',
         )
@@ -188,7 +188,7 @@ $wp_customize->add_setting('renewable_energy_second_slider_title', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_slider_title', array(
-            'label'       => __('Second Slider Title', 'renewable_energy'),
+            'label'       => __('Second Slider Title', 'renewable-energy'),
             'section'     => 'renewable_energy_second_slider_options',
             'settings'    => 'renewable_energy_second_slider_title',
             'type'        => 'text',
@@ -207,7 +207,7 @@ $wp_customize->add_setting('renewable_energy_second_slider_description', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_slider_description', array(
-            'label'       => __('Second Slider Description', 'renewable_energy'),
+            'label'       => __('Second Slider Description', 'renewable-energy'),
             'section'     => 'renewable_energy_second_slider_options',
             'settings'    => 'renewable_energy_second_slider_description',
             'type'        => 'textarea',
@@ -226,7 +226,7 @@ $wp_customize->add_setting('renewable_energy_second_slider_button_link', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_slider_button_link', array(
-            'label'       => __('Second Slider Button Link', 'renewable_energy'),
+            'label'       => __('Second Slider Button Link', 'renewable-energy'),
             'section'     => 'renewable_energy_second_slider_options',
             'settings'    => 'renewable_energy_second_slider_button_link',
             'type'        => 'url',
@@ -245,7 +245,7 @@ $wp_customize->add_setting('renewable_energy_second_slider_button_text', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_slider_button_text', array(
-            'label'       => __('Second Slider Button Text', 'renewable_energy'),
+            'label'       => __('Second Slider Button Text', 'renewable-energy'),
             'section'     => 'renewable_energy_second_slider_options',
             'settings'    => 'renewable_energy_second_slider_button_text',
             'type'        => 'text',
@@ -264,7 +264,7 @@ $wp_customize->add_setting('renewable_energy_second_slider_backgrownd_image', ar
 
 $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize,
         'renewable_energy_second_slider_backgrownd_image', array(
-            'label'       => __('Second Slider Backgrownd Image', 'renewable_energy'),
+            'label'       => __('Second Slider Backgrownd Image', 'renewable-energy'),
             'section'     => 'renewable_energy_second_slider_options',
             'settings'    => 'renewable_energy_second_slider_backgrownd_image',
             'priority'    => '27',

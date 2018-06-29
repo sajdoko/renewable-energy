@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Renewable Energy\n"
-"POT-Creation-Date: 2018-06-29 18:09+0100\n"
-"PO-Revision-Date: 2018-06-29 18:12+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2018-06-29 21:35+0100\n"
+"PO-Revision-Date: 2018-06-29 21:36+0100\n"
+"Last-Translator: Sajmir Doko <sajdoko@gmail.com>\n"
 "Language-Team: Sajmir Doko <sajdoko@gmail.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -19,22 +19,22 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:29 node_modules/undescores-for-npm/404.php:17
+#: 404.php:29
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:35 node_modules/undescores-for-npm/404.php:21
+#: 404.php:35
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:45 node_modules/undescores-for-npm/404.php:33
+#: 404.php:45
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:66 node_modules/undescores-for-npm/404.php:51
+#: 404.php:66
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
@@ -79,8 +79,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: comments.php:59 comments.php:89
-#: node_modules/undescores-for-npm/comments.php:40
-#: node_modules/undescores-for-npm/comments.php:61
 msgid "Comment navigation"
 msgstr ""
 
@@ -92,7 +90,7 @@ msgstr ""
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:111 node_modules/undescores-for-npm/comments.php:78
+#: comments.php:111
 msgid "Comments are closed."
 msgstr ""
 
@@ -104,7 +102,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: header.php:40 node_modules/undescores-for-npm/header.php:24
+#: header.php:40
 msgid "Skip to content"
 msgstr ""
 
@@ -860,7 +858,7 @@ msgstr ""
 msgid "Footer Copyright Content"
 msgstr ""
 
-#: inc/setup.php:44 node_modules/undescores-for-npm/header.php:44
+#: inc/setup.php:44
 msgid "Primary Menu"
 msgstr ""
 
@@ -869,14 +867,12 @@ msgid "Read More..."
 msgstr ""
 
 #: inc/template-tags.php:26
-#: node_modules/undescores-for-npm/inc/template-tags.php:28
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #: inc/template-tags.php:30
-#: node_modules/undescores-for-npm/inc/template-tags.php:33
 #, php-format
 msgctxt "post author"
 msgid "by %s"
@@ -884,19 +880,15 @@ msgstr ""
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:45 inc/template-tags.php:50
-#: node_modules/undescores-for-npm/inc/template-tags.php:50
-#: node_modules/undescores-for-npm/inc/template-tags.php:56
 msgid ", "
 msgstr ""
 
 #: inc/template-tags.php:47
-#: node_modules/undescores-for-npm/inc/template-tags.php:52
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
 #: inc/template-tags.php:52
-#: node_modules/undescores-for-npm/inc/template-tags.php:58
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
@@ -915,8 +907,6 @@ msgstr ""
 
 #. translators: %s: Name of current post
 #: inc/template-tags.php:63
-#: node_modules/undescores-for-npm/inc/template-tags.php:72
-#: node_modules/undescores-for-npm/template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
 msgstr ""
@@ -938,26 +928,22 @@ msgid "Footer Full"
 msgstr ""
 
 #: loop-templates/content-none.php:16
-#: node_modules/undescores-for-npm/template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
 
 #: loop-templates/content-none.php:25
-#: node_modules/undescores-for-npm/template-parts/content-none.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: loop-templates/content-none.php:33
-#: node_modules/undescores-for-npm/template-parts/content-none.php:25
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
 #: loop-templates/content-none.php:38
-#: node_modules/undescores-for-npm/template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -965,8 +951,6 @@ msgstr ""
 
 #: loop-templates/content-page.php:25 loop-templates/content-single.php:31
 #: loop-templates/content.php:37
-#: node_modules/undescores-for-npm/template-parts/content-page.php:22
-#: node_modules/undescores-for-npm/template-parts/content.php:38
 msgid "Pages:"
 msgstr ""
 
@@ -974,66 +958,10 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: node_modules/undescores-for-npm/comments.php:31
-#, php-format
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: node_modules/undescores-for-npm/comments.php:43
-#: node_modules/undescores-for-npm/comments.php:64
-msgid "Older Comments"
-msgstr ""
-
-#: node_modules/undescores-for-npm/comments.php:44
-#: node_modules/undescores-for-npm/comments.php:65
-msgid "Newer Comments"
-msgstr ""
-
-#: node_modules/undescores-for-npm/footer.php:18
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: node_modules/undescores-for-npm/footer.php:18
-#, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: node_modules/undescores-for-npm/footer.php:20
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: node_modules/undescores-for-npm/functions.php:47
-msgid "Primary"
-msgstr ""
-
-#: node_modules/undescores-for-npm/functions.php:90
-msgid "Sidebar"
-msgstr ""
-
-#: node_modules/undescores-for-npm/functions.php:92
-msgid "Add widgets here."
-msgstr ""
-
-#. translators: %s: post title
-#: node_modules/undescores-for-npm/inc/template-tags.php:65
-#, php-format
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-
 #. translators:
-#: node_modules/undescores-for-npm/search.php:19 search.php:31
+#: search.php:31
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
-
-#. translators: %s: Name of current post.
-#: node_modules/undescores-for-npm/template-parts/content.php:33
-#, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: searchform.php:10 searchform.php:16

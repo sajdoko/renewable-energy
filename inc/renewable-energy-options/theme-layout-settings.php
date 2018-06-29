@@ -7,9 +7,9 @@
 
 // Theme layout settings SECTION.
     $wp_customize->add_section('renewable_energy_theme_layout_options', array(
-        'title'       => __('Renewable Energy Settings', 'renewable_energy'),
+        'title'       => __('Renewable Energy Settings', 'renewable-energy'),
         'capability'  => 'edit_theme_options',
-        'description' => __('Container width and sidebar defaults', 'renewable_energy'),
+        'description' => __('Container width and sidebar defaults', 'renewable-energy'),
         'priority'    => 161,
     ) );
 
@@ -23,14 +23,14 @@
     ) );
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
             'renewable_energy_container_type', array(
-                'label'       => __('Container Width', 'renewable_energy'),
-                'description' => __( "Choose between Bootstrap's container and container-fluid", 'renewable_energy'),
+                'label'       => __('Container Width', 'renewable-energy'),
+                'description' => __( "Choose between Bootstrap's container and container-fluid", 'renewable-energy'),
                 'section'     => 'renewable_energy_theme_layout_options',
                 'settings'    => 'renewable_energy_container_type',
                 'type'        => 'select',
                 'choices'     => array(
-                    'container'       => __('Fixed width container', 'renewable_energy'),
-                    'container-fluid' => __('Full width container', 'renewable_energy'),
+                    'container'       => __('Fixed width container', 'renewable-energy'),
+                    'container-fluid' => __('Full width container', 'renewable-energy'),
                 ),
                 'priority'    => '10',
             )
@@ -46,18 +46,18 @@
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
             'renewable_energy_sidebar_position', array(
-                'label'       => __('Sidebar Positioning', 'renewable_energy'),
+                'label'       => __('Sidebar Positioning', 'renewable-energy'),
                 'description' => __( "Set sidebar's default position. Can either be: right, left, both or none. Note: this can be overridden on individual pages.",
-                'renewable_energy'),
+                'renewable-energy'),
                 'section'     => 'renewable_energy_theme_layout_options',
                 'settings'    => 'renewable_energy_sidebar_position',
                 'type'        => 'select',
                 'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
                 'choices'     => array(
-                    'right' => __('Right sidebar', 'renewable_energy'),
-                    'left'  => __('Left sidebar', 'renewable_energy'),
-                    'both'  => __('Left & Right sidebars', 'renewable_energy'),
-                    'none'  => __('No sidebar', 'renewable_energy'),
+                    'right' => __('Right sidebar', 'renewable-energy'),
+                    'left'  => __('Left sidebar', 'renewable-energy'),
+                    'both'  => __('Left & Right sidebars', 'renewable-energy'),
+                    'none'  => __('No sidebar', 'renewable-energy'),
                 ),
                 'priority'    => '20',
             )
@@ -74,14 +74,14 @@ $wp_customize->add_setting('renewable_energy_show_preloader', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_show_preloader', array(
-            'label'       => __('Display Preloader', 'renewable_energy'),
+            'label'       => __('Display Preloader', 'renewable-energy'),
             'section'     => 'renewable_energy_theme_layout_options',
             'settings'    => 'renewable_energy_show_preloader',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '21',
         )
@@ -99,15 +99,15 @@ $wp_customize->add_setting('renewable_energy_show_slider', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_show_slider', array(
-            'label'       => __('Display Home Slider', 'renewable_energy'),
-            'description' => __( "Choose if you want to Display Home Slider.", 'renewable_energy'),
+            'label'       => __('Display Home Slider', 'renewable-energy'),
+            'description' => __( "Choose if you want to Display Home Slider.", 'renewable-energy'),
             'section'     => 'renewable_energy_theme_layout_options',
             'settings'    => 'renewable_energy_show_slider',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '21',
         )
@@ -124,14 +124,14 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
             'renewable_energy_show_hero_widget', array(
-                'label'       => __('Display Hero Widget', 'renewable_energy'),
+                'label'       => __('Display Hero Widget', 'renewable-energy'),
                 'section'     => 'renewable_energy_theme_layout_options',
                 'settings'    => 'renewable_energy_show_hero_widget',
                 'type'        => 'select',
                 'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
                 'choices'     => array(
-                    'yes' => __('Yes', 'renewable_energy'),
-                    'no'  => __('No', 'renewable_energy'),
+                    'yes' => __('Yes', 'renewable-energy'),
+                    'no'  => __('No', 'renewable-energy'),
                 ),
                 'priority'    => '21',
             )
@@ -147,14 +147,14 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
             'renewable_energy_show_footer_widget', array(
-                'label'       => __('Display Footer Widget', 'renewable_energy'),
+                'label'       => __('Display Footer Widget', 'renewable-energy'),
                 'section'     => 'renewable_energy_theme_layout_options',
                 'settings'    => 'renewable_energy_show_footer_widget',
                 'type'        => 'select',
                 'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
                 'choices'     => array(
-                    'yes' => __('Yes', 'renewable_energy'),
-                    'no'  => __('No', 'renewable_energy'),
+                    'yes' => __('Yes', 'renewable-energy'),
+                    'no'  => __('No', 'renewable-energy'),
                 ),
                 'priority'    => '22',
             )
@@ -170,14 +170,14 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_show_footer_copyright', array(
-            'label'       => __('Display Footer Copyright', 'renewable_energy'),
+            'label'       => __('Display Footer Copyright', 'renewable-energy'),
             'section'     => 'renewable_energy_theme_layout_options',
             'settings'    => 'renewable_energy_show_footer_copyright',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '23',
         )
@@ -194,7 +194,7 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
 
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_footer_copyright_content', array(
-            'label'       => __('Footer Copyright Content', 'renewable_energy'),
+            'label'       => __('Footer Copyright Content', 'renewable-energy'),
             'section'     => 'renewable_energy_theme_layout_options',
             'settings'    => 'renewable_energy_footer_copyright_content',
             'type'        => 'textarea',

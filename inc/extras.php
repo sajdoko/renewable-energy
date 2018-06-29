@@ -90,15 +90,15 @@ if ( ! function_exists('renewable_energy_post_nav') ) :
 		}
 		?>
 				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php _e('Post navigation', 'renewable_energy'); ?></h2>
+					<h2 class="sr-only"><?php _e('Post navigation', 'renewable-energy'); ?></h2>
 					<div class="row nav-links justify-content-between">
 						<?php
 
 							if ( get_previous_post_link() ) {
-								previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'renewable_energy') );
+								previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'renewable-energy') );
 							}
 							if ( get_next_post_link() ) {
-								next_post_link('<span class="nav-next">%link</span>',     _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'renewable_energy') );
+								next_post_link('<span class="nav-next">%link</span>',     _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'renewable-energy') );
 							}
 						?>
 					</div><!-- .nav-links -->

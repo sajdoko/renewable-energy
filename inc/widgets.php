@@ -50,7 +50,7 @@ if ( ! function_exists('renewable_energy_widgets_init') ) {
 	 */
 	function renewable_energy_widgets_init() {
 		register_sidebar( array(
-			'name'          => __('Right Sidebar', 'renewable_energy'),
+			'name'          => __('Right Sidebar', 'renewable-energy'),
 			'id'            => 'right-sidebar',
 			'description'   => 'Right sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -60,7 +60,7 @@ if ( ! function_exists('renewable_energy_widgets_init') ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __('Left Sidebar', 'renewable_energy'),
+			'name'          => __('Left Sidebar', 'renewable-energy'),
 			'id'            => 'left-sidebar',
 			'description'   => 'Left sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -69,7 +69,7 @@ if ( ! function_exists('renewable_energy_widgets_init') ) {
 			'after_title'   => '</h3>',
 		) );
 		register_sidebar( array(
-			'name'          => __('Hero Static', 'renewable_energy'),
+			'name'          => __('Hero Static', 'renewable-energy'),
 			'id'            => 'statichero',
 			'description'   => 'Static Hero widget. no slider functionallity',
 		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. renewable_energy_slbd_count_widgets('statichero') .'">', 
@@ -79,7 +79,7 @@ if ( ! function_exists('renewable_energy_widgets_init') ) {
 		) );
 
 		register_sidebar( array(
-			'name'          => __('Footer Full', 'renewable_energy'),
+			'name'          => __('Footer Full', 'renewable-energy'),
 			'id'            => 'footerfull',
 			'description'   => 'Widget area below main content and above footer',
 		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. renewable_energy_slbd_count_widgets('footerfull') .'">', 

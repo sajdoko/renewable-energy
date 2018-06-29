@@ -34,7 +34,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __('Pages:', 'renewable_energy'),
+			'before' => '<div class="page-links">' . __('Pages:', 'renewable-energy'),
 			'after'  => '</div>',
 		) );
 		?>

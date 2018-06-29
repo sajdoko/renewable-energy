@@ -6,7 +6,7 @@
  */
 
 $wp_customize->add_panel( 'renewable_energy_featurette_options', array(
-    'title' => __( 'Home Featurette Options' ),
+    'title' => __( 'Home Featurette Options', 'renewable-energy' ),
     //'description' => 'Nuk ka', // Include html tags such as <p>.
     'priority'    => 163,
 ) );
@@ -14,14 +14,14 @@ $wp_customize->add_panel( 'renewable_energy_featurette_options', array(
 
 // First Featurette Options SECTION.
 $wp_customize->add_section('renewable_energy_first_featurette_options', array(
-    'title'       => __('First Featurette Options', 'renewable_energy'),
+    'title'       => __('First Featurette Options', 'renewable-energy'),
     'capability'  => 'edit_theme_options',
     'panel'       => 'renewable_energy_featurette_options',
 ) );
 
 // Second Featurette Options SECTION.
 $wp_customize->add_section('renewable_energy_second_featurette_options', array(
-    'title'       => __('Second Featurette Options', 'renewable_energy'),
+    'title'       => __('Second Featurette Options', 'renewable-energy'),
     'capability'  => 'edit_theme_options',
     'panel'       => 'renewable_energy_featurette_options',
 ) );
@@ -40,14 +40,14 @@ $wp_customize->add_setting('renewable_energy_enable_first_featurette', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_enable_first_featurette', array(
-            'label'       => __('Enable First Featurette', 'renewable_energy'),
+            'label'       => __('Enable First Featurette', 'renewable-energy'),
             'section'     => 'renewable_energy_first_featurette_options',
             'settings'    => 'renewable_energy_enable_first_featurette',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '22',
         )
@@ -64,7 +64,7 @@ $wp_customize->add_setting('renewable_energy_first_featurette_title', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_featurette_title', array(
-            'label'       => __('First Featurette Title', 'renewable_energy'),
+            'label'       => __('First Featurette Title', 'renewable-energy'),
             'section'     => 'renewable_energy_first_featurette_options',
             'settings'    => 'renewable_energy_first_featurette_title',
             'type'        => 'text',
@@ -83,7 +83,7 @@ $wp_customize->add_setting('renewable_energy_first_featurette_description', arra
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_featurette_description', array(
-            'label'       => __('First Featurette Description', 'renewable_energy'),
+            'label'       => __('First Featurette Description', 'renewable-energy'),
             'section'     => 'renewable_energy_first_featurette_options',
             'settings'    => 'renewable_energy_first_featurette_description',
             'type'        => 'textarea',
@@ -102,7 +102,7 @@ $wp_customize->add_setting('renewable_energy_first_featurette_button_text', arra
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_featurette_button_text', array(
-            'label'       => __('First Featurette Button Text', 'renewable_energy'),
+            'label'       => __('First Featurette Button Text', 'renewable-energy'),
             'section'     => 'renewable_energy_first_featurette_options',
             'settings'    => 'renewable_energy_first_featurette_button_text',
             'type'        => 'text',
@@ -121,7 +121,7 @@ $wp_customize->add_setting('renewable_energy_first_featurette_button_link', arra
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_first_featurette_button_link', array(
-            'label'       => __('First Featurette Button Link', 'renewable_energy'),
+            'label'       => __('First Featurette Button Link', 'renewable-energy'),
             'section'     => 'renewable_energy_first_featurette_options',
             'settings'    => 'renewable_energy_first_featurette_button_link',
             'type'        => 'url',
@@ -140,7 +140,7 @@ $wp_customize->add_setting('renewable_energy_first_featurette_backgrownd_image',
 
 $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize,
         'renewable_energy_first_featurette_backgrownd_image', array(
-            'label'       => __('First Featurette Backgrownd Image', 'renewable_energy'),
+            'label'       => __('First Featurette Backgrownd Image', 'renewable-energy'),
             'section'     => 'renewable_energy_first_featurette_options',
             'settings'    => 'renewable_energy_first_featurette_backgrownd_image',
             'priority'    => '27',
@@ -164,14 +164,14 @@ $wp_customize->add_setting('renewable_energy_enable_second_featurette', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_enable_second_featurette', array(
-            'label'       => __('Enable Second Featurette', 'renewable_energy'),
+            'label'       => __('Enable Second Featurette', 'renewable-energy'),
             'section'     => 'renewable_energy_second_featurette_options',
             'settings'    => 'renewable_energy_enable_second_featurette',
             'type'        => 'select',
             'sanitize_callback' => 'renewable_energy_theme_slug_sanitize_select',
             'choices'     => array(
-                'yes' => __('Yes', 'renewable_energy'),
-                'no'  => __('No', 'renewable_energy'),
+                'yes' => __('Yes', 'renewable-energy'),
+                'no'  => __('No', 'renewable-energy'),
             ),
             'priority'    => '22',
         )
@@ -188,7 +188,7 @@ $wp_customize->add_setting('renewable_energy_second_featurette_title', array(
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_featurette_title', array(
-            'label'       => __('Second Featurette Title', 'renewable_energy'),
+            'label'       => __('Second Featurette Title', 'renewable-energy'),
             'section'     => 'renewable_energy_second_featurette_options',
             'settings'    => 'renewable_energy_second_featurette_title',
             'type'        => 'text',
@@ -207,7 +207,7 @@ $wp_customize->add_setting('renewable_energy_second_featurette_description', arr
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_featurette_description', array(
-            'label'       => __('Second Featurette Description', 'renewable_energy'),
+            'label'       => __('Second Featurette Description', 'renewable-energy'),
             'section'     => 'renewable_energy_second_featurette_options',
             'settings'    => 'renewable_energy_second_featurette_description',
             'type'        => 'textarea',
@@ -226,7 +226,7 @@ $wp_customize->add_setting('renewable_energy_second_featurette_button_text', arr
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_featurette_button_text', array(
-            'label'       => __('Second Featurette Button Text', 'renewable_energy'),
+            'label'       => __('Second Featurette Button Text', 'renewable-energy'),
             'section'     => 'renewable_energy_second_featurette_options',
             'settings'    => 'renewable_energy_second_featurette_button_text',
             'type'        => 'text',
@@ -245,7 +245,7 @@ $wp_customize->add_setting('renewable_energy_second_featurette_button_link', arr
 
 $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
         'renewable_energy_second_featurette_button_link', array(
-            'label'       => __('Second Featurette Button Link', 'renewable_energy'),
+            'label'       => __('Second Featurette Button Link', 'renewable-energy'),
             'section'     => 'renewable_energy_second_featurette_options',
             'settings'    => 'renewable_energy_second_featurette_button_link',
             'type'        => 'url',
@@ -264,7 +264,7 @@ $wp_customize->add_setting('renewable_energy_second_featurette_backgrownd_image'
 
 $wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize,
         'renewable_energy_second_featurette_backgrownd_image', array(
-            'label'       => __('Second Featurette Backgrownd Image', 'renewable_energy'),
+            'label'       => __('Second Featurette Backgrownd Image', 'renewable-energy'),
             'section'     => 'renewable_energy_second_featurette_options',
             'settings'    => 'renewable_energy_second_featurette_backgrownd_image',
             'priority'    => '27',

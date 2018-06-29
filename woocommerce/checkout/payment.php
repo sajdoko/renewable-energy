@@ -32,15 +32,15 @@ if ( ! is_ajax() ) {
 						wc_get_template('checkout/payment-method.php', array('gateway' => $gateway ) );
 					}
 				} else {
-					echo '<li>' . apply_filters('woocommerce_no_available_payment_methods_message', WC()->customer->get_country() ? __('Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'renewable_energy') : __('Please fill in your details above to see available payment methods.', 'renewable_energy') ) . '</li>';
+					echo '<li>' . apply_filters('woocommerce_no_available_payment_methods_message', WC()->customer->get_country() ? __('Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'renewable-energy') : __('Please fill in your details above to see available payment methods.', 'renewable-energy') ) . '</li>';
 				}
 			?>
 		</ul>
 	<?php endif; ?>
 	<div class="form-row place-order">
 		<noscript>
-			<?php _e('Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'renewable_energy'); ?>
-			<br/><input type="submit" class="btn btn-primary" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e('Update totals', 'renewable_energy'); ?>" />
+			<?php _e('Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.', 'renewable-energy'); ?>
+			<br/><input type="submit" class="btn btn-primary" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e('Update totals', 'renewable-energy'); ?>" />
 		</noscript>
 
 		<?php wc_get_template('checkout/terms.php'); ?>
