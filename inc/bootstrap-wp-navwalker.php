@@ -208,7 +208,23 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			if ( $container ) {
 				$fb_output .= '</' . $container . '>';
 			}
-			echo $fb_output;
+			echo wp_kses(
+				$fb_output,
+				array(
+					'a' => array(
+						'href' => array(),
+						'title' => array(),
+						'target' => array(),
+						'alt' => array(),
+					),
+					'br' => array(),
+					'class' => array(),
+					'id' => array(),
+					'ul' => array(),
+					'li' => array(),
+				)
+			)
+			;
 		}
 	}
 }

@@ -1,2 +1,0 @@
-- Add Social to Customizer
-- Add Contacts to Customizer

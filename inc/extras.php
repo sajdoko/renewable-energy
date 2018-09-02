@@ -90,7 +90,7 @@ if ( ! function_exists('renewable_energy_post_nav') ) :
 		}
 		?>
 				<nav class="container navigation post-navigation">
-					<h2 class="sr-only"><?php _e('Post navigation', 'renewable-energy'); ?></h2>
+					<h2 class="sr-only"><?php esc_attr_e('Post navigation', 'renewable-energy'); ?></h2>
 					<div class="row nav-links justify-content-between">
 						<?php
 

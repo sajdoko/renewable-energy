@@ -25,7 +25,6 @@ $container   = get_theme_mod('renewable_energy_container_type');
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-						
 							<h1 class="page-title"><?php printf(
 							/* translators:*/
 							 esc_html__('Search Results for: %s', 'renewable-energy'),

@@ -185,7 +185,7 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
 // Ends Display Footer Copyright
 // Begins Footer Copyright Content
     $wp_customize->add_setting('renewable_energy_footer_copyright_content', array(
-        'default'           => 'Copyright © 2018  <a href="https://github.com/sajdoko/renewable-energy" alt="Renewable Energy">Renewable Energy</a>',
+        'default'           => 'Copyright @ 2018  <a href="https://github.com/sajdoko/renewable-energy" alt="Renewable Energy">Renewable Energy</a>',
         'type'              => 'theme_mod',
         'sanitize_callback' => 'wp_kses_post', //keeps only HTML tags that are allowed in post content
         'capability'        => 'edit_theme_options',

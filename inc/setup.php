@@ -87,9 +87,6 @@ if ( ! function_exists('renewable_energy_setup') ) :
 		// Set up the WordPress Theme logo feature.
 		add_theme_support('custom-logo');
 
-		// Check and setup theme default settings.
-		renewable_energy_setup_theme_default_settings();
-
 	}
 endif; // renewable_energy_setup.
 add_action('after_setup_theme', 'renewable_energy_setup');

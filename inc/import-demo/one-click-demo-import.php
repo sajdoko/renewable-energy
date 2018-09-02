@@ -58,23 +58,23 @@ function ocdi_plugin_intro_text( $plugin_intro_text ) {
     ?>
 
         <div class="ocdi__intro-notice  notice  notice-warning  is-dismissible">
-            <p><?php esc_html_e( 'Before you begin, make sure all the required plugins are activated.', 'renewable-energy' ); ?></p>
+            <p><?php esc_attr_e( 'Before you begin, make sure all the required plugins are activated.', 'renewable-energy' ); ?></p>
         </div>
 
         <div class="ocdi__intro-text">
             <p class="about-description">
-                <?php //esc_html_e( 'Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme.', 'renewable-energy' ); ?>
-                <?php //esc_html_e( 'It will allow you to quickly edit everything instead of creating content from scratch.', 'renewable-energy' ); ?>
+                <?php //esc_attr_e( 'Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme.', 'renewable-energy' ); ?>
+                <?php //esc_attr_e( 'It will allow you to quickly edit everything instead of creating content from scratch.', 'renewable-energy' ); ?>
             </p>
 
             <hr>
 
-            <p><?php esc_html_e( 'When you import the data, the following things might happen:', 'renewable-energy' ); ?></p>
+            <p><?php esc_attr_e( 'When you import the data, the following things might happen:', 'renewable-energy' ); ?></p>
 
             <ul>
-                <li><?php esc_html_e( 'No existing posts, pages, categories, images, custom post types or any other data will be deleted or modified.', 'renewable-energy' ); ?></li>
-                <li><?php esc_html_e( 'Posts, pages, images, widgets, menus and other theme settings will get imported.', 'renewable-energy' ); ?></li>
-                <li><?php esc_html_e( 'Please click on the Import button only once and wait, it can take a couple of minutes.', 'renewable-energy' ); ?></li>
+                <li><?php esc_attr_e( 'No existing posts, pages, categories, images, custom post types or any other data will be deleted or modified.', 'renewable-energy' ); ?></li>
+                <li><?php esc_attr_e( 'Posts, pages, images, widgets, menus and other theme settings will get imported.', 'renewable-energy' ); ?></li>
+                <li><?php esc_attr_e( 'Please click on the Import button only once and wait, it can take a couple of minutes.', 'renewable-energy' ); ?></li>
             </ul>
             <hr>
         </div>

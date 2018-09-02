@@ -9,8 +9,8 @@
 
 $the_theme = wp_get_theme();
 $container = get_theme_mod('renewable_energy_container_type');
-$show_footer_copyright = get_theme_mod('renewable_energy_show_footer_copyright');
-$footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content');
+$show_footer_copyright = get_theme_mod('renewable_energy_show_footer_copyright') ? get_theme_mod('renewable_energy_show_footer_copyright') : 'yes';
+$footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content') ? get_theme_mod('renewable_energy_footer_copyright_content'): '<a href="https://github.com/sajdoko/renewable-energy" alt="Renewable Energy" target="_blank">Renewable Energy</a>';
 ?>
 
 <?php get_sidebar('footerfull'); ?>
@@ -27,7 +27,19 @@ $footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_con
 					<footer class="site-footer" id="colophon">
 
 						<div class="site-info">
-							<span class="footer-copyright">Copyright &copy; <?php echo date("Y");?><?php echo ' ' . $footer_copyright_content; ?></span>
+							<span class="footer-copyright">Copyright&copy; <?php echo date("Y");?>
+								<?php echo ' ' . wp_kses($footer_copyright_content, array(
+									'a' => array(
+										'href' => array(),
+										'title' => array(),
+										'target' => array(),
+										'alt' => array(),
+									),
+									'br' => array(),
+									'em' => array(),
+									'strong' => array(),
+								));?>
+							</span>
 						</div><!-- .site-info -->
 
 					</footer><!-- #colophon -->
