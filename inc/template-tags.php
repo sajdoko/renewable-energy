@@ -61,7 +61,7 @@ function renewable_energy_entry_footer() {
 		sprintf(
 			/* translators: %s: Name of current post */
 			esc_html__('Edit %s', 'renewable-energy'),
-			the_title_attribute('<span class="screen-reader-text">"', '"</span>', false )
+			the_title('<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
 		'</span>'

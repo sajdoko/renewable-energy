@@ -26,13 +26,13 @@ $sidebar_pos = get_theme_mod('renewable_energy_sidebar_position');
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_attr_e('Oops! That page can&rsquo;t be found.', 'renewable-energy'); ?></h1>
+							<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'renewable-energy'); ?></h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-						<p><?php esc_attr_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'renewable-energy'); ?></p>
+						<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'renewable-energy'); ?></p>
 
 						<?php get_search_form(); ?>
 
@@ -42,7 +42,7 @@ $sidebar_pos = get_theme_mod('renewable_energy_sidebar_position');
 
 							<div class="widget widget_categories">
 
-								<h2 class="widget-title"><?php esc_attr_e('Most Used Categories', 'renewable-energy'); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'renewable-energy'); ?></h2>
 
 								<ul>
 									<?php

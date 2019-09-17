@@ -74,7 +74,7 @@ function renewable_energy_register_required_plugins() {
 		array(
 			'name'        => 'One Click Demo Import',
 			'slug'        => 'one-click-demo-import',
-			'required'    => false, // If false, the plugin is only 'recommended' instead of required
+			'required'    => true, // If false, the plugin is only 'recommended' instead of required
 		),
 		array(
 			'name'        => 'Contact Form 7',

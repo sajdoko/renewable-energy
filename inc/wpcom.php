@@ -35,6 +35,6 @@ add_action('after_setup_theme', 'renewable_energy_wpcom_setup');
  * WordPress.com-specific styles
  */
 function renewable_energy_wpcom_styles() {
-	wp_enqueue_style('renewable-energy-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', '20160411');
+	wp_enqueue_style('renewable-energy-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', wp_get_theme()->get('Version'));
 }
 add_action('wp_enqueue_scripts', 'renewable_energy_wpcom_styles');
