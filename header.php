@@ -51,14 +51,11 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 						<?php if ( is_front_page() && is_home() ) : ?>
 
 							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" itemprop="url"><?php bloginfo('name'); ?></a></h1>
-							
-						<?php else : ?>
 
+						<?php else : ?>
 							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
-						
 						<?php endif; ?>
-						
-					
+
 					<?php } else {
 						the_custom_logo();
 					} ?><!-- end custom logo -->
@@ -86,3 +83,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 		</nav><!-- .site-navigation -->
 
 	</div><!-- .wrapper-navbar end -->
+
+	<nav class="<?php echo esc_attr( $container ); ?>" aria-label="breadcrumb">
+		<?php if (function_exists('renewable_energy_breadcrumbs')) renewable_energy_breadcrumbs(); ?>
+	</nav>
