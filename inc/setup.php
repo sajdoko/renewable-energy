@@ -116,10 +116,10 @@ if ( ! function_exists('renewable_energy_all_excerpts_get_more_link') ) {
 	 *
 	 * @return string
 	 */
-	function renewable_energy_all_excerpts_get_more_link( $post_excerpt ) {
+	function renewable_energy_all_excerpts_get_more_link( $more  ) {
 
-		return $post_excerpt . ' [...]<p><a class="btn btn-secondary renewable-energy-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __('Read More...',
+		return $more  . ' [...]<p><a class="btn btn-secondary renewable-energy-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __('Read More ...',
 		'renewable-energy') . '</a></p>';
 	}
 }
-add_filter('wp_trim_excerpt', 'renewable_energy_all_excerpts_get_more_link');
+add_filter('excerpt_more', 'renewable_energy_all_excerpts_get_more_link', 999);

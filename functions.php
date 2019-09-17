@@ -52,6 +52,11 @@ require get_template_directory() . '/inc/pagination.php';
 require get_template_directory() . '/inc/slider-post-type.php';
 
 /**
+ * Adds Projects finctionality.
+ */
+require get_template_directory() . '/inc/project-post-type.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';

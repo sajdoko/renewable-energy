@@ -2,20 +2,24 @@
 
 // Create Slides Post Type
 
-function register_slides_posttype() {
+function register_slides_posttype_init() {
+    /**
+     * add the projects custom post type
+     * https://codex.wordpress.org/Function_Reference/register_post_type
+     */
     $labels = array(
-        'name'                  => __('Slides', 'post type general name'),
-        'singular_name'         => __('Slide', 'post type singular name'),
-        'add_new'               => __('Add New Slide'),
-        'add_new_item'          => __('Add New Slide'),
-        'edit_item'             => __('Edit Slide'),
-        'new_item'              => __('New Slide'),
-        'view_item'             => __('View Slide'),
-        'search_items'          => __('Search Slides'),
-        'not_found'             => __('Slide'),
-        'not_found_in_trash'    => __('Slide'),
-        'parent_item_colon'     => __('Slide'),
-        'menu_name'             => __('Slides'),
+        'name'                  => _x('Slides', 'post type general name', 'renewable-energy'),
+        'singular_name'         => _x('Slide', 'post type singular name', 'renewable-energy'),
+        'add_new'               => __('Add New Slide', 'renewable-energy'),
+        'add_new_item'          => __('Add New Slide', 'renewable-energy'),
+        'edit_item'             => __('Edit Slide', 'renewable-energy'),
+        'new_item'              => __('New Slide', 'renewable-energy'),
+        'view_item'             => __('View Slide', 'renewable-energy'),
+        'search_items'          => __('Search Slides', 'renewable-energy'),
+        'not_found'             => __('Slide', 'renewable-energy'),
+        'not_found_in_trash'    => __('Slide', 'renewable-energy'),
+        'parent_item_colon'     => __('Slide', 'renewable-energy'),
+        'menu_name'             => __('Slides', 'renewable-energy'),
     );
 
     $taxonomies = array();
@@ -24,7 +28,7 @@ function register_slides_posttype() {
 
     $post_type_args = array(
         'labels'                => $labels,
-        'singular_label'        => __('Slide'),
+        'singular_label'        => _x('Slide', 'renewable-energy'),
         'public'                => true,
         'show_ui'               => true,
         'publicly_queryable'    => true,
@@ -34,13 +38,13 @@ function register_slides_posttype() {
         'hierarchical'          => false,
         'rewrite'               => array('slug' => 'slides', 'with_front' => false),
         'supports'              => $supports,
-        'menu_position'         => 27, // Where it is in the menu. Change to 6 and it's below posts. 11 and it's below media, etc.
+        'menu_position'         => 7, // Where it is in the menu. Change to 6 and it's below posts. 11 and it's below media, etc.
         'menu_icon'             => 'dashicons-image-flip-horizontal',
         'taxonomies'            => $taxonomies,
     );
     register_post_type('slides', $post_type_args);
 }
-add_action('init', 'register_slides_posttype');
+add_action('init', 'register_slides_posttype_init');
 
 
 // Create Slider

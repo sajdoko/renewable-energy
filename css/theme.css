@@ -6225,6 +6225,7 @@ tbody.collapse.show {
 
 .card-img-top {
   width: 100%;
+  margin: 0 !important;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
