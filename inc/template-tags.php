@@ -130,11 +130,11 @@ if (!function_exists('renewable_energy_breadcrumbs')):
     }
     function renewable_energy_breadcrumbs() {
         global $post;
-
-        if ((is_front_page()) || (is_home())) {
+        if (is_front_page()) {
+            return;
         } else {
             $html = '<ol class="breadcrumb">';
-            $html .= '<li class="breadcrumb-item"><a href="' . esc_url(home_url('/')) . '">Home</a></li>';
+            $html .= '<li class="breadcrumb-item"><a href="' . esc_url(home_url('/')) . '">' . __('Home', 'renewable-energy') . '</a></li>';
             if (is_attachment()) {
                 $parent = get_post($post->post_parent);
                 $categories = get_the_category($parent->ID);
@@ -170,8 +170,19 @@ if (!function_exists('renewable_energy_breadcrumbs')):
                 $html .= custom_get_category_parents($categories[0]);
             }
             $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+        } elseif (is_singular('projects')) {
+            $categories = get_the_terms($post->ID, 'type');
+            if ($categories[0]) {
+                $html .= custom_get_category_parents($categories[0]);
+            }
+            $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+        } elseif (is_singular('slides')) {
+            $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
         } elseif (is_tag()) {
             $html .= '<li class="breadcrumb-item active">' . single_tag_title('', false) . '</li>';
+        } elseif (is_tax()) {
+            $current_term = single_term_title("", false);
+            $html .= '<li class="breadcrumb-item active">' . $current_term . '</li>';
         } elseif (is_day()) {
             $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . get_the_time('Y') . '</a></li>';
             $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_month_link(get_the_time('Y'), get_the_time('m'))) . '">' . get_the_time('m') . '</a></li>';
@@ -184,17 +195,19 @@ if (!function_exists('renewable_energy_breadcrumbs')):
         } elseif (is_author()) {
             $html .= '<li class="breadcrumb-item active">' . get_the_author() . '</li>';
         } elseif (is_archive()) {
-            $html .= '<li class="breadcrumb-item active">' . the_archive_title() . '</li>';
+            $html .= '<li class="breadcrumb-item active">' . post_type_archive_title('', false) . '</li>';
         } elseif (is_search()) {
-
+            $html .= '<li class="breadcrumb-item active">' . __('Search Results for: ', 'renewable-energy') . '<b>' . get_search_query() . '</b></li>';
         } elseif (is_404()) {
-
+            $html .= '<li class="breadcrumb-item active">' . __('404 Page', 'renewable-energy') . '</li>';
+        } elseif (is_home()) {
+            $html .= '<li class="breadcrumb-item active">' . __('Blog', 'renewable-energy') . '</li>';
         } else {
-            $html .= '<li class="breadcrumb-item active">Nuk gjeta</li>';
+            $html .= '<li class="breadcrumb-item active"></li>';
         }
-			$html .= '</ol>';
-			echo $html;
     }
+    $html .= '</ol>';
+    echo $html;
 }
 
 endif;

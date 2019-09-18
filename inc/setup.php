@@ -123,3 +123,24 @@ if ( ! function_exists('renewable_energy_all_excerpts_get_more_link') ) {
 	}
 }
 add_filter('excerpt_more', 'renewable_energy_all_excerpts_get_more_link', 999);
+
+if ( ! function_exists('renewable_energy_archive_title') ) {
+	/**
+	 * Get rid of the “Category:”, “Tag:”, “Author:”, “Archives:” and “Other taxonomy name:” in the archive title
+	 */
+	function renewable_energy_archive_title( $title ) {
+		if ( is_category() ) {
+				$title = single_cat_title( '', false );
+		} elseif ( is_tag() ) {
+				$title = single_tag_title( '', false );
+		} elseif ( is_author() ) {
+				$title = '<span class="vcard">' . get_the_author() . '</span>';
+		} elseif ( is_post_type_archive() ) {
+				$title = post_type_archive_title( '', false );
+		} elseif ( is_tax() ) {
+				$title = single_term_title( '', false );
+		}
+		return $title;
+	}
+}
+add_filter( 'get_the_archive_title', 'renewable_energy_archive_title' );
