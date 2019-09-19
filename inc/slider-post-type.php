@@ -66,7 +66,7 @@ function renewable_energy_slider_template() {
         <div class="carousel-inner" role="listbox">
         <?php while ($the_query->have_posts()): $the_query->the_post();?>
             <div class="carousel-item">
-                <div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="border-top: 1px solid rgba(255,255,255,.1); background-image: url('<?php the_post_thumbnail_url( 'full' ) ?>');background-size: cover;">
+                <div class="jumbotron py-5 jumbotron-fluid" style="border-top: 1px solid rgba(255,255,255,.1); background-image: url('<?php the_post_thumbnail_url( 'full' ) ?>');background-size: cover;">
                     <div class="container py-5">
                         <div class="row" style="min-height: 250px;">
                             <div class="col-md-12">

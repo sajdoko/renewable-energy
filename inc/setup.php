@@ -86,6 +86,10 @@ if ( ! function_exists('renewable_energy_setup') ) :
 
 		// Set up the WordPress Theme logo feature.
 		add_theme_support('custom-logo');
+		
+		// Set up the WordPress Theme custom thumbnail sizes.
+    add_image_size( 'project-thumb-1', 200, 250, true );
+    add_image_size( 'project-thumb-2', 350, 200, true );
 
 		// Check and setup theme default settings.
 		renewable_energy_setup_theme_default_settings();
@@ -118,7 +122,7 @@ if ( ! function_exists('renewable_energy_all_excerpts_get_more_link') ) {
 	 */
 	function renewable_energy_all_excerpts_get_more_link( $more  ) {
 
-		return $more  . ' [...]<p><a class="btn btn-secondary renewable-energy-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __('Read More ...',
+		return $more  . ' [...]<p><a class="btn btn-success renewable-energy-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __('Read More ...',
 		'renewable-energy') . '</a></p>';
 	}
 }

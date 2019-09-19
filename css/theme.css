@@ -10759,11 +10759,9 @@ a.text-dark:focus {
   border-bottom: 1px solid #dee2e6;
 }
 
-#wrapper-footer-full,
-#wrapper-static-hero {
-  background-color: #e9ecef;
+#wrapper-footer-full {
+  background-color: #E9ECEF;
 }
-
 .wp-caption {
   font-size: inherit;
 }
@@ -14165,4 +14163,20 @@ img.wp-post-image {
 .wpcf7 .wpcf7-validation-errors {
   color: #dc3545;
   border: 1px solid #e9ecef;
+}
+.re-cta-flat {
+  background:#343a40;
+  padding:50px 0;
+}
+.re-cta-flat .re-cta-box h2 {
+  color:#fff;
+  font-size:42px;
+  font-weight:900;
+}
+.re-cta-flat .re-cta-box p {
+  color:#dcdcdc;
+  font-size:22px;
+}
+.re-cta-flat .re-cta-box .btn {
+  border-radius:30px;
 }

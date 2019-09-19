@@ -33,7 +33,7 @@ $container   = get_theme_mod('renewable_energy_container_type');
 											<p class="card-text"><?php the_excerpt(); ?></p>
 											<div class="d-flex justify-content-between align-items-center">
 												<div class="btn-group">
-												<a class="btn btn-secondary btn-sm renewable-energy-read-more-link" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title(); ?>"><?php echo __('Read More', 'renewable-energy'); ?></a>
+												<a class="btn btn-success btn-sm renewable-energy-read-more-link" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title(); ?>"><?php echo __('Read More', 'renewable-energy'); ?></a>
 												</div>
 												<small class="text-muted"><?php renewable_energy_posted_on(); ?></small>
 											</div>
