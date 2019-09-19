@@ -10,7 +10,7 @@
 $the_theme = wp_get_theme();
 $container = get_theme_mod('renewable_energy_container_type');
 $show_footer_copyright = get_theme_mod('renewable_energy_show_footer_copyright') ? get_theme_mod('renewable_energy_show_footer_copyright') : 'yes';
-$footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content') ? get_theme_mod('renewable_energy_footer_copyright_content'): '<a href="https://github.com/sajdoko/renewable-energy" alt="Renewable Energy" target="_blank">Renewable Energy</a>';
+$footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content') ? get_theme_mod('renewable_energy_footer_copyright_content'): '<a href="'. $the_theme->get( 'ThemeURI' ) .'" alt="'. $the_theme->get( 'Name' ) .'" target="_blank">'. $the_theme->get( 'Name' ) .'</a>';
 ?>
 
 <?php get_sidebar('footerfull'); ?>

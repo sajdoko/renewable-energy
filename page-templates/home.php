@@ -66,10 +66,10 @@ $renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_
 								<p class="card-text mb-auto">
 									<?php echo wp_trim_words(get_the_excerpt(), 15); ?>
 								</p>
-								<a class="stretched-link" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title(); ?>"><?php echo __('Continue reading', 'renewable-energy'); ?></a>
+								<a class="stretched-link" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title_attribute(); ?>"><?php echo __('Continue reading', 'renewable-energy'); ?></a>
 							</div>
 							<div class="col-auto d-none d-lg-block">
-									<a href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title(); ?>">
+									<a href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title_attribute(); ?>">
 										<?php echo get_the_post_thumbnail( $post->ID, 'project-thumb-1', array( 'class' => 'card-img-top' ) ); ?>
 									</a>
 							</div>

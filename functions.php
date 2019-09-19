@@ -6,11 +6,6 @@
  */
 
 /**
- * Initialize theme default settings
- */
-require get_template_directory() . '/inc/theme-settings.php';
-
-/**
  * Theme setup and custom theme supports.
  */
 require get_template_directory() . '/inc/setup.php';
@@ -45,16 +40,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/pagination.php';
-
-/**
- * Adds slider finctionality.
- */
-require get_template_directory() . '/inc/slider-post-type.php';
-
-/**
- * Adds Projects finctionality.
- */
-require get_template_directory() . '/inc/project-post-type.php';
 
 /**
  * Custom functions that act independently of the theme templates.
