@@ -4,10 +4,10 @@ Contributors: sajdoko
 Tags: energy, custom-logo, custom-menu, solar, threaded-comments, bootstrap, renewable
 
 Requires at least: 4.5
-Tested up to: 5.2.3
-Stable tag: 1.2.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+Tested up to: 5.3.2
+Stable tag: 5.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Renewable Energy is a Wordpress theme designed for renewable energy and sustainable energy companies.
 
@@ -32,6 +32,7 @@ Renewable Energy includes support for Jetpack, WooCommerce and Contact Form 7.
 
 == Changelog ==
 
+= 1.2.1 - Janary. 13th 2020 =
 = 1.2.0 - Settember. 20th 2019 =
 = 1.0.0 - June. 24th 2018 =
 * Initial release
@@ -45,4 +46,4 @@ Renewable Energy includes support for Jetpack, WooCommerce and Contact Form 7.
 and of course
 * WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
 * One Click Demo Import By [ProteusThemes](https://wordpress.org/plugins/one-click-demo-import/)
-* Images&Graphics from [Public Domain Pictures.net](https://publicdomainpictures.net) and [Pixabay](https://pixabay.com/)
+* Images from [pxhere.com](https://pxhere.com/):  [slide-1.jpg](https://pxhere.com/en/photo/638728), [hydropower.jpg](https://pxhere.com/en/photo/789094), [wind-energy.jpg](https://pxhere.com/en/photo/954757), [solar-energy.jpg](https://pxhere.com/en/photo/1358139)
