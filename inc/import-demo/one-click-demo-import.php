@@ -32,7 +32,7 @@ function ocdi_import_files() {
 	);
 	// Assign front page and posts page (blog page).
 	$front_page_id = get_page_by_title( 'Home' );
-	$blog_page_id  = get_page_by_title( 'Blog' );
+	$blog_page_id  = get_page_by_title( 'News' );
 
 	update_option( 'show_on_front', 'page' );
 	update_option( 'page_on_front', $front_page_id->ID );

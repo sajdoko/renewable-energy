@@ -25,7 +25,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 </head>
 
 <body <?php body_class(); ?>>
-
+<?php wp_body_open(); ?>
 <?php if ($show_preloader == 'yes') : ?>
 	<div class="loader-body" id="loader">
 		<div class="loader"></div>
