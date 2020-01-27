@@ -8,14 +8,14 @@ Tested up to: 5.3.2
 Stable tag: 5.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Tags: left-sidebar, right-sidebar, custom-header, custom-menu, custom-background, editor-style, featured-images, microformats, post-formats, translation-ready
+Tags: left-sidebar, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, featured-images, translation-ready, post-formats, theme-options
 Text Domain: renewable-energy
 
-Renewable Energy is a Wordpress theme designed for renewable energy and sustainable energy companies.
+Renewable Energy is a WordPress theme designed for renewable energy and sustainable energy companies.
 
 == Description ==
 
-Renewable Energy is a Wordpress theme designed for renewable energy and sustainable energy companies. How to install demo data: 1- Install and aktivate the theme; 2- Install and activate all 3 recommended plugins: Renewable Energy CPT, Contact Form 7 and One Click Demo Import; 3- After activating all tree plugins go to Aparence > Import Demo Data and click the button 'Import Demo Data'
+Renewable Energy is a WordPress theme designed for renewable energy and sustainable energy companies. How to install demo data: 1- Install and aktivate the theme; 2- Install and activate all 3 recommended plugins: Renewable Energy CPT, Contact Form 7 and One Click Demo Import; 3- After activating all tree plugins go to Aparence > Import Demo Data and click the button 'Import Demo Data'
 
 == Installation ==
 
@@ -40,6 +40,7 @@ Renewable Energy includes support for Jetpack, WooCommerce and Contact Form 7.
 
 == Changelog ==
 
+= 1.2.3 - Janary. 22th 2020 =
 = 1.2.2 - Janary. 21th 2020 =
 = 1.2.1 - Janary. 13th 2020 =
 = 1.2.0 - Settember. 20th 2019 =

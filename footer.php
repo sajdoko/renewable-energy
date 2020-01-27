@@ -7,18 +7,18 @@
  * @package Renewable_Energy
  */
 
-$the_theme = wp_get_theme();
-$container = get_theme_mod('renewable_energy_container_type');
-$show_footer_copyright = get_theme_mod('renewable_energy_show_footer_copyright') ? get_theme_mod('renewable_energy_show_footer_copyright') : 'yes';
-$footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content') ? get_theme_mod('renewable_energy_footer_copyright_content'): '<a href="'. $the_theme->get( 'ThemeURI' ) .'" alt="'. $the_theme->get( 'Name' ) .'" target="_blank">'. $the_theme->get( 'Name' ) .'</a>';
+$renewable_energy_the_theme = wp_get_theme();
+$renewable_energy_container = get_theme_mod('renewable_energy_container_type', 'container');
+$renewable_energy_show_footer_copyright = get_theme_mod('renewable_energy_show_footer_copyright', 'yes');
+$renewable_energy_footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_content') ? get_theme_mod('renewable_energy_footer_copyright_content'): '<a href="'. esc_url( home_url('/') ) .'" title="'. esc_attr( get_bloginfo('name', 'display') ) .'">'. get_bloginfo('name') .'</a>';
 ?>
 
 <?php get_sidebar('footerfull'); ?>
 
-<?php if ($show_footer_copyright == 'yes') : ?>
+<?php if ($renewable_energy_show_footer_copyright == 'yes') : ?>
 	<div class="wrapper" id="wrapper-footer">
 
-		<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="<?php echo esc_attr( $renewable_energy_container ); ?>">
 
 			<div class="row">
 
@@ -27,8 +27,8 @@ $footer_copyright_content = get_theme_mod('renewable_energy_footer_copyright_con
 					<footer class="site-footer" id="colophon">
 
 						<div class="site-info">
-							<span class="footer-copyright">Copyright&copy; <?php echo date("Y");?>
-								<?php echo ' ' . wp_kses($footer_copyright_content, array(
+							<span class="footer-copyright">Copyright &copy;<?php echo esc_html( date_i18n( 'Y' ) );?>
+								<?php echo ' ' . wp_kses($renewable_energy_footer_copyright_content, array(
 									'a' => array(
 										'href' => array(),
 										'title' => array(),

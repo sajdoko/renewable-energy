@@ -7,14 +7,14 @@
 
 get_header();
 
-$container   = get_theme_mod('renewable_energy_container_type');
-$sidebar_pos = get_theme_mod('renewable_energy_sidebar_position');
+$renewable_energy_container   = get_theme_mod('renewable_energy_container_type', 'container');
+$renewable_energy_sidebar_pos = get_theme_mod('renewable_energy_sidebar_position', 'right');
 
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
 
- <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
+ <div class="<?php echo esc_attr($renewable_energy_container); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 

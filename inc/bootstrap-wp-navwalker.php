@@ -32,9 +32,9 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @param int    $depth Depth of page. Used for padding.
-	 * @param mixed  $args Rest of arguments.
+	 * @param mixed  $renewable_energy_args Rest of arguments.
 	 */
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+	public function start_lvl( &$output, $depth = 0, $renewable_energy_args = array() ) {
 		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul class=\" dropdown-menu\" role=\"menu\">\n";
 	}
@@ -46,12 +46,12 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 * @since 3.0.0
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $item Menu item data object.
+	 * @param object $renewable_energy_item Menu item data object.
 	 * @param int    $depth Depth of menu item. Used for padding.
-	 * @param mixed  $args Rest arguments.
-	 * @param int    $id Element's ID.
+	 * @param mixed  $renewable_energy_args Rest arguments.
+	 * @param int    $renewable_energy_id Element's ID.
 	 */
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	public function start_el( &$output, $renewable_energy_item, $depth = 0, $renewable_energy_args = array(), $renewable_energy_id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 		/**
 		 * Dividers, Headers or Disabled
@@ -61,26 +61,26 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 		 * comparison that is not case sensitive. The strcasecmp() function returns
 		 * a 0 if the strings are equal.
 		 */
-		if ( strcasecmp( $item->attr_title, 'divider') == 0 && $depth === 1 ) {
+		if ( strcasecmp( $renewable_energy_item->attr_title, 'divider') == 0 && $depth === 1 ) {
 			$output .= $indent . '<li class="dropdown-divider" role="presentation">';
-		} else if ( strcasecmp( $item->title, 'divider') == 0 && $depth === 1 ) {
+		} else if ( strcasecmp( $renewable_energy_item->title, 'divider') == 0 && $depth === 1 ) {
 			$output .= $indent . '<li class="dropdown-divider" role="presentation">';
-		} else if ( strcasecmp( $item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
-			$output .= $indent . '<li class="dropdown-header" role="presentation">' . esc_html( $item->title );
-		} else if ( strcasecmp( $item->attr_title, 'disabled') == 0 ) {
-			$output .= $indent . '<li class="disabled" role="presentation"><a href="#">' . esc_html( $item->title ) . '</a>';
+		} else if ( strcasecmp( $renewable_energy_item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
+			$output .= $indent . '<li class="dropdown-header" role="presentation">' . esc_html( $renewable_energy_item->title );
+		} else if ( strcasecmp( $renewable_energy_item->attr_title, 'disabled') == 0 ) {
+			$output .= $indent . '<li class="disabled" role="presentation"><a href="#">' . esc_html( $renewable_energy_item->title ) . '</a>';
 		} else {
 			$class_names = $value = '';
-			$classes     = empty( $item->classes ) ? array() : (array) $item->classes;
-			$classes[]   = 'nav-item menu-item-' . $item->ID;
-			$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+			$classes     = empty( $renewable_energy_item->classes ) ? array() : (array) $renewable_energy_item->classes;
+			$classes[]   = 'nav-item menu-item-' . $renewable_energy_item->ID;
+			$class_names = join(' ', apply_filters('renewable_energy_nav_menu_css_class', array_filter( $classes ), $renewable_energy_item, $renewable_energy_args ) );
 			/*
-			if ( $args->has_children )
+			if ( $renewable_energy_args->has_children )
 			  $class_names .= ' dropdown';
 			*/
-			if ( $args->has_children && $depth === 0 ) {
+			if ( $renewable_energy_args->has_children && $depth === 0 ) {
 				$class_names .= ' dropdown';
-			} elseif ( $args->has_children && $depth > 0 ) {
+			} elseif ( $renewable_energy_args->has_children && $depth > 0 ) {
 				$class_names .= ' dropdown-submenu';
 			}
 			if ( in_array('current-menu-item', $classes ) ) {
@@ -90,50 +90,53 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			// we will add the icon back in via a <span> below so it aligns with
 			// the menu item
 			if ( in_array('fa', $classes ) ) {
-				$key         = array_search('fa', $classes );
-				$icon        = $classes[ $key + 1 ];
-				$class_names = str_replace( $classes[ $key + 1 ], '', $class_names );
-				$class_names = str_replace( $classes[ $key ], '', $class_names );
+				$renewable_energy_key         = array_search('fa', $classes );
+				$icon        = $classes[ $renewable_energy_key + 1 ];
+				$class_names = str_replace( $classes[ $renewable_energy_key + 1 ], '', $class_names );
+				$class_names = str_replace( $classes[ $renewable_energy_key ], '', $class_names );
 			}
 
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-			$id          = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
-			$id          = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-			$output .= $indent . '<li' . $id . $value . $class_names . '>';
+			$renewable_energy_id          = apply_filters('renewable_energy_nav_menu_item_id', 'menu-item-' . $renewable_energy_item->ID, $renewable_energy_item, $renewable_energy_args );
+			$renewable_energy_id          = $renewable_energy_id ? ' id="' . esc_attr( $renewable_energy_id ) . '"' : '';
+			$output .= $indent . '<li' . $renewable_energy_id . $value . $class_names . '>';
 			$atts           = array();
-			if ( empty( $item->attr_title ) ) { $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : ''; } else { $atts['title'] = $item->attr_title; }
-			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
-			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+			if ( empty( $renewable_energy_item->attr_title ) ) { $atts['title'] = ! empty( $renewable_energy_item->title ) ? strip_tags( $renewable_energy_item->title ) : ''; } else { $atts['title'] = $renewable_energy_item->attr_title; }
+			$atts['target'] = ! empty( $renewable_energy_item->target ) ? $renewable_energy_item->target : '';
+			$atts['rel']    = ! empty( $renewable_energy_item->xfn ) ? $renewable_energy_item->xfn : '';
 			// If item has_children add atts to a.
 
-			if ( $args->has_children && $depth === 0 ) {
-				$atts['href']        = '#';
-				$atts['data-toggle'] = 'dropdown';
-				$atts['class']       = 'nav-link dropdown-toggle';
+			if ( $renewable_energy_args->has_children && $depth === 0 ) {
+				// $atts['href']        = '#';
+				$atts['href']  = ! empty( $renewable_energy_item->url ) ? $renewable_energy_item->url : '';
+				// $atts['data-toggle'] = 'dropdown';
+				$atts['class']       = 'nav-link';
+				// $atts['aria-haspopup']    = 'true';
 			} else {
-				$atts['href']  = ! empty( $item->url ) ? $item->url : '';
+				$atts['href']  = ! empty( $renewable_energy_item->url ) ? $renewable_energy_item->url : '';
 				$atts['class'] = 'nav-link';
 			}
-			$atts       = apply_filters('nav_menu_link_attributes', $atts, $item, $args );
-			$attributes = '';
+			$atts       = apply_filters('renewable_energy_nav_menu_link_attributes', $atts, $renewable_energy_item, $renewable_energy_args );
+			$renewable_energy_attributes = '';
 			foreach ( $atts as $attr => $value ) {
 				if ( ! empty( $value ) ) {
 					$value = ('href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-					$attributes .= ' ' . $attr . '="' . $value . '"';
+					$renewable_energy_attributes .= ' ' . $attr . '="' . $value . '"';
 				}
 			}
-			$item_output = $args->before;
+			$item_output = $renewable_energy_args->before;
 			// Font Awesome icons
 			if ( ! empty( $icon ) ) {
-				$item_output .= '<a' . $attributes . '><span class="fa ' . esc_attr( $icon ) . '"></span>&nbsp;';
+				$item_output .= '<a' . $renewable_energy_attributes . '><span class="fa ' . esc_attr( $icon ) . '"></span>&nbsp;';
 			} else {
-				$item_output .= '<a' . $attributes . '>';
+				$item_output .= '<a' . $renewable_energy_attributes . '>';
 			}
-			$item_output .= $args->link_before . apply_filters('the_title', $item->title,
-					$item->ID ) . $args->link_after;
-			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
-			$item_output .= $args->after;
-			$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+			$item_output .= $renewable_energy_args->link_before;
+			$item_output .= apply_filters('the_title', esc_html($renewable_energy_item->title), $renewable_energy_item->ID ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- escaped $renewable_energy_item->title
+			$item_output .= $renewable_energy_args->link_after;
+			$item_output .= ( $renewable_energy_args->has_children && 0 === $depth ) ? ' </a><span class="caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"></span>' : '</a>';
+			$item_output .= $renewable_energy_args->after;
+			$output .= apply_filters('renewable_energy_walker_nav_menu_start_el', $item_output, $renewable_energy_item, $depth, $renewable_energy_args );
 		}
 	}
 
@@ -153,21 +156,21 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 * @param array  $children_elements List of elements to continue traversing.
 	 * @param int    $max_depth Max depth to traverse.
 	 * @param int    $depth Depth of current element.
-	 * @param array  $args
+	 * @param array  $renewable_energy_args
 	 * @param string $output Passed by reference. Used to append additional content.
 	 *
 	 * @return null Null on failure with no changes to parameters.
 	 */
-	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+	public function display_element( $element, &$children_elements, $max_depth, $depth, $renewable_energy_args, &$output ) {
 		if ( ! $element ) {
 			return;
 		}
 		$id_field = $this->db_fields['id'];
 		// Display this element.
-		if ( is_object( $args[0] ) ) {
-			$args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
+		if ( is_object( $renewable_energy_args[0] ) ) {
+			$renewable_energy_args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
 		}
-		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+		parent::display_element( $element, $children_elements, $max_depth, $depth, $renewable_energy_args, $output );
 	}
 
 	/**
@@ -178,15 +181,15 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 	 * menu manager the function with display nothing to a non-logged in user,
 	 * and will add a link to the WordPress menu manager if logged in as an admin.
 	 *
-	 * @param array $args passed from the wp_nav_menu function.
+	 * @param array $renewable_energy_args passed from the wp_nav_menu function.
 	 *
 	 */
-	public static function fallback( $args ) {
+	public static function fallback( $renewable_energy_args ) {
 		if ( current_user_can('manage_options') ) {
-			extract( $args );
+			extract( $renewable_energy_args );
 			$fb_output = null;
-			if ( $container ) {
-				$fb_output = '<' . $container;
+			if ( $renewable_energy_container ) {
+				$fb_output = '<' . $renewable_energy_container;
 				if ( $container_class ) {
 					$fb_output .= ' class="' . $container_class . '"';
 				}
@@ -205,8 +208,8 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$fb_output .= '>';
 			$fb_output .= '<li><a href="' . admin_url('nav-menus.php') . '">Add a menu</a></li>';
 			$fb_output .= '</ul>';
-			if ( $container ) {
-				$fb_output .= '</' . $container . '>';
+			if ( $renewable_energy_container ) {
+				$fb_output .= '</' . $renewable_energy_container . '>';
 			}
 			echo wp_kses(
 				$fb_output,

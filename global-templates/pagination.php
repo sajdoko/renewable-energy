@@ -46,16 +46,16 @@ function renewable_energy_pagination() {
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active page-item"' : ' class="page-item"';
 
-		printf( // WPCS: XSS OK.
+		printf(
 			'<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
-		$class,
+		$class,//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		esc_url( get_pagenum_link( 1 ) ), '1');
 
 		/**    Previous Post Link */
 		if ( get_previous_posts_link() ) {
-			printf( // WPCS: XSS OK.
+			printf(//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 				'<li class="page-item"><span class="page-link">%1$s</span></li> ' . "\n",
-			get_previous_posts_link(  // WPCS: XSS OK.
+			get_previous_posts_link(
 			 '<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>') );
 		}
 
@@ -68,15 +68,15 @@ function renewable_energy_pagination() {
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? ' class="active page-item"' : ' class="page-item"';
-		printf( // WPCS: XSS OK.
+		printf(
 			'<li %s><a href="%s" class="page-link">%s</a></li>' . "\n",
-			$class,
-			esc_url( get_pagenum_link( $link ) ), $link );
+			$class,//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
+			esc_url( get_pagenum_link( $link ) ), esc_html( $link ) );
 	}
 
 	// Next Post Link.
 	if ( get_next_posts_link() ) {
-		printf( // WPCS: XSS OK.
+		printf( //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 			'<li class="page-item"><span class="page-link">%s</span></li>' . "\n",
 			get_next_posts_link('<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>') );
 	}
@@ -88,7 +88,7 @@ function renewable_energy_pagination() {
 		}
 
 		$class = $paged == $max ? ' class="active "' : ' class="page-item"';
-		printf( // WPCS: XSS OK.
+		printf( //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 			'<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true"><i class="fa fa-step-forward" aria-hidden="true"></i></span><span class="sr-only">%s</span></a></li>' . "\n",
 		$class . ' page-item 9', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );
 	}

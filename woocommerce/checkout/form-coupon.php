@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.3.0
+ * @version 3.5.0
  */
 
 if ( ! defined('ABSPATH') ) {
@@ -25,8 +25,8 @@ if ( ! wc_coupons_enabled() ) {
 }
 
 if ( empty( WC()->cart->applied_coupons ) ) {
-	$info_message = apply_filters('woocommerce_checkout_coupon_message', __('Have a coupon?', 'renewable-energy') . ' <a href="#" class="showcoupon">' . __('Click here to enter your code', 'renewable-energy') . '</a>');
-	wc_print_notice( $info_message, 'notice');
+	$renewable_energy_info_message = apply_filters('woocommerce_checkout_coupon_message', __('Have a coupon?', 'renewable-energy') . ' <a href="#" class="showcoupon">' . __('Click here to enter your code', 'renewable-energy') . '</a>');
+	wc_print_notice( $renewable_energy_info_message, 'notice');
 }
 ?>
 

@@ -12,14 +12,14 @@
 
 get_header();
 
-$container   = get_theme_mod('renewable_energy_container_type');
+$renewable_energy_container   = get_theme_mod('renewable_energy_container_type', 'container');
 
 
 ?>
 
 <div class="wrapper" id="woocommerce-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $renewable_energy_container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -29,19 +29,19 @@ $container   = get_theme_mod('renewable_energy_container_type');
 			<main class="site-main" id="main">
 
 			<?php
-				$template_name = '\archive-product.php';
-				$args = array();
-				$template_path = '';
-				$default_path = untrailingslashit( plugin_dir_path(__FILE__) ) . '\woocommerce';
+				$renewable_energy_template_name = '\archive-product.php';
+				$renewable_energy_args = array();
+				$renewable_energy_template_path = '';
+				$renewable_energy_default_path = untrailingslashit( plugin_dir_path(__FILE__) ) . '\woocommerce';
 
 					if ( is_singular('product') ) {
 
 						woocommerce_content();
 
 			//For ANY product archive, Product taxonomy, product search or /shop landing page etc Fetch the template override;
-				} 	elseif ( file_exists( $default_path . $template_name ) )
+				} 	elseif ( file_exists( $renewable_energy_default_path . $renewable_energy_template_name ) )
 					{
-					wc_get_template( $template_name, $args, $template_path, $default_path );
+					wc_get_template( $renewable_energy_template_name, $renewable_energy_args, $renewable_energy_template_path, $renewable_energy_default_path );
 
 			//If no archive-product.php template exists, default to catchall;
 				}	else  {

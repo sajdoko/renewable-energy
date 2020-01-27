@@ -55,7 +55,7 @@ if (!function_exists('renewable_energy_theme_customize_register')) {
         }
 
         foreach (glob(get_template_directory() . "/inc/renewable-energy-options/*.php") as $option_file) {
-            include_once $option_file;
+            include_once $option_file; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- include_once theme option files
         }
     }
 } // endif function_exists('renewable_energy_theme_customize_register').

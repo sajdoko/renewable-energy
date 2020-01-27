@@ -12,7 +12,7 @@ function renewable_energy_custom_header_setup() {
 	 *
 	 * @since RenewableEnergy 0.5.2
 	 *
-	 * @param array $args {
+	 * @param array $renewable_energy_args {
 	 *     An array of custom-header support arguments.
 	 *
 	 *     @type string $default-image     		Default image of the header.

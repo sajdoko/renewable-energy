@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.6.0
  */
 
 if ( ! defined('ABSPATH') ) {
@@ -23,22 +23,22 @@ if ( ! defined('ABSPATH') ) {
 ?>
 <form class="woocommerce-ordering" method="get">
 	<select name="orderby" class="orderby custom-select">
-		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
+		<?php foreach ( $catalog_orderby_options as $renewable_energy_id => $renewable_energy_name ) : ?>
+			<option value="<?php echo esc_attr( $renewable_energy_id ); ?>" <?php selected( $orderby, $renewable_energy_id ); ?>><?php echo esc_html( $renewable_energy_name ); ?></option>
 		<?php endforeach; ?>
 	</select>
 	<?php
 		// Keep query string vars intact
-		foreach ( $_GET as $key => $val ) {
-			if ('orderby' === $key || 'submit' === $key ) {
+		foreach ( $_GET as $renewable_energy_key => $renewable_energy_val ) {
+			if ('orderby' === $renewable_energy_key || 'submit' === $renewable_energy_key ) {
 				continue;
 			}
-			if ( is_array( $val ) ) {
-				foreach( $val as $innerVal ) {
-					echo '<input type="hidden" name="' . esc_attr( $key ) . '[]" value="' . esc_attr( $innerVal ) . '" />';
+			if ( is_array( $renewable_energy_val ) ) {
+				foreach( $renewable_energy_val as $renewable_energy_innerVal ) {
+					echo '<input type="hidden" name="' . esc_attr( $renewable_energy_key ) . '[]" value="' . esc_attr( $renewable_energy_innerVal ) . '" />';
 				}
 			} else {
-				echo '<input type="hidden" name="' . esc_attr( $key ) . '" value="' . esc_attr( $val ) . '" />';
+				echo '<input type="hidden" name="' . esc_attr( $renewable_energy_key ) . '" value="' . esc_attr( $renewable_energy_val ) . '" />';
 			}
 		}
 	?>

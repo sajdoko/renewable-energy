@@ -3928,7 +3928,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })();
 
 (function ($) {
-
     // Carousel Slide
     $(".carousel-item").first().addClass("active");
 

@@ -10,10 +10,10 @@ if ( ! is_active_sidebar('right-sidebar') ) {
 }
 
 // when both sidebars turned on reduce col size to 3 from 4.
-$sidebar_pos = get_theme_mod('renewable_energy_sidebar_position');
+$renewable_energy_sidebar_pos = get_theme_mod('renewable_energy_sidebar_position', 'right');
 ?>
 
-<?php if ('both' === $sidebar_pos ) : ?>
+<?php if ('both' === $renewable_energy_sidebar_pos ) : ?>
 <div class="col-md-3 widget-area" id="right-sidebar" role="complementary">
 	<?php else : ?>
 <div class="col-md-4 widget-area" id="right-sidebar" role="complementary">

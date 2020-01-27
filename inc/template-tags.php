@@ -18,15 +18,17 @@ if (!function_exists('renewable_energy_posted_on')):
     // }
     $time_string = sprintf($time_string,
       esc_attr(get_the_date('c')),
-      esc_html(get_the_date()),
+      esc_html(get_the_date())
       // esc_attr( get_the_modified_date('c') ),
       // esc_html( get_the_modified_date() )
     );
     $posted_on = sprintf(
+      /* translators: %s: post date */
       esc_html_x('Posted on %s', 'post date', 'renewable-energy'),
       '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
     );
     $byline = sprintf(
+      /* translators: %s: post author */
       esc_html_x('by %s', 'post author', 'renewable-energy'),
       '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
     );
@@ -113,19 +115,19 @@ if (!function_exists('renewable_energy_breadcrumbs')):
 /**
  * Adds the Breadcrumb functionality to the theme
  */
-  function custom_get_category_parents($id, $visited = array()) {
+  function renewable_energy_custom_get_category_parents($renewable_energy_id, $visited = array()) {
     $chain = '';
-    $parent = get_term($id, 'category');
+    $parent = get_term($renewable_energy_id, 'category');
     if (is_wp_error($parent)) {
       return $parent;
     }
 
-    $name = $parent->name;
+    $renewable_energy_name = $parent->name;
     if ($parent->parent && ($parent->parent != $parent->term_id) && !in_array($parent->parent, $visited)) {
       $visited[] = $parent->parent;
-      $chain .= custom_get_category_parents($parent->parent, $visited);
+      $chain .= renewable_energy_custom_get_category_parents($parent->parent, $visited);
     }
-    $chain .= '<li class="breadcrumb-item"><a href="' . esc_url(get_category_link($parent->term_id)) . '">' . $name . '</a>' . '</li>';
+    $chain .= '<li class="breadcrumb-item"><a href="' . esc_url(get_category_link($parent->term_id)) . '">' . $renewable_energy_name . '</a>' . '</li>';
     return $chain;
   }
   function renewable_energy_breadcrumbs() {
@@ -133,22 +135,22 @@ if (!function_exists('renewable_energy_breadcrumbs')):
     if (is_front_page()) {
       return;
     } else {
-      $html = '<ol class="breadcrumb">';
-      $html .= '<li class="breadcrumb-item"><a href="' . esc_url(home_url('/')) . '">' . __('Home', 'renewable-energy') . '</a></li>';
+      $renewable_energy_html = '<ol class="breadcrumb">';
+      $renewable_energy_html .= '<li class="breadcrumb-item"><a href="' . esc_url(home_url('/')) . '">' . __('Home', 'renewable-energy') . '</a></li>';
       if (is_attachment()) {
         $parent = get_post($post->post_parent);
         $categories = get_the_category($parent->ID);
         if ($categories[0]) {
-          $html .= custom_get_category_parents($categories[0]);
+          $renewable_energy_html .= renewable_energy_custom_get_category_parents($categories[0]);
         }
-        $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_permalink($parent)) . '">' . $parent->post_title . '</a></li>';
-        $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+        $renewable_energy_html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_permalink($parent)) . '">' . $parent->post_title . '</a></li>';
+        $renewable_energy_html .= '<li class="breadcrumb-item active">' . esc_html( get_the_title() ) . '</li>';
       } elseif (is_category()) {
       $category = get_category(get_query_var('cat'));
       if ($category->parent != 0) {
-        $html .= custom_get_category_parents($category->parent);
+        $renewable_energy_html .= renewable_energy_custom_get_category_parents($category->parent);
       }
-      $html .= '<li class="breadcrumb-item active">' . single_cat_title('', false) . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . single_cat_title('', false) . '</li>';
     } elseif (is_page() && !is_front_page()) {
       $parent_id = $post->post_parent;
       $parent_pages = array();
@@ -160,54 +162,54 @@ if (!function_exists('renewable_energy_breadcrumbs')):
       $parent_pages = array_reverse($parent_pages);
       if (!empty($parent_pages)) {
         foreach ($parent_pages as $parent) {
-          $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_permalink($parent->ID)) . '">' . get_the_title($parent->ID) . '</a></li>';
+          $renewable_energy_html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_permalink($parent->ID)) . '">' . esc_html( get_the_title($parent->ID)) . '</a></li>';
         }
       }
-      $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . esc_html( get_the_title() ) . '</li>';
     } elseif (is_singular('post')) {
       $categories = get_the_category();
       if ($categories[0]) {
-        $html .= custom_get_category_parents($categories[0]);
+        $renewable_energy_html .= renewable_energy_custom_get_category_parents($categories[0]);
       }
-      $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . esc_html( get_the_title() ) . '</li>';
     } elseif (is_singular('projects')) {
       $categories = get_the_terms($post->ID, 'type');
       if (isset($categories[0])) {
-        $html .= custom_get_category_parents($categories[0]);
+        $renewable_energy_html .= renewable_energy_custom_get_category_parents($categories[0]);
       }
-      $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . esc_html( get_the_title() ) . '</li>';
     } elseif (is_singular('slides')) {
-      $html .= '<li class="breadcrumb-item active">' . get_the_title() . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . esc_html( get_the_title() ) . '</li>';
     } elseif (is_tag()) {
-      $html .= '<li class="breadcrumb-item active">' . single_tag_title('', false) . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . single_tag_title('', false) . '</li>';
     } elseif (is_tax()) {
       $current_term = single_term_title("", false);
-      $html .= '<li class="breadcrumb-item active">' . $current_term . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . $current_term . '</li>';
     } elseif (is_day()) {
-      $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . get_the_time('Y') . '</a></li>';
-      $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_month_link(get_the_time('Y'), get_the_time('m'))) . '">' . get_the_time('m') . '</a></li>';
-      $html .= '<li class="breadcrumb-item active">' . get_the_time('d') . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . get_the_time('Y') . '</a></li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_month_link(get_the_time('Y'), get_the_time('m'))) . '">' . get_the_time('m') . '</a></li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . get_the_time('d') . '</li>';
     } elseif (is_month()) {
-      $html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . get_the_time('Y') . '</a></li>';
-      $html .= '<li class="breadcrumb-item active">' . get_the_time('F') . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item"><a href="' . esc_url(get_year_link(get_the_time('Y'))) . '">' . get_the_time('Y') . '</a></li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . get_the_time('F') . '</li>';
     } elseif (is_year()) {
-      $html .= '<li class="breadcrumb-item active">' . get_the_time('Y') . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . get_the_time('Y') . '</li>';
     } elseif (is_author()) {
-      $html .= '<li class="breadcrumb-item active">' . get_the_author() . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . get_the_author() . '</li>';
     } elseif (is_archive()) {
-      $html .= '<li class="breadcrumb-item active">' . post_type_archive_title('', false) . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . post_type_archive_title('', false) . '</li>';
     } elseif (is_search()) {
-      $html .= '<li class="breadcrumb-item active">' . __('Search Results for: ', 'renewable-energy') . '<b>' . get_search_query() . '</b></li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . __('Search Results for: ', 'renewable-energy') . '<b>' . get_search_query() . '</b></li>';
     } elseif (is_404()) {
-      $html .= '<li class="breadcrumb-item active">' . __('404 Page', 'renewable-energy') . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . __('404 Page', 'renewable-energy') . '</li>';
     } elseif (is_home()) {
-      $html .= '<li class="breadcrumb-item active">' . __('Blog', 'renewable-energy') . '</li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active">' . __('Blog', 'renewable-energy') . '</li>';
     } else {
-      $html .= '<li class="breadcrumb-item active"></li>';
+      $renewable_energy_html .= '<li class="breadcrumb-item active"></li>';
     }
   }
-  $html .= '</ol>';
-  echo $html;
+  $renewable_energy_html .= '</ol>';
+  echo $renewable_energy_html;
 }
 endif;
 
@@ -217,14 +219,14 @@ if (!function_exists('renewable_energy_slider_template')):
    */
   function renewable_energy_slider_template() {
     // Query Arguments
-    $args = array(
+    $renewable_energy_args = array(
       'post_type' => 'slides',
       'post_status' => array('publish'),
       'orderby' => 'date',
       'order' => 'ASC',
     );
     // The Query
-    $the_query = new WP_Query($args);
+    $the_query = new WP_Query($renewable_energy_args);
     // Check if the Query returns any posts
     if ($the_query->have_posts()): ; // Start the Slider ?>
 

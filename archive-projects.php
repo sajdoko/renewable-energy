@@ -11,11 +11,11 @@ get_header();
 ?>
 
 <?php
-$container   = get_theme_mod('renewable_energy_container_type');
+$renewable_energy_container   = get_theme_mod('renewable_energy_container_type', 'container');
 ?>
 
 <div class="wrapper" id="archive-wrapper">
- <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
+ <div class="<?php echo esc_attr($renewable_energy_container); ?>" id="content" tabindex="-1">
   <div class="row">
    <main class="site-main" id="main">
 				<?php if ( have_posts() ) : ?>

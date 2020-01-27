@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.5.5
  */
 
 if ( ! defined('ABSPATH') ) {
@@ -35,8 +35,8 @@ wc_print_notices(); ?>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text form-control" name="password_2" id="password_2" />
 	</p>
 
-	<input type="hidden" name="reset_key" value="<?php echo esc_attr( $args['key'] ); ?>" />
-	<input type="hidden" name="reset_login" value="<?php echo esc_attr( $args['login'] ); ?>" />
+	<input type="hidden" name="reset_key" value="<?php echo esc_attr( $renewable_energy_args['key'] ); ?>" />
+	<input type="hidden" name="reset_login" value="<?php echo esc_attr( $renewable_energy_args['login'] ); ?>" />
 
 	<div class="clear"></div>
 

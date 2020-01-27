@@ -6,11 +6,11 @@
  */
 
 get_header();
-$container   = get_theme_mod('renewable_energy_container_type');
+$renewable_energy_container   = get_theme_mod('renewable_energy_container_type', 'container');
 ?>
 
 <div class="wrapper" id="single-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $renewable_energy_container ); ?>" id="content" tabindex="-1">
 		<div class="row">
 			<!-- Do the left sidebar check -->
 			<?php get_template_part('global-templates/left-sidebar-check'); ?>
@@ -35,9 +35,9 @@ $container   = get_theme_mod('renewable_energy_container_type');
 					</div><!-- .entry-content -->
 					<footer class="entry-footer">
 						<?php renewable_energy_entry_footer();
-            $taxonomy = 'type';
+            $renewable_energy_taxonomy = 'type';
             // Get the term IDs assigned to post.
-            $post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+            $post_terms = wp_get_object_terms( $post->ID, $renewable_energy_taxonomy, array( 'fields' => 'ids' ) );
             // Separator between links.
             $separator = ', ';
             if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ) {
@@ -46,7 +46,7 @@ $container   = get_theme_mod('renewable_energy_container_type');
                     'title_li' => '',
                     'style'    => 'none',
                     'echo'     => false,
-                    'taxonomy' => $taxonomy,
+                    'taxonomy' => $renewable_energy_taxonomy,
                     'include'  => $term_ids
                 ) );
                 $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );

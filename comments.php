@@ -27,25 +27,25 @@ if (post_password_required()) {
 		<h2 class="comments-title">
 			
 			<?php
-				$comments_number = get_comments_number();
-				if ( 1 === (int)$comments_number ) {
+				$renewable_energy_comments_number = get_comments_number();
+				if ( 1 === (int)$renewable_energy_comments_number ) {
 					printf(
 						/* translators: %s: post title */
 						esc_html_x('One thought on &ldquo;%s&rdquo;', 'comments title', 'renewable-energy'),
-						'<span>' . get_the_title() . '</span>'
+						'<span>' . esc_html( get_the_title() ) . '</span>'
 					);
 				} else {
-					printf( // WPCS: XSS OK.
+					printf(
 						/* translators: 1: number of comments, 2: post title */
 						esc_html( _nx(
 							'%1$s thought on &ldquo;%2$s&rdquo;',
 							'%1$s thoughts on &ldquo;%2$s&rdquo;',
-							$comments_number,
+							$renewable_energy_comments_number,
 							'comments title',
 							'renewable-energy'
 						) ),
-						number_format_i18n( $comments_number ),
-						'<span>' . get_the_title() . '</span>'
+						esc_html( number_format_i18n( $renewable_energy_comments_number ) ),
+						'<span>' . esc_html( get_the_title() ) . '</span>'
 					);
 				}
 			?>

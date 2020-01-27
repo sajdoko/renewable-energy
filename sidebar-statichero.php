@@ -5,7 +5,7 @@
  * @package Renewable_Energy
  */
 
-$container   = get_theme_mod('renewable_energy_container_type');
+$renewable_energy_container   = get_theme_mod('renewable_energy_container_type', 'container');
 
 ?>
 
@@ -15,7 +15,7 @@ $container   = get_theme_mod('renewable_energy_container_type');
 
 	<div class="wrapper" id="wrapper-static-hero">
 
-			<div class="<?php echo esc_attr( $container ); ?>" id="wrapper-static-content" tabindex="-1">
+			<div class="<?php echo esc_attr( $renewable_energy_container ); ?>" id="wrapper-static-content" tabindex="-1">
 
 				<div class="row">
 

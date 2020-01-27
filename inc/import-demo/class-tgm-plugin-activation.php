@@ -128,7 +128,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @var string
 		 */
-		public $id = 'tgmpa';
+		public $id = 'renewable_energy_tgmpa';
 
 		/**
 		 * Name of the query-string argument for the admin page.
@@ -137,7 +137,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @var string
 		 */
-		protected $menu = 'tgmpa-install-plugins';
+		protected $menu = 'renewable_energy_tgmpa-install-plugins';
 
 		/**
 		 * Parent menu file slug.
@@ -164,7 +164,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @var string Absolute path prefix to zip file location for bundled plugins. Default is empty string.
 		 */
-		public $default_path = '';
+		public $renewable_energy_default_path = '';
 
 		/**
 		 * Flag to show admin notices or not.
@@ -242,7 +242,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 		/**
 		 * Adds a reference of this object to $instance, populates default strings,
-		 * does the tgmpa_init action hook, and hooks in the interactions to init.
+		 * does the renewable_energy_tgmpa_init action hook, and hooks in the interactions to init.
 		 *
 		 * {@internal This method should be `protected`, but as too many TGMPA implementations
 		 * haven't upgraded beyond v2.3.6 yet, this gives backward compatibility issues.
@@ -257,7 +257,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$this->wp_version = $GLOBALS['wp_version'];
 
 			// Announce that the class is ready, and pass the object (for advanced use).
-			do_action_ref_array( 'tgmpa_init', array( $this ) );
+			do_action_ref_array( 'renewable_energy_tgmpa_init', array( $this ) );
 
 
 
@@ -318,7 +318,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			 * @param bool $load Whether or not TGMPA should load.
 			 *                   Defaults to the return of `is_admin() && ! defined( 'DOING_AJAX' )`.
 			 */
-			if ( true !== apply_filters( 'tgmpa_load', ( is_admin() && ! defined( 'DOING_AJAX' ) ) ) ) {
+			if ( true !== apply_filters( 'renewable_energy_tgmpa_load', ( is_admin() && ! defined( 'DOING_AJAX' ) ) ) ) {
 				return;
 			}
 
@@ -326,43 +326,43 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$this->strings = array(
 				'page_title'                      => __( 'Install Required Plugins', 'renewable-energy' ),
 				'menu_title'                      => __( 'Install Plugins', 'renewable-energy' ),
-				/* translators: %s: plugin name. */
+				/* translators: %s: plugin name */
 				'installing'                      => __( 'Installing Plugin: %s', 'renewable-energy' ),
-				/* translators: %s: plugin name. */
+				/* translators: %s: plugin name */
 				'updating'                        => __( 'Updating Plugin: %s', 'renewable-energy' ),
 				'oops'                            => __( 'Something went wrong with the plugin API.', 'renewable-energy' ),
+				/* translators: 1: plugin name(s) */
 				'notice_can_install_required'     => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'This theme requires the following plugin: %1$s.',
 					'This theme requires the following plugins: %1$s.',
 					'renewable-energy'
 				),
+				/* translators: 1: plugin name(s) */
 				'notice_can_install_recommended'  => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'This theme recommends the following plugin: %1$s.',
 					'This theme recommends the following plugins: %1$s.',
 					'renewable-energy'
 				),
+				/* translators: 1: plugin name(s) */
 				'notice_ask_to_update'            => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
 					'renewable-energy'
 				),
+				/* translators: 1: plugin name(s) */
 				'notice_ask_to_update_maybe'      => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'There is an update available for: %1$s.',
 					'There are updates available for the following plugins: %1$s.',
 					'renewable-energy'
 				),
+				/* translators: 1: plugin name(s) */
 				'notice_can_activate_required'    => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'The following required plugin is currently inactive: %1$s.',
 					'The following required plugins are currently inactive: %1$s.',
 					'renewable-energy'
 				),
+				/* translators: 1: plugin name(s) */
 				'notice_can_activate_recommended' => _n_noop(
-					/* translators: 1: plugin name(s). */
 					'The following recommended plugin is currently inactive: %1$s.',
 					'The following recommended plugins are currently inactive: %1$s.',
 					'renewable-energy'
@@ -386,20 +386,20 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				'dashboard'                       => __( 'Return to the Dashboard', 'renewable-energy' ),
 				'plugin_activated'                => __( 'Plugin activated successfully.', 'renewable-energy' ),
 				'activated_successfully'          => __( 'The following plugin was activated successfully:', 'renewable-energy' ),
-				/* translators: 1: plugin name. */
+				/* translators: 1: plugin name */
 				'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'renewable-energy' ),
-				/* translators: 1: plugin name. */
+				/* translators: %s: plugin name */
 				'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'renewable-energy' ),
-				/* translators: 1: dashboard link. */
+				/* translators: 1: dashboard link */
 				'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'renewable-energy' ),
 				'dismiss'                         => __( 'Dismiss this notice', 'renewable-energy' ),
 				'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'renewable-energy' ),
 				'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'renewable-energy' ),
 			);
 
-			do_action( 'tgmpa_register' );
+			do_action( 'renewable_energy_tgmpa_register' );
 
-			/* After this point, the plugins should be registered and the configuration set. */
+			/* After this point, the plugins should be registered and the configuration set */
 
 			// Proceed only if we have plugins to handle.
 			if ( empty( $this->plugins ) || ! is_array( $this->plugins ) ) {
@@ -483,13 +483,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param array $actions Action links.
+		 * @param array $renewable_energy_actions Action links.
 		 * @return array
 		 */
-		public function filter_plugin_action_links_activate( $actions ) {
-			unset( $actions['activate'] );
+		public function filter_plugin_action_links_activate( $renewable_energy_actions ) {
+			unset( $renewable_energy_actions['activate'] );
 
-			return $actions;
+			return $renewable_energy_actions;
 		}
 
 		/**
@@ -497,13 +497,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param array $actions Action links.
+		 * @param array $renewable_energy_actions Action links.
 		 * @return array
 		 */
-		public function filter_plugin_action_links_deactivate( $actions ) {
-			unset( $actions['deactivate'] );
+		public function filter_plugin_action_links_deactivate( $renewable_energy_actions ) {
+			unset( $renewable_energy_actions['deactivate'] );
 
-			return $actions;
+			return $renewable_energy_actions;
 		}
 
 		/**
@@ -512,18 +512,18 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param array $actions Action links.
+		 * @param array $renewable_energy_actions Action links.
 		 * @return array
 		 */
-		public function filter_plugin_action_links_update( $actions ) {
-			$actions['update'] = sprintf(
+		public function filter_plugin_action_links_update( $renewable_energy_actions ) {
+			$renewable_energy_actions['update'] = sprintf(
 				'<a href="%1$s" title="%2$s" class="edit">%3$s</a>',
 				esc_url( $this->get_tgmpa_status_url( 'update' ) ),
 				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'renewable-energy' ),
 				esc_html__( 'Update Required', 'renewable-energy' )
 			);
 
-			return $actions;
+			return $renewable_energy_actions;
 		}
 
 		/**
@@ -544,8 +544,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @since 2.1.0
 		 *
-		 * @global string $tab Used as iframe div class names, helps with styling
-		 * @global string $body_id Used as the iframe body ID, helps with styling
+		 * @global string $renewable_energy_tab Used as iframe div class names, helps with styling
+		 * @global string $renewable_energy_body_id Used as the iframe body ID, helps with styling
 		 *
 		 * @return null Returns early if not the TGMPA page.
 		 */
@@ -556,14 +556,14 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			if ( isset( $_REQUEST['tab'] ) && 'plugin-information' === $_REQUEST['tab'] ) {
 				// Needed for install_plugin_information().
-				require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+				require_once ABSPATH . 'wp-admin/includes/plugin-install.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- wp-admin/includes/plugin-install.php
 
 				wp_enqueue_style( 'plugin-install' );
 
-				global $tab, $body_id;
-				$body_id = 'plugin-information';
+				global $renewable_energy_tab, $renewable_energy_body_id;
+				$renewable_energy_body_id = 'plugin-information';
 				// @codingStandardsIgnoreStart
-				$tab     = 'plugin-information';
+				$renewable_energy_tab     = 'plugin-information';
 				// @codingStandardsIgnoreEnd
 
 				install_plugin_information();
@@ -610,8 +610,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				return;
 			}
 
-			$args = apply_filters(
-				'tgmpa_admin_menu_args',
+			$renewable_energy_args = apply_filters(
+				'renewable_energy_tgmpa_admin_menu_args',
 				array(
 					'parent_slug' => $this->parent_slug,                     // Parent Menu slug.
 					'page_title'  => $this->strings['page_title'],           // Page title.
@@ -622,7 +622,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				)
 			);
 
-			$this->add_admin_menu( $args );
+			$this->add_admin_menu( $renewable_energy_args );
 		}
 
 		/**
@@ -633,10 +633,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param array $args Menu item configuration.
+		 * @param array $renewable_energy_args Menu item configuration.
 		 */
-		protected function add_admin_menu( array $args ) {
-			$this->page_hook = add_theme_page( $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
+		protected function add_admin_menu( array $renewable_energy_args ) {
+			$this->page_hook = add_theme_page( $renewable_energy_args['page_title'], $renewable_energy_args['menu_title'], $renewable_energy_args['capability'], $renewable_energy_args['menu_slug'], $renewable_energy_args['function'] );
 		}
 
 		/**
@@ -655,7 +655,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$plugin_table = new TGMPA_List_Table;
 
 			// Return early if processing a plugin installation action.
-			if ( ( ( 'tgmpa-bulk-install' === $plugin_table->current_action() || 'tgmpa-bulk-update' === $plugin_table->current_action() ) && $plugin_table->process_bulk_actions() ) || $this->do_plugin_install() ) {
+			if ( ( ( 'renewable_energy_tgmpa-bulk-install' === $plugin_table->current_action() || 'renewable_energy_tgmpa-bulk-update' === $plugin_table->current_action() ) && $plugin_table->process_bulk_actions() ) || $this->do_plugin_install() ) {
 				return;
 			}
 
@@ -663,7 +663,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			wp_clean_plugins_cache( false );
 
 			?>
-			<div class="tgmpa wrap">
+			<div class="renewable_energy_tgmpa wrap">
 				<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 				<?php $plugin_table->prepare_items(); ?>
 
@@ -674,8 +674,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				?>
 				<?php $plugin_table->views(); ?>
 
-				<form id="tgmpa-plugins" action="" method="post">
-					<input type="hidden" name="tgmpa-page" value="<?php echo esc_attr( $this->menu ); ?>" />
+				<form id="renewable_energy_tgmpa-plugins" action="" method="post">
+					<input type="hidden" name="renewable_energy_tgmpa-page" value="<?php echo esc_attr( $this->menu ); ?>" />
 					<input type="hidden" name="plugin_status" value="<?php echo esc_attr( $plugin_table->view_context ); ?>" />
 					<?php $plugin_table->display(); ?>
 				</form>
@@ -709,33 +709,33 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			}
 
 			// All plugin information will be stored in an array for processing.
-			$slug = $this->sanitize_key( urldecode( $_GET['plugin'] ) );
+			$slug = $this->sanitize_key( urldecode(sanitize_text_field(  wp_unslash( $_GET['plugin'] ) ) ) );
 
 			if ( ! isset( $this->plugins[ $slug ] ) ) {
 				return false;
 			}
 
 			// Was an install or upgrade action link clicked?
-			if ( ( isset( $_GET['tgmpa-install'] ) && 'install-plugin' === $_GET['tgmpa-install'] ) || ( isset( $_GET['tgmpa-update'] ) && 'update-plugin' === $_GET['tgmpa-update'] ) ) {
+			if ( ( isset( $_GET['renewable_energy_tgmpa-install'] ) && 'install-plugin' === $_GET['renewable_energy_tgmpa-install'] ) || ( isset( $_GET['renewable_energy_tgmpa-update'] ) && 'update-plugin' === $_GET['renewable_energy_tgmpa-update'] ) ) {
 
 				$install_type = 'install';
-				if ( isset( $_GET['tgmpa-update'] ) && 'update-plugin' === $_GET['tgmpa-update'] ) {
+				if ( isset( $_GET['renewable_energy_tgmpa-update'] ) && 'update-plugin' === $_GET['renewable_energy_tgmpa-update'] ) {
 					$install_type = 'update';
 				}
 
-				check_admin_referer( 'tgmpa-' . $install_type, 'tgmpa-nonce' );
+				check_admin_referer( 'renewable_energy_tgmpa-' . $install_type, 'renewable_energy_tgmpa-nonce' );
 
 				// Pass necessary information via URL if WP_Filesystem is needed.
 				$url = wp_nonce_url(
 					add_query_arg(
 						array(
 							'plugin'                 => urlencode( $slug ),
-							'tgmpa-' . $install_type => $install_type . '-plugin',
+							'renewable_energy_tgmpa-' . $install_type => $install_type . '-plugin',
 						),
 						$this->get_tgmpa_url()
 					),
-					'tgmpa-' . $install_type,
-					'tgmpa-nonce'
+					'renewable_energy_tgmpa-' . $install_type,
+					'renewable_energy_tgmpa-nonce'
 				);
 
 				$method = ''; // Leave blank so WP_Filesystem can populate it as necessary.
@@ -749,7 +749,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					return true;
 				}
 
-				/* If we arrive here, we have the filesystem. */
+				/* If we arrive here, we have the filesystem */
 
 				// Prep variables for Plugin_Installer_Skin class.
 				$extra         = array();
@@ -767,20 +767,20 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				);
 
 				if ( ! class_exists( 'Plugin_Upgrader', false ) ) {
-					require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+					require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- wp-admin/includes/class-wp-upgrader.php
 				}
 
-				$title     = ( 'update' === $install_type ) ? $this->strings['updating'] : $this->strings['installing'];
+				$renewable_energy_title     = ( 'update' === $install_type ) ? $this->strings['updating'] : $this->strings['installing'];
 				$skin_args = array(
 					'type'   => ( 'bundled' !== $this->plugins[ $slug ]['source_type'] ) ? 'web' : 'upload',
-					'title'  => sprintf( $title, $this->plugins[ $slug ]['name'] ),
+					'title'  => sprintf( $renewable_energy_title, $this->plugins[ $slug ]['name'] ),
 					'url'    => esc_url_raw( $url ),
 					'nonce'  => $install_type . '-plugin_' . $slug,
 					'plugin' => '',
 					'api'    => $api,
 					'extra'  => $extra,
 				);
-				unset( $title );
+				unset( $renewable_energy_title );
 
 				if ( 'update' === $install_type ) {
 					$skin_args['plugin'] = $this->plugins[ $slug ]['file_path'];
@@ -831,9 +831,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				}
 
 				return true;
-			} elseif ( isset( $this->plugins[ $slug ]['file_path'], $_GET['tgmpa-activate'] ) && 'activate-plugin' === $_GET['tgmpa-activate'] ) {
+			} elseif ( isset( $this->plugins[ $slug ]['file_path'], $_GET['renewable_energy_tgmpa-activate'] ) && 'activate-plugin' === $_GET['renewable_energy_tgmpa-activate'] ) {
 				// Activate action link was clicked.
-				check_admin_referer( 'tgmpa-activate', 'tgmpa-nonce' );
+				check_admin_referer( 'renewable_energy_tgmpa-activate', 'renewable_energy_tgmpa-nonce' );
 
 				if ( false === $this->activate_single_plugin( $this->plugins[ $slug ]['file_path'], $slug ) ) {
 					return true; // Finish execution of the function early as we encountered an error.
@@ -1020,7 +1020,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function notices() {
 			// Remove nag on the install page / Return early if the nag message has been dismissed or user < author.
-			if ( ( $this->is_tgmpa_page() || $this->is_core_update_page() ) || get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) || ! current_user_can( apply_filters( 'tgmpa_show_admin_notice_capability', 'publish_posts' ) ) ) {
+			if ( ( $this->is_tgmpa_page() || $this->is_core_update_page() ) || get_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, true ) || ! current_user_can( apply_filters( 'renewable_energy_tgmpa_show_admin_notice_capability', 'publish_posts' ) ) ) {
 				return;
 			}
 
@@ -1136,7 +1136,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				}
 
 				// Register the nag messages and prepare them to be processed.
-				add_settings_error( 'tgmpa', 'tgmpa', $rendered, $this->get_admin_notice_class() );
+				add_settings_error( 'renewable_energy_tgmpa', 'renewable_energy_tgmpa', $rendered, $this->get_admin_notice_class() );
 			}
 
 			// Admin options pages already output settings_errors, so this is to avoid duplication.
@@ -1162,7 +1162,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				'install'  => '',
 				'update'   => '',
 				'activate' => '',
-				'dismiss'  => $this->dismissable ? '<a href="' . esc_url( wp_nonce_url( add_query_arg( 'tgmpa-dismiss', 'dismiss_admin_notices' ), 'tgmpa-dismiss-' . get_current_user_id() ) ) . '" class="dismiss-notice" target="_parent">' . esc_html( $this->strings['dismiss'] ) . '</a>' : '',
+				'dismiss'  => $this->dismissable ? '<a href="' . esc_url( wp_nonce_url( add_query_arg( 'renewable_energy_tgmpa-dismiss', 'dismiss_admin_notices' ), 'renewable_energy_tgmpa-dismiss-' . get_current_user_id() ) ) . '" class="dismiss-notice" target="_parent">' . esc_html( $this->strings['dismiss'] ) . '</a>' : '',
 			);
 
 			$link_template = '<a href="%2$s">%1$s</a>';
@@ -1192,13 +1192,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				);
 			}
 
-			$action_links = apply_filters( 'tgmpa_notice_action_links', $action_links );
+			$action_links = apply_filters( 'renewable_energy_tgmpa_notice_action_links', $action_links );
 
 			$action_links = array_filter( (array) $action_links ); // Remove any empty array items.
 
 			if ( ! empty( $action_links ) ) {
 				$action_links = sprintf( $line_template, implode( ' | ', $action_links ) );
-				return apply_filters( 'tgmpa_notice_rendered_action_links', $action_links );
+				return apply_filters( 'renewable_energy_tgmpa_notice_rendered_action_links', $action_links );
 			} else {
 				return '';
 			}
@@ -1236,11 +1236,11 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		protected function display_settings_errors() {
 			global $wp_settings_errors;
 
-			settings_errors( 'tgmpa' );
+			settings_errors( 'renewable_energy_tgmpa' );
 
-			foreach ( (array) $wp_settings_errors as $key => $details ) {
-				if ( 'tgmpa' === $details['setting'] ) {
-					unset( $wp_settings_errors[ $key ] );
+			foreach ( (array) $wp_settings_errors as $renewable_energy_key => $details ) {
+				if ( 'renewable_energy_tgmpa' === $details['setting'] ) {
+					unset( $wp_settings_errors[ $renewable_energy_key ] );
 					break;
 				}
 			}
@@ -1255,7 +1255,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @since 2.1.0
 		 */
 		public function dismiss() {
-			if ( isset( $_GET['tgmpa-dismiss'] ) && check_admin_referer( 'tgmpa-dismiss-' . get_current_user_id() ) ) {
+			if ( isset( $_GET['renewable_energy_tgmpa-dismiss'] ) && check_admin_referer( 'renewable_energy_tgmpa-dismiss-' . get_current_user_id() ) ) {
 				update_user_meta( get_current_user_id(), 'tgmpa_dismissed_notice_' . $this->id, 1 );
 			}
 		}
@@ -1354,22 +1354,22 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param string $key String key.
+		 * @param string $renewable_energy_key String key.
 		 * @return string Sanitized key
 		 */
-		public function sanitize_key( $key ) {
-			$raw_key = $key;
-			$key     = preg_replace( '`[^A-Za-z0-9_-]`', '', $key );
+		public function sanitize_key( $renewable_energy_key ) {
+			$raw_key = $renewable_energy_key;
+			$renewable_energy_key     = preg_replace( '`[^A-Za-z0-9_-]`', '', $renewable_energy_key );
 
 			/**
 			 * Filter a sanitized key string.
 			 *
 			 * @since 2.5.0
 			 *
-			 * @param string $key     Sanitized key.
+			 * @param string $renewable_energy_key     Sanitized key.
 			 * @param string $raw_key The key prior to sanitization.
 			 */
-			return apply_filters( 'tgmpa_sanitize_key', $key, $raw_key );
+			return apply_filters( 'renewable_energy_tgmpa_sanitize_key', $renewable_energy_key, $raw_key );
 		}
 
 		/**
@@ -1394,12 +1394,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				'strings',
 			);
 
-			foreach ( $keys as $key ) {
-				if ( isset( $config[ $key ] ) ) {
-					if ( is_array( $config[ $key ] ) ) {
-						$this->$key = array_merge( $this->$key, $config[ $key ] );
+			foreach ( $keys as $renewable_energy_key ) {
+				if ( isset( $config[ $renewable_energy_key ] ) ) {
+					if ( is_array( $config[ $renewable_energy_key ] ) ) {
+						$this->$renewable_energy_key = array_merge( $this->$renewable_energy_key, $config[ $renewable_energy_key ] );
 					} else {
-						$this->$key = $config[ $key ];
+						$this->$renewable_energy_key = $config[ $renewable_energy_key ];
 					}
 				}
 			}
@@ -1466,9 +1466,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		protected function _get_plugin_basename_from_slug( $slug ) {
 			$keys = array_keys( $this->get_plugins() );
 
-			foreach ( $keys as $key ) {
-				if ( preg_match( '|^' . $slug . '/|', $key ) ) {
-					return $key;
+			foreach ( $keys as $renewable_energy_key ) {
+				if ( preg_match( '|^' . $slug . '/|', $renewable_energy_key ) ) {
+					return $renewable_energy_key;
 				}
 			}
 
@@ -1552,7 +1552,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			if ( ! isset( $api[ $slug ] ) ) {
 				if ( ! function_exists( 'plugins_api' ) ) {
-					require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+					require_once ABSPATH . 'wp-admin/includes/plugin-install.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- wp-admin/includes/plugin-install.php
 				}
 
 				$response = plugins_api( 'plugin_information', array( 'slug' => $slug, 'fields' => array( 'sections' => false ) ) );
@@ -1653,7 +1653,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * Retrieve the URL to the TGMPA Install page.
 		 *
 		 * I.e. depending on the config settings passed something along the lines of:
-		 * http://example.com/wp-admin/themes.php?page=tgmpa-install-plugins
+		 * http://example.com/wp-admin/themes.php?page=renewable_energy_tgmpa-install-plugins
 		 *
 		 * @since 2.5.0
 		 *
@@ -1682,7 +1682,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * Retrieve the URL to the TGMPA Install page for a specific plugin status (view).
 		 *
 		 * I.e. depending on the config settings passed something along the lines of:
-		 * http://example.com/wp-admin/themes.php?page=tgmpa-install-plugins&plugin_status=install
+		 * http://example.com/wp-admin/themes.php?page=renewable_energy_tgmpa-install-plugins&plugin_status=install
 		 *
 		 * @since 2.5.0
 		 *
@@ -1892,7 +1892,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function get_plugins( $plugin_folder = '' ) {
 			if ( ! function_exists( 'get_plugins' ) ) {
-				require_once ABSPATH . 'wp-admin/includes/plugin.php';
+				require_once ABSPATH . 'wp-admin/includes/plugin.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- wp-admin/includes/plugin.php
 			}
 
 			return get_plugins( $plugin_folder );
@@ -2002,25 +2002,25 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		}
 	}
 
-	if ( ! function_exists( 'load_tgm_plugin_activation' ) ) {
+	if ( ! function_exists( 'renewable_energy_load_tgm_plugin_activation' ) ) {
 		/**
 		 * Ensure only one instance of the class is ever invoked.
 		 *
 		 * @since 2.5.0
 		 */
-		function load_tgm_plugin_activation() {
-			$GLOBALS['tgmpa'] = TGM_Plugin_Activation::get_instance();
+		function renewable_energy_load_tgm_plugin_activation() {
+			$GLOBALS['renewable_energy_tgmpa'] = TGM_Plugin_Activation::get_instance();
 		}
 	}
 
 	if ( did_action( 'plugins_loaded' ) ) {
-		load_tgm_plugin_activation();
+		renewable_energy_load_tgm_plugin_activation();
 	} else {
-		add_action( 'plugins_loaded', 'load_tgm_plugin_activation' );
+		add_action( 'plugins_loaded', 'renewable_energy_load_tgm_plugin_activation' );
 	}
 }
 
-if ( ! function_exists( 'tgmpa' ) ) {
+if ( ! function_exists( 'renewable_energy_tgmpa' ) ) {
 	/**
 	 * Helper function to register a collection of required plugins.
 	 *
@@ -2030,8 +2030,8 @@ if ( ! function_exists( 'tgmpa' ) ) {
 	 * @param array $plugins An array of plugin arrays.
 	 * @param array $config  Optional. An array of configuration values.
 	 */
-	function tgmpa( $plugins, $config = array() ) {
-		$instance = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+	function renewable_energy_tgmpa( $plugins, $config = array() ) {
+		$instance = call_user_func( array( get_class( $GLOBALS['renewable_energy_tgmpa'] ), 'get_instance' ) );
 
 		foreach ( $plugins as $plugin ) {
 			call_user_func( array( $instance, 'register' ), $plugin );
@@ -2065,7 +2065,7 @@ if ( ! function_exists( 'tgmpa' ) ) {
  * @since 2.2.0
  */
 if ( ! class_exists( 'WP_List_Table' ) ) {
-	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
+	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- wp-admin/includes/class-wp-list-table.php
 }
 
 if ( ! class_exists( 'TGMPA_List_Table' ) ) {
@@ -2095,7 +2095,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @var object
 		 */
-		protected $tgmpa;
+		protected $renewable_energy_tgmpa;
 
 		/**
 		 * The currently chosen view.
@@ -2126,7 +2126,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function __construct() {
-			$this->tgmpa = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+			$this->renewable_energy_tgmpa = call_user_func( array( get_class( $GLOBALS['renewable_energy_tgmpa'] ), 'get_instance' ) );
 
 			parent::__construct(
 				array(
@@ -2140,7 +2140,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				$this->view_context = sanitize_key( $_REQUEST['plugin_status'] );
 			}
 
-			add_filter( 'tgmpa_table_data_items', array( $this, 'sort_table_items' ) );
+			add_filter( 'renewable_energy_tgmpa_table_data_items', array( $this, 'sort_table_items' ) );
 		}
 
 		/**
@@ -2165,8 +2165,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function _gather_plugin_data() {
 			// Load thickbox for plugin links.
-			$this->tgmpa->admin_init();
-			$this->tgmpa->thickbox();
+			$this->renewable_energy_tgmpa->admin_init();
+			$this->renewable_energy_tgmpa->thickbox();
 
 			// Categorize the plugins which have open actions.
 			$plugins = $this->categorize_plugins_to_views();
@@ -2186,23 +2186,23 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			foreach ( $plugins[ $this->view_context ] as $slug => $plugin ) {
 				$table_data[ $i ]['sanitized_plugin']  = $plugin['name'];
 				$table_data[ $i ]['slug']              = $slug;
-				$table_data[ $i ]['plugin']            = '<strong>' . $this->tgmpa->get_info_link( $slug ) . '</strong>';
+				$table_data[ $i ]['plugin']            = '<strong>' . $this->renewable_energy_tgmpa->get_info_link( $slug ) . '</strong>';
 				$table_data[ $i ]['source']            = $this->get_plugin_source_type_text( $plugin['source_type'] );
 				$table_data[ $i ]['type']              = $this->get_plugin_advise_type_text( $plugin['required'] );
 				$table_data[ $i ]['status']            = $this->get_plugin_status_text( $slug );
-				$table_data[ $i ]['installed_version'] = $this->tgmpa->get_installed_version( $slug );
+				$table_data[ $i ]['installed_version'] = $this->renewable_energy_tgmpa->get_installed_version( $slug );
 				$table_data[ $i ]['minimum_version']   = $plugin['version'];
-				$table_data[ $i ]['available_version'] = $this->tgmpa->does_plugin_have_update( $slug );
+				$table_data[ $i ]['available_version'] = $this->renewable_energy_tgmpa->does_plugin_have_update( $slug );
 
 				// Prep the upgrade notice info.
-				$upgrade_notice = $this->tgmpa->get_upgrade_notice( $slug );
+				$upgrade_notice = $this->renewable_energy_tgmpa->get_upgrade_notice( $slug );
 				if ( ! empty( $upgrade_notice ) ) {
 					$table_data[ $i ]['upgrade_notice'] = $upgrade_notice;
 
 					add_action( "tgmpa_after_plugin_row_{$slug}", array( $this, 'wp_plugin_update_row' ), 10, 2 );
 				}
 
-				$table_data[ $i ] = apply_filters( 'tgmpa_table_data_item', $table_data[ $i ], $plugin );
+				$table_data[ $i ] = apply_filters( 'renewable_energy_tgmpa_table_data_item', $table_data[ $i ], $plugin );
 
 				$i++;
 			}
@@ -2223,21 +2223,21 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				'activate' => array(),
 			);
 
-			foreach ( $this->tgmpa->plugins as $slug => $plugin ) {
-				if ( $this->tgmpa->is_plugin_active( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
+			foreach ( $this->renewable_energy_tgmpa->plugins as $slug => $plugin ) {
+				if ( $this->renewable_energy_tgmpa->is_plugin_active( $slug ) && false === $this->renewable_energy_tgmpa->does_plugin_have_update( $slug ) ) {
 					// No need to display plugins if they are installed, up-to-date and active.
 					continue;
 				} else {
 					$plugins['all'][ $slug ] = $plugin;
 
-					if ( ! $this->tgmpa->is_plugin_installed( $slug ) ) {
+					if ( ! $this->renewable_energy_tgmpa->is_plugin_installed( $slug ) ) {
 						$plugins['install'][ $slug ] = $plugin;
 					} else {
-						if ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
+						if ( false !== $this->renewable_energy_tgmpa->does_plugin_have_update( $slug ) ) {
 							$plugins['update'][ $slug ] = $plugin;
 						}
 
-						if ( $this->tgmpa->can_plugin_activate( $slug ) ) {
+						if ( $this->renewable_energy_tgmpa->can_plugin_activate( $slug ) ) {
 							$plugins['activate'][ $slug ] = $plugin;
 						}
 					}
@@ -2311,11 +2311,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @return string
 		 */
 		protected function get_plugin_status_text( $slug ) {
-			if ( ! $this->tgmpa->is_plugin_installed( $slug ) ) {
+			if ( ! $this->renewable_energy_tgmpa->is_plugin_installed( $slug ) ) {
 				return __( 'Not Installed', 'renewable-energy' );
 			}
 
-			if ( ! $this->tgmpa->is_plugin_active( $slug ) ) {
+			if ( ! $this->renewable_energy_tgmpa->is_plugin_active( $slug ) ) {
 				$install_status = __( 'Installed But Not Activated', 'renewable-energy' );
 			} else {
 				$install_status = __( 'Active', 'renewable-energy' );
@@ -2323,13 +2323,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			$update_status = '';
 
-			if ( $this->tgmpa->does_plugin_require_update( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
+			if ( $this->renewable_energy_tgmpa->does_plugin_require_update( $slug ) && false === $this->renewable_energy_tgmpa->does_plugin_have_update( $slug ) ) {
 				$update_status = __( 'Required Update not Available', 'renewable-energy' );
 
-			} elseif ( $this->tgmpa->does_plugin_require_update( $slug ) ) {
+			} elseif ( $this->renewable_energy_tgmpa->does_plugin_require_update( $slug ) ) {
 				$update_status = __( 'Requires Update', 'renewable-energy' );
 
-			} elseif ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
+			} elseif ( false !== $this->renewable_energy_tgmpa->does_plugin_have_update( $slug ) ) {
 				$update_status = __( 'Update recommended', 'renewable-energy' );
 			}
 
@@ -2384,19 +2384,19 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				switch ( $type ) {
 					case 'all':
-						/* translators: 1: number of plugins. */
+						/* translators: 1: number of plugins */
 						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'renewable-energy' );
 						break;
 					case 'install':
-						/* translators: 1: number of plugins. */
+						/* translators: 1: number of plugins */
 						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'renewable-energy' );
 						break;
 					case 'update':
-						/* translators: 1: number of plugins. */
+						/* translators: 1: number of plugins */
 						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'renewable-energy' );
 						break;
 					case 'activate':
-						/* translators: 1: number of plugins. */
+						/* translators: 1: number of plugins */
 						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'renewable-energy' );
 						break;
 					default:
@@ -2408,7 +2408,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 					$status_links[ $type ] = sprintf(
 						'<a href="%s"%s>%s</a>',
-						esc_url( $this->tgmpa->get_tgmpa_status_url( $type ) ),
+						esc_url( $this->renewable_energy_tgmpa->get_tgmpa_status_url( $type ) ),
 						( $type === $this->view_context ) ? ' class="current"' : '',
 						sprintf( $text, number_format_i18n( $count ) )
 					);
@@ -2424,12 +2424,12 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.2.0
 		 *
-		 * @param array  $item        Array of item data.
-		 * @param string $column_name The name of the column.
+		 * @param array  $renewable_energy_item        Array of item data.
+		 * @param string $renewable_energy_column_name The name of the column.
 		 * @return string
 		 */
-		public function column_default( $item, $column_name ) {
-			return $item[ $column_name ];
+		public function column_default( $renewable_energy_item, $renewable_energy_column_name ) {
+			return $renewable_energy_item[ $renewable_energy_column_name ];
 		}
 
 		/**
@@ -2439,15 +2439,15 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.2.0
 		 *
-		 * @param array $item Array of item data.
+		 * @param array $renewable_energy_item Array of item data.
 		 * @return string The input checkbox with all necessary info.
 		 */
-		public function column_cb( $item ) {
+		public function column_cb( $renewable_energy_item ) {
 			return sprintf(
 				'<input type="checkbox" name="%1$s[]" value="%2$s" id="%3$s" />',
 				esc_attr( $this->_args['singular'] ),
-				esc_attr( $item['slug'] ),
-				esc_attr( $item['sanitized_plugin'] )
+				esc_attr( $renewable_energy_item['slug'] ),
+				esc_attr( $renewable_energy_item['sanitized_plugin'] )
 			);
 		}
 
@@ -2456,14 +2456,14 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.2.0
 		 *
-		 * @param array $item Array of item data.
+		 * @param array $renewable_energy_item Array of item data.
 		 * @return string The plugin name and action links.
 		 */
-		public function column_plugin( $item ) {
+		public function column_plugin( $renewable_energy_item ) {
 			return sprintf(
 				'%1$s %2$s',
-				$item['plugin'],
-				$this->row_actions( $this->get_row_actions( $item ), true )
+				$renewable_energy_item['plugin'],
+				$this->row_actions( $this->get_row_actions( $renewable_energy_item ), true )
 			);
 		}
 
@@ -2472,17 +2472,17 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param array $item Array of item data.
+		 * @param array $renewable_energy_item Array of item data.
 		 * @return string HTML-formatted version information.
 		 */
-		public function column_version( $item ) {
+		public function column_version( $renewable_energy_item ) {
 			$output = array();
 
-			if ( $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
-				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'renewable-energy' );
+			if ( $this->renewable_energy_tgmpa->is_plugin_installed( $renewable_energy_item['slug'] ) ) {
+				$installed = ! empty( $renewable_energy_item['installed_version'] ) ? $renewable_energy_item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'renewable-energy' );
 
 				$color = '';
-				if ( ! empty( $item['minimum_version'] ) && $this->tgmpa->does_plugin_require_update( $item['slug'] ) ) {
+				if ( ! empty( $renewable_energy_item['minimum_version'] ) && $this->renewable_energy_tgmpa->does_plugin_require_update( $renewable_energy_item['slug'] ) ) {
 					$color = ' color: #ff0000; font-weight: bold;';
 				}
 
@@ -2493,23 +2493,23 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				);
 			}
 
-			if ( ! empty( $item['minimum_version'] ) ) {
+			if ( ! empty( $renewable_energy_item['minimum_version'] ) ) {
 				$output[] = sprintf(
 					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . __( 'Minimum required version:', 'renewable-energy' ) . '</p>',
-					$item['minimum_version']
+					$renewable_energy_item['minimum_version']
 				);
 			}
 
-			if ( ! empty( $item['available_version'] ) ) {
+			if ( ! empty( $renewable_energy_item['available_version'] ) ) {
 				$color = '';
-				if ( ! empty( $item['minimum_version'] ) && version_compare( $item['available_version'], $item['minimum_version'], '>=' ) ) {
+				if ( ! empty( $renewable_energy_item['minimum_version'] ) && version_compare( $renewable_energy_item['available_version'], $renewable_energy_item['minimum_version'], '>=' ) ) {
 					$color = ' color: #71C671; font-weight: bold;';
 				}
 
 				$output[] = sprintf(
 					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . __( 'Available version:', 'renewable-energy' ) . '</p>',
 					$color,
-					$item['available_version']
+					$renewable_energy_item['available_version']
 				);
 			}
 
@@ -2554,7 +2554,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				$columns['status']  = __( 'Status', 'renewable-energy' );
 			}
 
-			return apply_filters( 'tgmpa_table_columns', $columns );
+			return apply_filters( 'renewable_energy_tgmpa_table_columns', $columns );
 		}
 
 		/**
@@ -2590,54 +2590,54 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param array $item Array of item data.
+		 * @param array $renewable_energy_item Array of item data.
 		 * @return array Array with relevant action links.
 		 */
-		protected function get_row_actions( $item ) {
-			$actions      = array();
+		protected function get_row_actions( $renewable_energy_item ) {
+			$renewable_energy_actions      = array();
 			$action_links = array();
 
 			// Display the 'Install' action link if the plugin is not yet available.
-			if ( ! $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
+			if ( ! $this->renewable_energy_tgmpa->is_plugin_installed( $renewable_energy_item['slug'] ) ) {
 				/* translators: %2$s: plugin name in screen reader markup */
-				$actions['install'] = __( 'Install %2$s', 'renewable-energy' );
+				$renewable_energy_actions['install'] = __( 'Install %2$s', 'renewable-energy' );
 			} else {
 				// Display the 'Update' action link if an update is available and WP complies with plugin minimum.
-				if ( false !== $this->tgmpa->does_plugin_have_update( $item['slug'] ) && $this->tgmpa->can_plugin_update( $item['slug'] ) ) {
+				if ( false !== $this->renewable_energy_tgmpa->does_plugin_have_update( $renewable_energy_item['slug'] ) && $this->renewable_energy_tgmpa->can_plugin_update( $renewable_energy_item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['update'] = __( 'Update %2$s', 'renewable-energy' );
+					$renewable_energy_actions['update'] = __( 'Update %2$s', 'renewable-energy' );
 				}
 
 				// Display the 'Activate' action link, but only if the plugin meets the minimum version.
-				if ( $this->tgmpa->can_plugin_activate( $item['slug'] ) ) {
+				if ( $this->renewable_energy_tgmpa->can_plugin_activate( $renewable_energy_item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['activate'] = __( 'Activate %2$s', 'renewable-energy' );
+					$renewable_energy_actions['activate'] = __( 'Activate %2$s', 'renewable-energy' );
 				}
 			}
 
 			// Create the actual links.
-			foreach ( $actions as $action => $text ) {
+			foreach ( $renewable_energy_actions as $renewable_energy_action => $text ) {
 				$nonce_url = wp_nonce_url(
 					add_query_arg(
 						array(
-							'plugin'           => urlencode( $item['slug'] ),
-							'tgmpa-' . $action => $action . '-plugin',
+							'plugin'           => urlencode( $renewable_energy_item['slug'] ),
+							'renewable_energy_tgmpa-' . $renewable_energy_action => $renewable_energy_action . '-plugin',
 						),
-						$this->tgmpa->get_tgmpa_url()
+						$this->renewable_energy_tgmpa->get_tgmpa_url()
 					),
-					'tgmpa-' . $action,
-					'tgmpa-nonce'
+					'renewable_energy_tgmpa-' . $renewable_energy_action,
+					'renewable_energy_tgmpa-nonce'
 				);
 
-				$action_links[ $action ] = sprintf(
+				$action_links[ $renewable_energy_action ] = sprintf(
 					'<a href="%1$s">' . esc_html( $text ) . '</a>', // $text contains the second placeholder.
 					esc_url( $nonce_url ),
-					'<span class="screen-reader-text">' . esc_html( $item['sanitized_plugin'] ) . '</span>'
+					'<span class="screen-reader-text">' . esc_html( $renewable_energy_item['sanitized_plugin'] ) . '</span>'
 				);
 			}
 
 			$prefix = ( defined( 'WP_NETWORK_ADMIN' ) && WP_NETWORK_ADMIN ) ? 'network_admin_' : '';
-			return apply_filters( "tgmpa_{$prefix}plugin_action_links", array_filter( $action_links ), $item['slug'], $item, $this->view_context );
+			return apply_filters( "renewable_energy_tgmpa_{$prefix}plugin_action_links", array_filter( $action_links ), $renewable_energy_item['slug'], $renewable_energy_item, $this->view_context );
 		}
 
 		/**
@@ -2645,20 +2645,20 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.5.0
 		 *
-		 * @param object $item The current item.
+		 * @param object $renewable_energy_item The current item.
 		 */
-		public function single_row( $item ) {
-			parent::single_row( $item );
+		public function single_row( $renewable_energy_item ) {
+			parent::single_row( $renewable_energy_item );
 
 			/**
 			 * Fires after each specific row in the TGMPA Plugins list table.
 			 *
-			 * The dynamic portion of the hook name, `$item['slug']`, refers to the slug
+			 * The dynamic portion of the hook name, `$renewable_energy_item['slug']`, refers to the slug
 			 * for the plugin.
 			 *
 			 * @since 2.5.0
 			 */
-			do_action( "tgmpa_after_plugin_row_{$item['slug']}", $item['slug'], $item, $this->view_context );
+			do_action( "renewable_energy_tgmpa_after_plugin_row_{$renewable_energy_item['slug']}", $renewable_energy_item['slug'], $renewable_energy_item, $this->view_context );
 		}
 
 		/**
@@ -2669,11 +2669,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @see /wp-admin/includes/update.php
 		 *
 		 * @param string $slug Plugin slug.
-		 * @param array  $item The information available in this table row.
+		 * @param array  $renewable_energy_item The information available in this table row.
 		 * @return null Return early if upgrade notice is empty.
 		 */
-		public function wp_plugin_update_row( $slug, $item ) {
-			if ( empty( $item['upgrade_notice'] ) ) {
+		public function wp_plugin_update_row( $slug, $renewable_energy_item ) {
+			if ( empty( $renewable_energy_item['upgrade_notice'] ) ) {
 				return;
 			}
 
@@ -2682,7 +2682,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					<td colspan="', absint( $this->get_column_count() ), '" class="plugin-update colspanchange">
 						<div class="update-message">',
 							esc_html__( 'Upgrade message from the plugin author:', 'renewable-energy' ),
-							' <strong>', wp_kses_data( $item['upgrade_notice'] ), '</strong>
+							' <strong>', wp_kses_data( $renewable_energy_item['upgrade_notice'] ), '</strong>
 						</div>
 					</td>
 				</tr>';
@@ -2697,7 +2697,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		public function extra_tablenav( $which ) {
 			if ( 'bottom' === $which ) {
-				$this->tgmpa->show_tgmpa_version();
+				$this->renewable_energy_tgmpa->show_tgmpa_version();
 			}
 		}
 
@@ -2706,28 +2706,28 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 *
 		 * @since 2.2.0
 		 *
-		 * @return array $actions The bulk actions for the plugin install table.
+		 * @return array $renewable_energy_actions The bulk actions for the plugin install table.
 		 */
 		public function get_bulk_actions() {
 
-			$actions = array();
+			$renewable_energy_actions = array();
 
 			if ( 'update' !== $this->view_context && 'activate' !== $this->view_context ) {
 				if ( current_user_can( 'install_plugins' ) ) {
-					$actions['tgmpa-bulk-install'] = __( 'Install', 'renewable-energy' );
+					$renewable_energy_actions['renewable_energy_tgmpa-bulk-install'] = __( 'Install', 'renewable-energy' );
 				}
 			}
 
 			if ( 'install' !== $this->view_context ) {
 				if ( current_user_can( 'update_plugins' ) ) {
-					$actions['tgmpa-bulk-update'] = __( 'Update', 'renewable-energy' );
+					$renewable_energy_actions['renewable_energy_tgmpa-bulk-update'] = __( 'Update', 'renewable-energy' );
 				}
 				if ( current_user_can( 'activate_plugins' ) ) {
-					$actions['tgmpa-bulk-activate'] = __( 'Activate', 'renewable-energy' );
+					$renewable_energy_actions['renewable_energy_tgmpa-bulk-activate'] = __( 'Activate', 'renewable-energy' );
 				}
 			}
 
-			return $actions;
+			return $renewable_energy_actions;
 		}
 
 		/**
@@ -2740,12 +2740,12 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		public function process_bulk_actions() {
 			// Bulk installation process.
-			if ( 'tgmpa-bulk-install' === $this->current_action() || 'tgmpa-bulk-update' === $this->current_action() ) {
+			if ( 'renewable_energy_tgmpa-bulk-install' === $this->current_action() || 'renewable_energy_tgmpa-bulk-update' === $this->current_action() ) {
 
 				check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
 				$install_type = 'install';
-				if ( 'tgmpa-bulk-update' === $this->current_action() ) {
+				if ( 'renewable_energy_tgmpa-bulk-update' === $this->current_action() ) {
 					$install_type = 'update';
 				}
 
@@ -2765,32 +2765,32 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				if ( is_array( $_POST['plugin'] ) ) {
-					$plugins_to_install = (array) $_POST['plugin'];
+					$plugins_to_install = (array) sanitize_text_field( wp_unslash( $_POST['plugin'] ) );
 				} elseif ( is_string( $_POST['plugin'] ) ) {
 					// Received via Filesystem page - un-flatten array (WP bug #19643).
-					$plugins_to_install = explode( ',', $_POST['plugin'] );
+					$plugins_to_install = explode( ',', sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) );
 				}
 
 				// Sanitize the received input.
 				$plugins_to_install = array_map( 'urldecode', $plugins_to_install );
-				$plugins_to_install = array_map( array( $this->tgmpa, 'sanitize_key' ), $plugins_to_install );
+				$plugins_to_install = array_map( array( $this->renewable_energy_tgmpa, 'sanitize_key' ), $plugins_to_install );
 
 				// Validate the received input.
-				foreach ( $plugins_to_install as $key => $slug ) {
+				foreach ( $plugins_to_install as $renewable_energy_key => $slug ) {
 					// Check if the plugin was registered with TGMPA and remove if not.
-					if ( ! isset( $this->tgmpa->plugins[ $slug ] ) ) {
-						unset( $plugins_to_install[ $key ] );
+					if ( ! isset( $this->renewable_energy_tgmpa->plugins[ $slug ] ) ) {
+						unset( $plugins_to_install[ $renewable_energy_key ] );
 						continue;
 					}
 
 					// For install: make sure this is a plugin we *can* install and not one already installed.
-					if ( 'install' === $install_type && true === $this->tgmpa->is_plugin_installed( $slug ) ) {
-						unset( $plugins_to_install[ $key ] );
+					if ( 'install' === $install_type && true === $this->renewable_energy_tgmpa->is_plugin_installed( $slug ) ) {
+						unset( $plugins_to_install[ $renewable_energy_key ] );
 					}
 
 					// For updates: make sure this is a plugin we *can* update (update available and WP version ok).
-					if ( 'update' === $install_type && false === $this->tgmpa->is_plugin_updatetable( $slug ) ) {
-						unset( $plugins_to_install[ $key ] );
+					if ( 'update' === $install_type && false === $this->renewable_energy_tgmpa->is_plugin_updatetable( $slug ) ) {
+						unset( $plugins_to_install[ $renewable_energy_key ] );
 					}
 				}
 
@@ -2809,7 +2809,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Pass all necessary information if WP_Filesystem is needed.
 				$url = wp_nonce_url(
-					$this->tgmpa->get_tgmpa_url(),
+					$this->renewable_energy_tgmpa->get_tgmpa_url(),
 					'bulk-' . $this->_args['plural']
 				);
 
@@ -2841,8 +2841,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Prepare the data for validated plugins for the install/upgrade.
 				foreach ( $plugins_to_install as $slug ) {
-					$name   = $this->tgmpa->plugins[ $slug ]['name'];
-					$source = $this->tgmpa->get_download_url( $slug );
+					$name   = $this->renewable_energy_tgmpa->plugins[ $slug ]['name'];
+					$source = $this->renewable_energy_tgmpa->get_download_url( $slug );
 
 					if ( ! empty( $name ) && ! empty( $source ) ) {
 						$names[] = $name;
@@ -2854,8 +2854,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 								break;
 
 							case 'update':
-								$file_paths[]                 = $this->tgmpa->plugins[ $slug ]['file_path'];
-								$to_inject[ $slug ]           = $this->tgmpa->plugins[ $slug ];
+								$file_paths[]                 = $this->renewable_energy_tgmpa->plugins[ $slug ]['file_path'];
+								$to_inject[ $slug ]           = $this->renewable_energy_tgmpa->plugins[ $slug ];
 								$to_inject[ $slug ]['source'] = $source;
 								break;
 						}
@@ -2863,11 +2863,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 				unset( $slug, $name, $source );
 
-				// Create a new instance of TGMPA_Bulk_Installer.
-				$installer = new TGMPA_Bulk_Installer(
-					new TGMPA_Bulk_Installer_Skin(
+				// Create a new instance of Renewable_Energy_TGMPA_Bulk_Installer.
+				$installer = new Renewable_Energy_TGMPA_Bulk_Installer(
+					new Renewable_Energy_TGMPA_Bulk_Installer_Skin(
 						array(
-							'url'          => esc_url_raw( $this->tgmpa->get_tgmpa_url() ),
+							'url'          => esc_url_raw( $this->renewable_energy_tgmpa->get_tgmpa_url() ),
 							'nonce'        => 'bulk-' . $this->_args['plural'],
 							'names'        => $names,
 							'install_type' => $install_type,
@@ -2876,23 +2876,23 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				);
 
 				// Wrap the install process with the appropriate HTML.
-				echo '<div class="tgmpa">',
+				echo '<div class="renewable_energy_tgmpa">',
 					'<h2 style="font-size: 23px; font-weight: 400; line-height: 29px; margin: 0; padding: 9px 15px 4px 0;">', esc_html( get_admin_page_title() ), '</h2>
 					<div class="update-php" style="width: 100%; height: 98%; min-height: 850px; padding-top: 1px;">';
 
 				// Process the bulk installation submissions.
-				add_filter( 'upgrader_source_selection', array( $this->tgmpa, 'maybe_adjust_source_dir' ), 1, 3 );
+				add_filter( 'upgrader_source_selection', array( $this->renewable_energy_tgmpa, 'maybe_adjust_source_dir' ), 1, 3 );
 
-				if ( 'tgmpa-bulk-update' === $this->current_action() ) {
+				if ( 'renewable_energy_tgmpa-bulk-update' === $this->current_action() ) {
 					// Inject our info into the update transient.
-					$this->tgmpa->inject_update_info( $to_inject );
+					$this->renewable_energy_tgmpa->inject_update_info( $to_inject );
 
 					$installer->bulk_upgrade( $file_paths );
 				} else {
 					$installer->bulk_install( $sources );
 				}
 
-				remove_filter( 'upgrader_source_selection', array( $this->tgmpa, 'maybe_adjust_source_dir' ), 1 );
+				remove_filter( 'upgrader_source_selection', array( $this->renewable_energy_tgmpa, 'maybe_adjust_source_dir' ), 1 );
 
 				echo '</div></div>';
 
@@ -2900,7 +2900,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			}
 
 			// Bulk activation process.
-			if ( 'tgmpa-bulk-activate' === $this->current_action() ) {
+			if ( 'renewable_energy_tgmpa-bulk-activate' === $this->current_action() ) {
 				check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
 				// Did user actually select any plugins to activate ?
@@ -2913,8 +2913,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// Grab plugin data from $_POST.
 				$plugins = array();
 				if ( isset( $_POST['plugin'] ) ) {
-					$plugins = array_map( 'urldecode', (array) $_POST['plugin'] );
-					$plugins = array_map( array( $this->tgmpa, 'sanitize_key' ), $plugins );
+					$plugins = array_map( 'urldecode', (array) sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) );
+					$plugins = array_map( array( $this->renewable_energy_tgmpa, 'sanitize_key' ), $plugins );
 				}
 
 				$plugins_to_activate = array();
@@ -2922,9 +2922,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Grab the file paths for the selected & inactive plugins from the registration array.
 				foreach ( $plugins as $slug ) {
-					if ( $this->tgmpa->can_plugin_activate( $slug ) ) {
-						$plugins_to_activate[] = $this->tgmpa->plugins[ $slug ]['file_path'];
-						$plugin_names[]        = $this->tgmpa->plugins[ $slug ]['name'];
+					if ( $this->renewable_energy_tgmpa->can_plugin_activate( $slug ) ) {
+						$plugins_to_activate[] = $this->renewable_energy_tgmpa->plugins[ $slug ]['file_path'];
+						$plugin_names[]        = $this->renewable_energy_tgmpa->plugins[ $slug ]['name'];
 					}
 				}
 				unset( $slug );
@@ -2947,7 +2947,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$last_plugin  = array_pop( $plugin_names ); // Pop off last name to prep for readability.
 					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'renewable-energy' ) . ' ' . $last_plugin );
 
-					printf( // WPCS: xss ok.
+					printf( // phpcs:ignore WordPress.Security.EscapeOutput.DeprecatedWhitelistCommentFound -- xss ok.
 						'<div id="message" class="updated"><p>%1$s %2$s.</p></div>',
 						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'renewable-energy' ) ),
 						$imploded
@@ -2984,12 +2984,12 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			$this->_column_headers = array( $columns, $hidden, $sortable, $primary ); // Get all necessary column headers.
 
 			// Process our bulk activations here.
-			if ( 'tgmpa-bulk-activate' === $this->current_action() ) {
+			if ( 'renewable_energy_tgmpa-bulk-activate' === $this->current_action() ) {
 				$this->process_bulk_actions();
 			}
 
 			// Store all of our plugin data into $items array so WP_List_Table can use it.
-			$this->items = apply_filters( 'tgmpa_table_data_items', $this->_gather_plugin_data() );
+			$this->items = apply_filters( 'renewable_energy_tgmpa_table_data_items', $this->_gather_plugin_data() );
 		}
 
 		/* *********** DEPRECATED METHODS *********** */
@@ -3008,7 +3008,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		protected function _get_plugin_data_from_name( $name, $data = 'slug' ) {
 			_deprecated_function( __FUNCTION__, 'TGMPA 2.5.0', 'TGM_Plugin_Activation::_get_plugin_data_from_name()' );
 
-			return $this->tgmpa->_get_plugin_data_from_name( $name, $data );
+			return $this->renewable_energy_tgmpa->_get_plugin_data_from_name( $name, $data );
 		}
 	}
 }
@@ -3021,7 +3021,7 @@ if ( ! class_exists( 'TGM_Bulk_Installer' ) ) {
 	 *
 	 * @since 2.5.2
 	 *
-	 * {@internal The TGMPA_Bulk_Installer class was originally called TGM_Bulk_Installer.
+	 * {@internal The Renewable_Energy_TGMPA_Bulk_Installer class was originally called TGM_Bulk_Installer.
 	 *            For more information, see that class.}}
 	 */
 	class TGM_Bulk_Installer {
@@ -3034,7 +3034,7 @@ if ( ! class_exists( 'TGM_Bulk_Installer_Skin' ) ) {
 	 *
 	 * @since 2.5.2
 	 *
-	 * {@internal The TGMPA_Bulk_Installer_Skin class was originally called TGM_Bulk_Installer_Skin.
+	 * {@internal The Renewable_Energy_TGMPA_Bulk_Installer_Skin class was originally called TGM_Bulk_Installer_Skin.
 	 *            For more information, see that class.}}
 	 */
 	class TGM_Bulk_Installer_Skin {
@@ -3051,26 +3051,26 @@ if ( ! class_exists( 'TGM_Bulk_Installer_Skin' ) ) {
  *
  * @since 2.2.0
  */
-add_action( 'admin_init', 'tgmpa_load_bulk_installer' );
-if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
+add_action( 'admin_init', 'renewable_energy_tgmpa_load_bulk_installer' );
+if ( ! function_exists( 'renewable_energy_tgmpa_load_bulk_installer' ) ) {
 	/**
 	 * Load bulk installer
 	 */
-	function tgmpa_load_bulk_installer() {
+	function renewable_energy_tgmpa_load_bulk_installer() {
 		// Silently fail if 2.5+ is loaded *after* an older version.
-		if ( ! isset( $GLOBALS['tgmpa'] ) ) {
+		if ( ! isset( $GLOBALS['renewable_energy_tgmpa'] ) ) {
 			return;
 		}
 
 		// Get TGMPA class instance.
-		$tgmpa_instance = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+		$tgmpa_instance = call_user_func( array( get_class( $GLOBALS['renewable_energy_tgmpa'] ), 'get_instance' ) );
 
 		if ( isset( $_GET['page'] ) && $tgmpa_instance->menu === $_GET['page'] ) {
 			if ( ! class_exists( 'Plugin_Upgrader', false ) ) {
-				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound -- wp-admin/includes/class-wp-upgrader.php
 			}
 
-			if ( ! class_exists( 'TGMPA_Bulk_Installer' ) ) {
+			if ( ! class_exists( 'Renewable_Energy_TGMPA_Bulk_Installer' ) ) {
 
 				/**
 				 * Installer class to handle bulk plugin installations.
@@ -3081,14 +3081,14 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				 * @since 2.2.0
 				 *
 				 * {@internal Since 2.5.0 the class is an extension of Plugin_Upgrader rather than WP_Upgrader.}}
-				 * {@internal Since 2.5.2 the class has been renamed from TGM_Bulk_Installer to TGMPA_Bulk_Installer.
+				 * {@internal Since 2.5.2 the class has been renamed from TGM_Bulk_Installer to Renewable_Energy_TGMPA_Bulk_Installer.
 				 *            This was done to prevent backward compatibility issues with v2.3.6.}}
 				 *
 				 * @package TGM-Plugin-Activation
 				 * @author  Thomas Griffin
 				 * @author  Gary Jones
 				 */
-				class TGMPA_Bulk_Installer extends Plugin_Upgrader {
+				class Renewable_Energy_TGMPA_Bulk_Installer extends Plugin_Upgrader {
 					/**
 					 * Holds result of bulk plugin installation.
 					 *
@@ -3114,7 +3114,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 *
 					 * @var object
 					 */
-					protected $tgmpa;
+					protected $renewable_energy_tgmpa;
 
 					/**
 					 * Whether or not the destination directory needs to be cleared ( = on update).
@@ -3134,7 +3134,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 */
 					public function __construct( $skin = null ) {
 						// Get TGMPA class instance.
-						$this->tgmpa = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+						$this->renewable_energy_tgmpa = call_user_func( array( get_class( $GLOBALS['renewable_energy_tgmpa'] ), 'get_instance' ) );
 
 						parent::__construct( $skin );
 
@@ -3142,11 +3142,11 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 							$this->clear_destination = true;
 						}
 
-						if ( $this->tgmpa->is_automatic ) {
+						if ( $this->renewable_energy_tgmpa->is_automatic ) {
 							$this->activate_strings();
 						}
 
-						add_action( 'upgrader_process_complete', array( $this->tgmpa, 'populate_file_path' ) );
+						add_action( 'renewable_energy_upgrader_process_complete', array( $this->renewable_energy_tgmpa, 'populate_file_path' ) );
 					}
 
 					/**
@@ -3173,7 +3173,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						$result = parent::run( $options );
 
 						// Reset the strings in case we changed one during automatic activation.
-						if ( $this->tgmpa->is_automatic ) {
+						if ( $this->renewable_energy_tgmpa->is_automatic ) {
 							if ( 'update' === $this->skin->options['install_type'] ) {
 								$this->upgrade_strings();
 							} else {
@@ -3200,17 +3200,17 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * (@internal Last synced: Dec 31st 2015 against https://core.trac.wordpress.org/browser/trunk?rev=36134}}
 					 *
 					 * @param array $plugins The plugin sources needed for installation.
-					 * @param array $args    Arbitrary passed extra arguments.
+					 * @param array $renewable_energy_args    Arbitrary passed extra arguments.
 					 * @return array|false   Install confirmation messages on success, false on failure.
 					 */
-					public function bulk_install( $plugins, $args = array() ) {
+					public function bulk_install( $plugins, $renewable_energy_args = array() ) {
 						// [TGMPA + ] Hook auto-activation in.
 						add_filter( 'upgrader_post_install', array( $this, 'auto_activate' ), 10 );
 
 						$defaults    = array(
 							'clear_update_cache' => true,
 						);
-						$parsed_args = wp_parse_args( $args, $defaults );
+						$parsed_args = wp_parse_args( $renewable_energy_args, $defaults );
 
 						$this->init();
 						$this->bulk = true;
@@ -3308,13 +3308,13 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						 * @param array           $data {
 						 *     Array of bulk item update data.
 						 *
-						 *     @type string $action   Type of action. Default 'update'.
+						 *     @type string $renewable_energy_action   Type of action. Default 'update'.
 						 *     @type string $type     Type of update process. Accepts 'plugin', 'theme', or 'core'.
 						 *     @type bool   $bulk     Whether the update process is a bulk update. Default true.
 						 *     @type array  $packages Array of plugin, theme, or core packages to update.
 						 * }
 						 */
-						do_action( 'upgrader_process_complete', $this, array(
+						do_action( 'renewable_energy_upgrader_process_complete', $this, array(
 							'action'  => 'install', // [TGMPA + ] adjusted.
 							'type'    => 'plugin',
 							'bulk'    => true,
@@ -3345,14 +3345,14 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * @see Plugin_Upgrader::bulk_upgrade()
 					 *
 					 * @param array $plugins The local WP file_path's of the plugins which should be upgraded.
-					 * @param array $args    Arbitrary passed extra arguments.
+					 * @param array $renewable_energy_args    Arbitrary passed extra arguments.
 					 * @return string|bool Install confirmation messages on success, false on failure.
 					 */
-					public function bulk_upgrade( $plugins, $args = array() ) {
+					public function bulk_upgrade( $plugins, $renewable_energy_args = array() ) {
 
 						add_filter( 'upgrader_post_install', array( $this, 'auto_activate' ), 10 );
 
-						$result = parent::bulk_upgrade( $plugins, $args );
+						$result = parent::bulk_upgrade( $plugins, $renewable_energy_args );
 
 						remove_filter( 'upgrader_post_install', array( $this, 'auto_activate' ), 10 );
 
@@ -3371,7 +3371,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 */
 					public function auto_activate( $bool ) {
 						// Only process the activation of installed plugins if the automatic flag is set to true.
-						if ( $this->tgmpa->is_automatic ) {
+						if ( $this->renewable_energy_tgmpa->is_automatic ) {
 							// Flush plugins cache so the headers of the newly installed plugins will be read correctly.
 							wp_clean_plugins_cache();
 
@@ -3399,7 +3399,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				}
 			}
 
-			if ( ! class_exists( 'TGMPA_Bulk_Installer_Skin' ) ) {
+			if ( ! class_exists( 'Renewable_Energy_TGMPA_Bulk_Installer_Skin' ) ) {
 
 				/**
 				 * Installer skin to set strings for the bulk plugin installations..
@@ -3410,7 +3410,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				 * @since 2.2.0
 				 *
 				 * {@internal Since 2.5.2 the class has been renamed from TGM_Bulk_Installer_Skin to
-				 *            TGMPA_Bulk_Installer_Skin.
+				 *            Renewable_Energy_TGMPA_Bulk_Installer_Skin.
 				 *            This was done to prevent backward compatibility issues with v2.3.6.}}
 				 *
 				 * @see https://core.trac.wordpress.org/browser/trunk/src/wp-admin/includes/class-wp-upgrader-skins.php
@@ -3419,7 +3419,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 				 * @author  Thomas Griffin
 				 * @author  Gary Jones
 				 */
-				class TGMPA_Bulk_Installer_Skin extends Bulk_Upgrader_Skin {
+				class Renewable_Energy_TGMPA_Bulk_Installer_Skin extends Bulk_Upgrader_Skin {
 					/**
 					 * Holds plugin info for each individual plugin installation.
 					 *
@@ -3454,18 +3454,18 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 *
 					 * @var object
 					 */
-					protected $tgmpa;
+					protected $renewable_energy_tgmpa;
 
 					/**
 					 * Constructor. Parses default args with new ones and extracts them for use.
 					 *
 					 * @since 2.2.0
 					 *
-					 * @param array $args Arguments to pass for use within the class.
+					 * @param array $renewable_energy_args Arguments to pass for use within the class.
 					 */
-					public function __construct( $args = array() ) {
+					public function __construct( $renewable_energy_args = array() ) {
 						// Get TGMPA class instance.
-						$this->tgmpa = call_user_func( array( get_class( $GLOBALS['tgmpa'] ), 'get_instance' ) );
+						$this->renewable_energy_tgmpa = call_user_func( array( get_class( $GLOBALS['renewable_energy_tgmpa'] ), 'get_instance' ) );
 
 						// Parse default and new args.
 						$defaults = array(
@@ -3474,13 +3474,13 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 							'names'        => array(),
 							'install_type' => 'install',
 						);
-						$args     = wp_parse_args( $args, $defaults );
+						$renewable_energy_args     = wp_parse_args( $renewable_energy_args, $defaults );
 
 						// Set plugin names to $this->plugin_names property.
-						$this->plugin_names = $args['names'];
+						$this->plugin_names = $renewable_energy_args['names'];
 
 						// Extract the new args.
-						parent::__construct( $args );
+						parent::__construct( $renewable_energy_args );
 					}
 
 					/**
@@ -3494,29 +3494,29 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					public function add_strings() {
 						if ( 'update' === $this->options['install_type'] ) {
 							parent::add_strings();
-							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
+							/* translators: 1: plugin name, 2: action number 3: total number of actions */
 							$this->upgrader->strings['skin_before_update_header'] = __( 'Updating Plugin %1$s (%2$d/%3$d)', 'renewable-energy' );
 						} else {
-							/* translators: 1: plugin name, 2: error message. */
+							/* translators: 1: plugin name, 2: error message */
 							$this->upgrader->strings['skin_update_failed_error'] = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'renewable-energy' );
-							/* translators: 1: plugin name. */
+							/* translators: 1: plugin name */
 							$this->upgrader->strings['skin_update_failed'] = __( 'The installation of %1$s failed.', 'renewable-energy' );
 
-							if ( $this->tgmpa->is_automatic ) {
+							if ( $this->renewable_energy_tgmpa->is_automatic ) {
 								// Automatic activation strings.
 								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'renewable-energy' );
-								/* translators: 1: plugin name. */
+								/* translators: 1: plugin name */
 								$this->upgrader->strings['skin_update_successful'] = __( '%1$s installed and activated successfully.', 'renewable-energy' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'renewable-energy' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'renewable-energy' ) . '</span>.</a>';
 								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations and activations have been completed.', 'renewable-energy' );
-								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
+								/* translators: 1: plugin name, 2: action number 3: total number of actions */
 								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'renewable-energy' );
 							} else {
 								// Default installation strings.
 								$this->upgrader->strings['skin_upgrade_start'] = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'renewable-energy' );
-								/* translators: 1: plugin name. */
+								/* translators: 1: plugin name */
 								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'renewable-energy' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'renewable-energy' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'renewable-energy' ) . '</span>.</a>';
 								$this->upgrader->strings['skin_upgrade_end']       = __( 'All installations have been completed.', 'renewable-energy' );
-								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
+								/* translators: 1: plugin name, 2: action number 3: total number of actions */
 								$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', 'renewable-energy' );
 							}
 						}
@@ -3527,13 +3527,13 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 *
 					 * @since 2.2.0
 					 *
-					 * @param string $title Unused in this implementation.
+					 * @param string $renewable_energy_title Unused in this implementation.
 					 */
-					public function before( $title = '' ) {
-						if ( empty( $title ) ) {
-							$title = esc_html( $this->plugin_names[ $this->i ] );
+					public function before( $renewable_energy_title = '' ) {
+						if ( empty( $renewable_energy_title ) ) {
+							$renewable_energy_title = esc_html( $this->plugin_names[ $this->i ] );
 						}
-						parent::before( $title );
+						parent::before( $renewable_energy_title );
 					}
 
 					/**
@@ -3544,13 +3544,13 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 *
 					 * @since 2.2.0
 					 *
-					 * @param string $title Unused in this implementation.
+					 * @param string $renewable_energy_title Unused in this implementation.
 					 */
-					public function after( $title = '' ) {
-						if ( empty( $title ) ) {
-							$title = esc_html( $this->plugin_names[ $this->i ] );
+					public function after( $renewable_energy_title = '' ) {
+						if ( empty( $renewable_energy_title ) ) {
+							$renewable_energy_title = esc_html( $this->plugin_names[ $this->i ] );
 						}
-						parent::after( $title );
+						parent::after( $renewable_energy_title );
 
 						$this->i++;
 					}
@@ -3567,20 +3567,20 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						// Flush plugins cache so we can make sure that the installed plugins list is always up to date.
 						wp_clean_plugins_cache();
 
-						$this->tgmpa->show_tgmpa_version();
+						$this->renewable_energy_tgmpa->show_tgmpa_version();
 
 						// Display message based on if all plugins are now active or not.
 						$update_actions = array();
 
-						if ( $this->tgmpa->is_tgmpa_complete() ) {
+						if ( $this->renewable_energy_tgmpa->is_tgmpa_complete() ) {
 							// All plugins are active, so we display the complete string and hide the menu to protect users.
 							echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 							$update_actions['dashboard'] = sprintf(
-								esc_html( $this->tgmpa->strings['complete'] ),
+								esc_html( $this->renewable_energy_tgmpa->strings['complete'] ),
 								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'renewable-energy' ) . '</a>'
 							);
 						} else {
-							$update_actions['tgmpa_page'] = '<a href="' . esc_url( $this->tgmpa->get_tgmpa_url() ) . '" target="_parent">' . esc_html( $this->tgmpa->strings['return'] ) . '</a>';
+							$update_actions['tgmpa_page'] = '<a href="' . esc_url( $this->renewable_energy_tgmpa->get_tgmpa_url() ) . '" target="_parent">' . esc_html( $this->renewable_energy_tgmpa->strings['return'] ) . '</a>';
 						}
 
 						/**
@@ -3591,7 +3591,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						 * @param array $update_actions Array of plugin action links.
 						 * @param array $plugin_info    Array of information for the last-handled plugin.
 						 */
-						$update_actions = apply_filters( 'tgmpa_update_bulk_plugins_complete_actions', $update_actions, $this->plugin_info );
+						$update_actions = apply_filters( 'renewable_energy_tgmpa_update_bulk_plugins_complete_actions', $update_actions, $this->plugin_info );
 
 						if ( ! empty( $update_actions ) ) {
 							$this->feedback( implode( ' | ', (array) $update_actions ) );

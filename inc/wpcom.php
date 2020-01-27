@@ -10,14 +10,14 @@
 /**
  * Adds support for wp.com-specific theme functions.
  *
- * @global array $themecolors
+ * @global array $renewable_energy_themecolors
  */
 function renewable_energy_wpcom_setup() {
-	global $themecolors;
+	global $renewable_energy_themecolors;
 
 	// Set theme colors for third party services.
-	if ( ! isset( $themecolors ) ) {
-		$themecolors = array(
+	if ( ! isset( $renewable_energy_themecolors ) ) {
+		$renewable_energy_themecolors = array(
 			'bg'     => '',
 			'border' => '',
 			'text'   => '',

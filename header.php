@@ -7,8 +7,8 @@
  * @package Renewable_Energy
  */
 
-$container = get_theme_mod('renewable_energy_container_type');
-$show_preloader = get_theme_mod('renewable_energy_show_preloader');
+$renewable_energy_container = get_theme_mod('renewable_energy_container_type', 'container');
+$show_preloader = get_theme_mod('renewable_energy_show_preloader', 'yes');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -25,7 +25,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php renewable_energy_wp_body_open(); ?>
 <?php if ($show_preloader == 'yes') : ?>
 	<div class="loader-body" id="loader">
 		<div class="loader"></div>
@@ -41,7 +41,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
-		<?php if ('container' == $container ) : ?>
+		<?php if ('container' == $renewable_energy_container ) : ?>
 			<div class="container" >
 		<?php endif; ?>
 
@@ -76,7 +76,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 						'walker'          => new Renewable_Energy_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-		<?php if ('container' == $container ) : ?>
+		<?php if ('container' == $renewable_energy_container ) : ?>
 			</div><!-- .container -->
 		<?php endif; ?>
 
@@ -84,6 +84,6 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader');
 
 	</div><!-- .wrapper-navbar end -->
 
-	<nav class="<?php echo esc_attr( $container ); ?>" aria-label="breadcrumb">
+	<nav class="<?php echo esc_attr( $renewable_energy_container ); ?>" aria-label="breadcrumb">
 		<?php if (function_exists('renewable_energy_breadcrumbs')) renewable_energy_breadcrumbs(); ?>
 	</nav>

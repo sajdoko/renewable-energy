@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.6.0
  */
 
 if ( ! defined('ABSPATH') ) {
@@ -21,8 +21,8 @@ if ( ! defined('ABSPATH') ) {
 }
 
 global $comment;
-$rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
+$renewable_energy_rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 
-if ( $rating && 'yes' === get_option('woocommerce_enable_review_rating') ) {
-	echo wc_get_rating_html( $rating );
+if ( $renewable_energy_rating && 'yes' === get_option('woocommerce_enable_review_rating') ) {
+	echo wc_get_rating_html( $renewable_energy_rating );
 }

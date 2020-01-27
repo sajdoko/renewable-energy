@@ -13,7 +13,7 @@
  * @see        https://docs.woocommerce.com/document/template-structure/
  * @author        WooThemes
  * @package    WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.5.0
  */
 
 if ( ! defined('ABSPATH') ) {
@@ -21,11 +21,11 @@ if ( ! defined('ABSPATH') ) {
 }
 
 // load container setting
-$container = get_theme_mod('renewable_energy_container_type');
+$renewable_energy_container = get_theme_mod('renewable_energy_container_type', 'container');
 
 // if we use container-fluid add some margin
-if ('container-fluid' === $container ) {
-	echo '<div class="wrapper" id="page-wrapper"><div class="' . $container . '" id="content" tabindex="-1"> <div class="row mx-1">';
+if ('container-fluid' === $renewable_energy_container ) {
+	echo '<div class="wrapper" id="page-wrapper"><div class="' . $renewable_energy_container . '" id="content" tabindex="-1"> <div class="row mx-1">';
 } else {
-	echo '<div class="wrapper" id="page-wrapper"><div class="' . $container . '" id="content" tabindex="-1"> <div class="row">';
+	echo '<div class="wrapper" id="page-wrapper"><div class="' . $renewable_energy_container . '" id="content" tabindex="-1"> <div class="row">';
 }

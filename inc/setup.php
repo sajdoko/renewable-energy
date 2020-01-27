@@ -131,29 +131,29 @@ if (!function_exists('renewable_energy_archive_title')) {
   /**
    * Get rid of the “Category:”, “Tag:”, “Author:”, “Archives:” and “Other taxonomy name:” in the archive title
    */
-  function renewable_energy_archive_title($title) {
+  function renewable_energy_archive_title($renewable_energy_title) {
     if (is_category()) {
-      $title = single_cat_title('', false);
+      $renewable_energy_title = single_cat_title('', false);
     } elseif (is_tag()) {
-      $title = single_tag_title('', false);
+      $renewable_energy_title = single_tag_title('', false);
     } elseif (is_author()) {
-      $title = '<span class="vcard">' . get_the_author() . '</span>';
+      $renewable_energy_title = '<span class="vcard">' . get_the_author() . '</span>';
     } elseif (is_post_type_archive()) {
-      $title = post_type_archive_title('', false);
+      $renewable_energy_title = post_type_archive_title('', false);
     } elseif (is_tax()) {
-      $title = single_term_title('', false);
+      $renewable_energy_title = single_term_title('', false);
     }
-    return $title;
+    return $renewable_energy_title;
   }
 }
 add_filter('get_the_archive_title', 'renewable_energy_archive_title');
 
-if (!function_exists('wp_body_open')) {
+if (!function_exists('renewable_energy_wp_body_open')) {
   /**
-   * wp_body_open() Backwards Compatibility
-   * See https://make.wordpress.org/themes/2019/03/29/addition-of-new-wp_body_open-hook/
+   * renewable_energy_wp_body_open() Backwards Compatibility
+   * See https://make.wordpress.org/themes/2019/03/29/addition-of-new-renewable_energy_wp_body_open-hook/
    */
-  function wp_body_open() {
-    do_action('wp_body_open');
+  function renewable_energy_wp_body_open() {
+    do_action('renewable_energy_wp_body_open');
   }
 }

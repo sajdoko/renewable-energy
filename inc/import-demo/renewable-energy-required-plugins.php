@@ -33,7 +33,7 @@
  */
 require_once get_template_directory() . '/inc/import-demo/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'renewable_energy_register_required_plugins' );
+add_action( 'renewable_energy_tgmpa_register', 'renewable_energy_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -43,14 +43,14 @@ add_action( 'tgmpa_register', 'renewable_energy_register_required_plugins' );
  * - two from an external source, one from an arbitrary source, one from a GitHub repository
  * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
  *
- * The variables passed to the `tgmpa()` function should be:
+ * The variables passed to the `renewable_energy_tgmpa()` function should be:
  * - an array of plugin arrays;
  * - optionally a configuration array.
  * If you are not changing anything in the configuration array, you can remove the array and remove the
- * variable from the function call: `tgmpa( $plugins );`.
+ * variable from the function call: `renewable_energy_tgmpa( $plugins );`.
  * In that case, the TGMPA default settings will be used.
  *
- * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
+ * This function is hooked into `renewable_energy_tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
 function renewable_energy_register_required_plugins() {
 	/*
@@ -138,7 +138,7 @@ function renewable_energy_register_required_plugins() {
 	$config = array(
 		'id'           => 'renewable-energy',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
-		'menu'         => 'tgmpa-install-plugins', // Menu slug.
+		'menu'         => 'renewable_energy_tgmpa-install-plugins', // Menu slug.
 		'parent_slug'  => 'themes.php',            // Parent menu slug.
 		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
 		'has_notices'  => true,                    // Show admin notices or not.
@@ -150,43 +150,43 @@ function renewable_energy_register_required_plugins() {
 		'strings'      => array(
 			'page_title'                      => __( 'Install Required Plugins', 'renewable-energy' ),
 			'menu_title'                      => __( 'Install Plugins', 'renewable-energy' ),
-			/* translators: %s: plugin name. */
+			/* translators: %s: plugin name */
 			'installing'                      => __( 'Installing Plugin: %s', 'renewable-energy' ),
-			/* translators: %s: plugin name. */
+			/* translators: %s: plugin name */
 			'updating'                        => __( 'Updating Plugin: %s', 'renewable-energy' ),
 			'oops'                            => __( 'Something went wrong with the plugin API.', 'renewable-energy' ),
 			'notice_can_install_required'     => _n_noop(
-				/* translators: 1: plugin name(s). */
+				/* translators: 1: plugin name(s) */
 				'This theme requires the following plugin: %1$s.',
 				'This theme requires the following plugins: %1$s.',
 				'renewable-energy'
 			),
 			'notice_can_install_recommended'  => _n_noop(
-				/* translators: 1: plugin name(s). */
+				/* translators: 1: plugin name(s) */
 				'This theme recommends the following plugin: %1$s.',
 				'This theme recommends the following plugins: %1$s.',
 				'renewable-energy'
 			),
 			'notice_ask_to_update'            => _n_noop(
-				/* translators: 1: plugin name(s). */
+				/* translators: 1: plugin name(s) */
 				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
 				'renewable-energy'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
-				/* translators: 1: plugin name(s). */
+				/* translators: 1: plugin name(s) */
 				'There is an update available for: %1$s.',
 				'There are updates available for the following plugins: %1$s.',
 				'renewable-energy'
 			),
 			'notice_can_activate_required'    => _n_noop(
-				/* translators: 1: plugin name(s). */
+				/* translators: 1: plugin name(s) */
 				'The following required plugin is currently inactive: %1$s.',
 				'The following required plugins are currently inactive: %1$s.',
 				'renewable-energy'
 			),
 			'notice_can_activate_recommended' => _n_noop(
-				/* translators: 1: plugin name(s). */
+				/* translators: 1: plugin name(s) */
 				'The following recommended plugin is currently inactive: %1$s.',
 				'The following recommended plugins are currently inactive: %1$s.',
 				'renewable-energy'
@@ -209,11 +209,11 @@ function renewable_energy_register_required_plugins() {
 			'return'                          => __( 'Return to Required Plugins Installer', 'renewable-energy' ),
 			'plugin_activated'                => __( 'Plugin activated successfully.', 'renewable-energy' ),
 			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'renewable-energy' ),
-			/* translators: 1: plugin name. */
+			/* translators: 1: plugin name */
 			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'renewable-energy' ),
-			/* translators: 1: plugin name. */
+			/* translators: 1: plugin name */
 			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'renewable-energy' ),
-			/* translators: 1: dashboard link. */
+			/* translators: 1: dashboard link */
 			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'renewable-energy' ),
 			'dismiss'                         => __( 'Dismiss this notice', 'renewable-energy' ),
 			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'renewable-energy' ),
@@ -223,5 +223,5 @@ function renewable_energy_register_required_plugins() {
 		),
 	);
 
-	tgmpa( $plugins, $config );
+	renewable_energy_tgmpa( $plugins, $config );
 }

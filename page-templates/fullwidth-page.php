@@ -8,12 +8,12 @@
  */
 
 get_header();
-$container = get_theme_mod('renewable_energy_container_type');
+$renewable_energy_container = get_theme_mod('renewable_energy_container_type', 'container');
 ?>
 
 <div class="wrapper" id="full-width-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div class="<?php echo esc_attr( $renewable_energy_container ); ?>" id="content">
 
 		<div class="row">
 

@@ -9,17 +9,17 @@
 
 get_header();
 
-$container   = get_theme_mod('renewable_energy_container_type');
-$renewable_energy_enable_cta   = get_theme_mod('renewable_energy_enable_cta') ? get_theme_mod('renewable_energy_enable_cta') : 'yes';
-$renewable_energy_cta_title   = get_theme_mod('renewable_energy_cta_title') ? get_theme_mod('renewable_energy_cta_title') : 'Big Heading To Catch Attention';
-$renewable_energy_cta_description   = get_theme_mod('renewable_energy_cta_description') ? get_theme_mod('renewable_energy_cta_description') : 'Small block of text to support above given fat heading text, with some catchy lines and keywords.';
-$renewable_energy_cta_button_text   = get_theme_mod('renewable_energy_cta_button_text') ? get_theme_mod('renewable_energy_cta_button_text') : 'Click Me Please!';
-$renewable_energy_cta_button_link   = get_theme_mod('renewable_energy_cta_button_link') ? get_theme_mod('renewable_energy_cta_button_link') : '/';
+$renewable_energy_container   = get_theme_mod('renewable_energy_container_type', 'container');
+$renewable_energy_enable_cta   = get_theme_mod('renewable_energy_enable_cta', 'yes');
+$renewable_energy_cta_title   = get_theme_mod('renewable_energy_cta_title', 'Big Heading To Catch Attention');
+$renewable_energy_cta_description   = get_theme_mod('renewable_energy_cta_description', 'Small block of text to support above given fat heading text, with some catchy lines and keywords.');
+$renewable_energy_cta_button_text   = get_theme_mod('renewable_energy_cta_button_text', 'Click Me Please!');
+$renewable_energy_cta_button_link   = get_theme_mod('renewable_energy_cta_button_link', '/');
 
-$enable_projects_section   = get_theme_mod('renewable_energy_show_projects_section') ? get_theme_mod('renewable_energy_show_projects_section') : 'yes';
-$renewable_energy_projects_heading_title   = get_theme_mod('renewable_energy_projects_heading_title') ? get_theme_mod('renewable_energy_projects_heading_title') : 'Fancy display heading';
-$renewable_energy_projects_heading_description   = get_theme_mod('renewable_energy_projects_heading_description') ? get_theme_mod('renewable_energy_projects_heading_description') : 'With faded secondary text';
-$renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_of_projects') ? get_theme_mod('renewable_energy_number_of_projects') : '4';
+$enable_projects_section   = get_theme_mod('renewable_energy_show_projects_section', 'yes');
+$renewable_energy_projects_heading_title   = get_theme_mod('renewable_energy_projects_heading_title', 'Fancy display heading');
+$renewable_energy_projects_heading_description   = get_theme_mod('renewable_energy_projects_heading_description', 'With faded secondary text');
+$renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_of_projects', '4');
 ?>
 
 <?php if ( is_front_page() ) : ?>
@@ -40,7 +40,7 @@ $renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_
 
 <?php if ($enable_projects_section == 'yes') : ?>
 	<div class="wrapper" id="projects-wrapper">
-		<div class="<?php echo esc_attr( $container ); ?>" id="projects" tabindex="-1">
+		<div class="<?php echo esc_attr( $renewable_energy_container ); ?>" id="projects" tabindex="-1">
 			<div class="row pb-4 pt-4">
 				<div class="col-md-12">
 						<h1>

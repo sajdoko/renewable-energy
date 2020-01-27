@@ -139,9 +139,9 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize,
 ));
 // Ends Display Footer Copyright
 // Begins Footer Copyright Content
-$the_theme = wp_get_theme();
+$renewable_energy_the_theme = wp_get_theme();
 $wp_customize->add_setting('renewable_energy_footer_copyright_content', array(
-    'default' => '<a href="'. $the_theme->get( 'ThemeURI' ) .'" alt="'. $the_theme->get( 'Name' ) .'">'. $the_theme->get( 'Name' ) .'</a>',
+    'default' => 'Renewable Energy',
     'type' => 'theme_mod',
     'sanitize_callback' => 'wp_kses_post', //keeps only HTML tags that are allowed in post content
     'capability' => 'edit_theme_options',

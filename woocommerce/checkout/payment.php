@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version 	3.3.0
+ * @version 	3.5.3
  */
 if ( ! defined('ABSPATH') ) {
 	exit;
@@ -28,11 +28,11 @@ if ( ! is_ajax() ) {
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php
 				if ( ! empty( $available_gateways ) ) {
-					foreach ( $available_gateways as $gateway ) {
-						wc_get_template('checkout/payment-method.php', array('gateway' => $gateway ) );
+					foreach ( $available_gateways as $renewable_energy_gateway ) {
+						wc_get_template('checkout/payment-method.php', array('gateway' => $renewable_energy_gateway ) );
 					}
 				} else {
-					echo '<li>' . apply_filters('woocommerce_no_available_payment_methods_message', WC()->customer->get_country() ? __('Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'renewable-energy') : __('Please fill in your details above to see available payment methods.', 'renewable-energy') ) . '</li>';
+					echo '<li>' . apply_filters('woocommerce_no_available_payment_methods_message', WC()->customer->get_billing_country() ? __('Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.', 'renewable-energy') : __('Please fill in your details above to see available payment methods.', 'renewable-energy') ) . '</li>';
 				}
 			?>
 		</ul>

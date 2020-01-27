@@ -43,9 +43,9 @@ if ( ! function_exists('renewable_energy_adjust_body_class') ) {
 	 */
 	function renewable_energy_adjust_body_class( $classes ) {
 
-		foreach ( $classes as $key => $value ) {
+		foreach ( $classes as $renewable_energy_key => $value ) {
 			if ('tag' == $value ) {
-				unset( $classes[ $key ] );
+				unset( $classes[ $renewable_energy_key ] );
 			}
 		}
 
@@ -61,17 +61,17 @@ if ( ! function_exists('renewable_energy_change_logo_class') ) {
 	/**
 	 * Replaces logo CSS class.
 	 *
-	 * @param string $html Markup.
+	 * @param string $renewable_energy_html Markup.
 	 *
 	 * @return mixed
 	 */
-	function renewable_energy_change_logo_class( $html ) {
+	function renewable_energy_change_logo_class( $renewable_energy_html ) {
 
-		$html = str_replace('class="custom-logo"', 'class="img-fluid"', $html );
-		$html = str_replace('class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
-		$html = str_replace('alt=""', 'title="Home" alt="logo"' , $html );
+		$renewable_energy_html = str_replace('class="custom-logo"', 'class="img-fluid"', $renewable_energy_html );
+		$renewable_energy_html = str_replace('class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $renewable_energy_html );
+		$renewable_energy_html = str_replace('alt=""', 'title="Home" alt="logo"' , $renewable_energy_html );
 
-		return $html;
+		return $renewable_energy_html;
 	}
 }
 
