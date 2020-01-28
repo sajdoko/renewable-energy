@@ -49,12 +49,12 @@ function renewable_energy_pagination() {
 		$class = 1 == $paged ? ' class="active page-item"' : ' class="page-item"';
 
 		printf('<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
-		$class, esc_url( get_pagenum_link( 1 ) ), '1');
+		$class, esc_url( get_pagenum_link( 1 ) ), '1'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 		/**    Previous Post Link */
 		if ( get_previous_posts_link() ) {
 			printf('<li class="page-item page-item-direction page-item-prev"><span class="page-link">%1$s</span></li> ' . "\n",
-			get_previous_posts_link('<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>') );
+			get_previous_posts_link('<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>') );//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 		}
 
 		if ( ! in_array( 2, $links ) ) {
@@ -66,14 +66,13 @@ function renewable_energy_pagination() {
 	sort( $links );
 	foreach ( (array) $links as $link ) {
 		$class = $paged == $link ? ' class="active page-item"' : ' class="page-item"';
-		printf('<li %s><a href="%s" class="page-link">%s</a></li>' . "\n", $class,
-			esc_url( get_pagenum_link( $link ) ), $link );
+		printf('<li %s><a href="%s" class="page-link">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 
 	// Next Post Link.
 	if ( get_next_posts_link() ) {
 		printf('<li class="page-item page-item-direction page-item-next"><span class="page-link">%s</span></li>' . "\n",
-			get_next_posts_link('<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>') );
+			get_next_posts_link('<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>') );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	// Link to last page, plus ellipses if necessary.
@@ -84,7 +83,7 @@ function renewable_energy_pagination() {
 
 		$class = $paged == $max ? ' class="active "' : ' class="page-item"';
 		printf('<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true"><i class="fa fa-step-forward" aria-hidden="true"></i></span><span class="sr-only">%s</span></a></li>' . "\n",
-		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );
+		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 
 	echo '</ul></nav>' . "\n";

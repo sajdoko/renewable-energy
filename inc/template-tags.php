@@ -32,7 +32,7 @@ if (!function_exists('renewable_energy_posted_on')):
       esc_html_x('by %s', 'post author', 'renewable-energy'),
       '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
     );
-    echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+    echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore Standard.Category.SniffName.ErrorCode -- XSS OK.
   }
 endif;
 
@@ -46,12 +46,14 @@ if (!function_exists('renewable_energy_entry_footer')):
       /* translators: used between list items, there is a space after the comma */
       $categories_list = get_the_category_list(esc_html__(', ', 'renewable-energy'));
       if ($categories_list && renewable_energy_categorized_blog()) {
-        printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'renewable-energy') . '</span>', $categories_list); // WPCS: XSS OK.
+        /* translators: 1: categories list */
+        printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'renewable-energy') . '</span>', $categories_list); //  // phpcs:ignore Standard.Category.SniffName.ErrorCode -- XSS OK.
       }
       /* translators: used between list items, there is a space after the comma */
       $tags_list = get_the_tag_list('', esc_html__(', ', 'renewable-energy'));
       if ($tags_list) {
-        printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'renewable-energy') . '</span>', $tags_list); // WPCS: XSS OK.
+        /* translators: 1: tags list */
+        printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'renewable-energy') . '</span>', $tags_list); // phpcs:ignore Standard.Category.SniffName.ErrorCode -- XSS OK.
       }
     }
     if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {
@@ -209,7 +211,7 @@ if (!function_exists('renewable_energy_breadcrumbs')):
     }
   }
   $renewable_energy_html .= '</ol>';
-  echo $renewable_energy_html;
+  echo $renewable_energy_html;// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 endif;
 
@@ -262,7 +264,7 @@ if (!function_exists('renewable_energy_slider_template')):
 				            </a>
 				            <ol class="carousel-indicators">
 				                <?php for ($x = 0; $x < $the_query->post_count; $x++): ?>
-				                    <li data-target="#heroSliderControls" data-slide-to="<?php echo $x; ?>" class=""></li>
+				                    <li data-target="#heroSliderControls" data-slide-to="<?php echo $x;// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" class=""></li>
 				                <?php endfor;?>
 		            </ol>
 		        <?php endif;?>

@@ -10814,10 +10814,6 @@ a.text-dark:focus {
   padding-right: 10px;
 }
 
-figure.woocommerce-product-gallery__wrapper {
-  max-width: inherit !important;
-}
-
 img.wp-post-image,
 article img,
 figure,

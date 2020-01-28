@@ -51,7 +51,8 @@ $renewable_energy_container   = get_theme_mod('renewable_energy_container_type',
                 ) );
                 $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
 								// Display post categories.
-								printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'renewable-energy') . '</span>', $terms); // WPCS: XSS OK.
+        				/* translators: %s: Custom post categories */
+								printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'renewable-energy') . '</span>', $terms); //  // phpcs:ignore Standard.Category.SniffName.ErrorCode -- XSS OK.
                 // echo  $terms;
             } ?>
 					</footer><!-- .entry-footer -->

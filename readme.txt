@@ -29,14 +29,13 @@ Renewable Energy is a WordPress theme designed for renewable energy and sustaina
 - Uses a single and minified CSS file.
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.6.3)
 - Jetpack ready.
-- WooCommerce support.
 - Translation ready.
 
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
 
-Renewable Energy includes support for Jetpack, WooCommerce and Contact Form 7.
+Renewable Energy includes support for Jetpack and Contact Form 7.
 
 == Changelog ==
 

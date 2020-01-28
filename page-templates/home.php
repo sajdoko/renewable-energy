@@ -30,9 +30,9 @@ $renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_
 	<div id="cta-wrapper">
 			<section class="re-cta-flat">
 					<div class="re-cta-box text-center">
-							<h1 class="display-3 text-white"><?php echo esc_attr($renewable_energy_cta_title); ?></h1>
-							<p class="mt-3"><?php echo esc_attr($renewable_energy_cta_description); ?></p>
-							<a href="<?php echo esc_url($renewable_energy_cta_button_link); ?>" class="btn btn-success btn-lg py-2 px-5 mt-4"><?php echo esc_attr($renewable_energy_cta_button_text); ?></a>
+							<h1 class="display-3 text-white"><?php echo esc_html($renewable_energy_cta_title); ?></h1>
+							<p class="mt-3"><?php echo esc_html($renewable_energy_cta_description); ?></p>
+							<a href="<?php echo esc_url($renewable_energy_cta_button_link); ?>" class="btn btn-success btn-lg py-2 px-5 mt-4"><?php echo esc_html($renewable_energy_cta_button_text); ?></a>
 					</div>
 			</section>
 	</div><!-- cta-wrapper end -->
@@ -40,12 +40,12 @@ $renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_
 
 <?php if ($enable_projects_section == 'yes') : ?>
 	<div class="wrapper" id="projects-wrapper">
-		<div class="<?php echo esc_attr( $renewable_energy_container ); ?>" id="projects" tabindex="-1">
+		<div class="<?php echo esc_html( $renewable_energy_container ); ?>" id="projects" tabindex="-1">
 			<div class="row pb-4 pt-4">
 				<div class="col-md-12">
 						<h1>
-							<?php echo $renewable_energy_projects_heading_title; ?>
-							<small class="text-muted"><?php echo $renewable_energy_projects_heading_description; ?></small>
+							<?php echo esc_html($renewable_energy_projects_heading_title); ?>
+							<small class="text-muted"><?php echo esc_html($renewable_energy_projects_heading_description); ?></small>
 						</h1>
 				</div>
 			</div>
@@ -64,9 +64,9 @@ $renewable_energy_number_of_projects   = get_theme_mod('renewable_energy_number_
 							<div class="col p-4 d-flex flex-column position-static">
 								<?php the_title('<h3 class="mb-2">', '</h3>'); ?>
 								<p class="card-text mb-auto">
-									<?php echo wp_trim_words(get_the_excerpt(), 15); ?>
+									<?php echo esc_html(wp_trim_words(get_the_excerpt(), 15)); ?>
 								</p>
-								<a class="stretched-link" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title_attribute(); ?>"><?php echo __('Continue reading', 'renewable-energy'); ?></a>
+								<a class="stretched-link" href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title_attribute(); ?>"><?php echo esc_html__('Continue reading', 'renewable-energy'); ?></a>
 							</div>
 							<div class="col-auto d-none d-lg-block">
 									<a href="<?php echo esc_url( get_permalink( get_the_ID() )); ?>" alt="<?php the_title_attribute(); ?>">
