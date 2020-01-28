@@ -66,11 +66,14 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader', 'yes');
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
+						'depth'           => 0, // 0 = all dropdowns, 1 = no dropdowns, 1+ = with dropdowns.
+						'container'       => 'div',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
+						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
+						'fallback_cb'     => 'Renewable_Energy_WP_Bootstrap_Navwalker::fallback',
 						'walker'          => new Renewable_Energy_WP_Bootstrap_Navwalker(),
 					)
 				); ?>

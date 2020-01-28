@@ -109,9 +109,9 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			if ( $renewable_energy_args->has_children && $depth === 0 ) {
 				// $atts['href']        = '#';
 				$atts['href']  = ! empty( $renewable_energy_item->url ) ? $renewable_energy_item->url : '';
-				// $atts['data-toggle'] = 'dropdown';
+				$atts['data-toggle'] = 'dropdown';
 				$atts['class']       = 'nav-link';
-				$atts['aria-haspopup']    = 'true';
+				// $atts['aria-haspopup']    = 'true';
 			} else {
 				$atts['href']  = ! empty( $renewable_energy_item->url ) ? $renewable_energy_item->url : '';
 				$atts['class'] = 'nav-link';
