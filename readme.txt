@@ -1,13 +1,12 @@
 === Renewable Energy ===
-
 Contributors: sajdoko
 Author: Sajmir Doko
 Version: 1.2.2
 Requires at least: 4.5
 Tested up to: 5.3.2
-Stable tag: 5.0
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: left-sidebar, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, featured-images, translation-ready, post-formats, theme-options
 Text Domain: renewable-energy
 
@@ -66,11 +65,9 @@ License: https://fontawesome.com/license (Fonts: SIL OFL 1.1, Code: MIT License)
 
 == Credits ==
 
-* Based on Understrap https://understrap.com/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
-* Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT documentation under CC BY 3.0.)
-* Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
-and of course
-* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Font Awesome https://github.com/FortAwesome/Font-Awesome, [SIL OFL 1.1, MIT](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html)
+* Bootstrap https://github.com/twbs/bootstrap, Copyright (c) 2011-2016 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
+* Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
+* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker, [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.txt)
 * One Click Demo Import By [ProteusThemes](https://wordpress.org/plugins/one-click-demo-import/)
-* Images from [pxhere.com](https://pxhere.com/):  [slide-1.jpg](https://pxhere.com/en/photo/638728), [hydropower.jpg](https://pxhere.com/en/photo/789094), [wind-energy.jpg](https://pxhere.com/en/photo/954757), [solar-energy.jpg](https://pxhere.com/en/photo/1358139)

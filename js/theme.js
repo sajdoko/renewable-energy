@@ -66,7 +66,7 @@ var Util = function ($$$1) {
    * ------------------------------------------------------------------------
    */
   var transition = false;
-  var MAX_UID = 1000000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
+  var MAX_UID = 1000000; // Shoutout AngusCroll
 
   function toType(obj) {
     return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
