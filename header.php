@@ -25,7 +25,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader', 'yes');
 </head>
 
 <body <?php body_class(); ?>>
-<?php renewable_energy_wp_body_open(); ?>
+<?php wp_body_open(); ?>
 <?php if ($show_preloader == 'yes') : ?>
 	<div class="loader-body" id="loader">
 		<div class="loader"></div>
@@ -37,9 +37,7 @@ $show_preloader = get_theme_mod('renewable_energy_show_preloader', 'yes');
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content', 'renewable-energy'); ?></a>
-
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark" id="site-navigation">
 
 		<?php if ('container' == $renewable_energy_container ) : ?>
 			<div class="container" >

@@ -111,7 +111,7 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 				$atts['href']  = ! empty( $renewable_energy_item->url ) ? $renewable_energy_item->url : '';
 				// $atts['data-toggle'] = 'dropdown';
 				$atts['class']       = 'nav-link';
-				// $atts['aria-haspopup']    = 'true';
+				$atts['aria-haspopup']    = 'true';
 			} else {
 				$atts['href']  = ! empty( $renewable_energy_item->url ) ? $renewable_energy_item->url : '';
 				$atts['class'] = 'nav-link';
@@ -134,7 +134,7 @@ class Renewable_Energy_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$item_output .= $renewable_energy_args->link_before;
 			$item_output .= apply_filters('the_title', esc_html($renewable_energy_item->title), $renewable_energy_item->ID ); // phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- escaped $renewable_energy_item->title
 			$item_output .= $renewable_energy_args->link_after;
-			$item_output .= ( $renewable_energy_args->has_children && 0 === $depth ) ? ' </a><span class="caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"></span>' : '</a>';
+			$item_output .= ( $renewable_energy_args->has_children && 0 === $depth ) ? ' </a><span class="caret dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true"></span>' : '</a>';
 			$item_output .= $renewable_energy_args->after;
 			$output .= apply_filters('renewable_energy_walker_nav_menu_start_el', $item_output, $renewable_energy_item, $depth, $renewable_energy_args );
 		}

@@ -5809,7 +5809,7 @@ tbody.collapse.show {
   .dropdown>a {
     display: inline-block;
   }
-  .dropdown:hover>.dropdown-menu {
+  .dropdown:hover>.dropdown-menu, .focus>.dropdown-menu {
     display: block;
     margin-top: -2px;
   }
