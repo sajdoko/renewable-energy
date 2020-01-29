@@ -52,7 +52,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			}
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-			$classes = array( 'dropdown-menu', 'dropdown-menu-' . $depth );
+			$classes = array( 'dropdown-menu', 'dropdown-menu-' . $depth, 'dropdown-submenu' );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -62,7 +62,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			 * @param stdClass $args    An object of `wp_nav_menu()` arguments.
 			 * @param int      $depth   Depth of menu item. Used for padding.
 			 */
-			$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
+			$class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 			/**
 			 * The `.dropdown-menu` container needs to have a labelledby
@@ -133,7 +133,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			 * @param WP_Post  $item  Menu item data object.
 			 * @param int      $depth Depth of menu item. Used for padding.
 			 */
-			$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+			$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 
 			// Add .dropdown or .active classes where they are needed.
 			if ( isset( $args->has_children ) && $args->has_children ) {
@@ -148,7 +148,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			$classes[] = 'nav-item';
 
 			// Allow filtering the classes.
-			$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
+			$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 
 			// Form a string of classes in format: class="class_names".
 			$class_names = join( ' ', $classes );
@@ -165,7 +165,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			 * @param stdClass $args    An object of wp_nav_menu() arguments.
 			 * @param int      $depth   Depth of menu item. Used for padding.
 			 */
-			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );
+			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args, $depth );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
 			$output .= $indent . '<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"' . $id . $class_names . '>';
@@ -211,7 +211,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			// update atts of this item based on any custom linkmod classes.
 			$atts = self::update_atts_for_linkmod_type( $atts, $linkmod_classes );
 			// Allow filtering of the $atts array before using it.
-			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 
 			// Build a string of html containing all the atts for the item.
 			$attributes = '';
@@ -255,7 +255,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			}
 
 			/** This filter is documented in wp-includes/post-template.php */
-			$title = apply_filters( 'the_title', $item->title, $item->ID );
+			$title = apply_filters( 'the_title', $item->title, $item->ID );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 
 			/**
 			 * Filters a menu item's title.
@@ -267,7 +267,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			 * @param stdClass $args  An object of wp_nav_menu() arguments.
 			 * @param int      $depth Depth of menu item. Used for padding.
 			 */
-			$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+			$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 
 			/**
 			 * If the .sr-only class was set apply to the nav items text only.
@@ -291,7 +291,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 				$item_output .= self::linkmod_element_close( $linkmod_type, $attributes );
 			} else {
 				// With no link mod type set this must be a standard <a> tag.
-				$item_output .= '</a>';
+				$item_output .= ( $args->has_children && 0 <= (int)$depth ) ? ' </a><span class="caret dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"></span>' : '</a>';
 			}
 
 			$item_output .= isset( $args->after ) ? $args->after : '';
@@ -299,7 +299,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 			/**
 			 * END appending the internal item contents to the output.
 			 */
-			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter
 
 		}
 
@@ -381,7 +381,7 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 
 				// if $args has 'echo' key and it's true echo, otherwise return.
 				if ( array_key_exists( 'echo', $args ) && $args['echo'] ) {
-					echo $fallback_output; // WPCS: XSS OK.
+					echo $fallback_output; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSS OK.
 				} else {
 					return $fallback_output;
 				}

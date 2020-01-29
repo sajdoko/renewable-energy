@@ -6966,6 +6966,7 @@
 
 
   (function () {
+
     if (typeof $ === 'undefined') {
       throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
     }
@@ -7006,6 +7007,14 @@
  * Learn more: https://git.io/vWdr2
  */
 (function () {
+  document.body.onload = function () {
+    setTimeout(function () {
+      var loader = document.getElementById("loader");
+      if (loader) {
+      loader.classList.contains("done") || loader.classList.add("done");
+      }
+    }, 1e3)
+  }
   var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
       isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
       isIe = navigator.userAgent.toLowerCase().indexOf('msie') > -1;

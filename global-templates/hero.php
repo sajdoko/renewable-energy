@@ -14,7 +14,7 @@ $renewable_energy_show_hero_widget  = get_theme_mod('renewable_energy_show_hero_
 	<div class="wrapper" id="wrapper-hero">
 
 		<?php if ($renewable_energy_show_slider == 'yes') : ?>
-				<?php echo renewable_energy_slider_template(); //// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- excaped inside the function ?>
+				<?php echo renewable_energy_slider_template(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- excaped inside the function ?>
 		<?php endif; ?>
 
 		<?php if ($renewable_energy_show_hero_widget == 'yes') : ?>
