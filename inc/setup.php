@@ -147,12 +147,10 @@ if (!function_exists('renewable_energy_archive_title')) {
     return $renewable_energy_title;
   }
 }
-add_filter('get_the_archive_title', 'renewable_energy_archive_title');
-
 /**
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
 function renewable_energy_skip_link() {
-	echo '<a class="skip-link screen-reader-text sr-only" href="#content">' . esc_html_e( 'Skip to the content', 'renewable-energy' ) . '</a>';
+	echo '<a class="skip-link screen-reader-text sr-only" href="#content">' . esc_html__( 'Skip to the content', 'renewable-energy' ) . '</a>';
 }
 add_action( 'wp_body_open', 'renewable_energy_skip_link', 5 );

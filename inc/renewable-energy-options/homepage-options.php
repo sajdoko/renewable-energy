@@ -107,7 +107,7 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize,
 // Ends Call to Action Title
 // Begins Call to Action Description
 $wp_customize->add_setting('renewable_energy_cta_description', array(
-    'default' => 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.',
+    'default' => 'Small block of text to support above given fat heading text, with some catchy lines and keywords.',
     'type' => 'theme_mod',
     'sanitize_callback' => 'sanitize_textarea_field',
     'capability' => 'edit_theme_options',

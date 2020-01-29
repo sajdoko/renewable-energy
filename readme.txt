@@ -65,9 +65,9 @@ License: https://fontawesome.com/license (Fonts: SIL OFL 1.1, Code: MIT License)
 
 == Credits ==
 
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Font Awesome https://github.com/FortAwesome/Font-Awesome, [SIL OFL 1.1, MIT](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html)
-* Bootstrap https://github.com/twbs/bootstrap, Copyright (c) 2011-2016 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
-* Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
-* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker, [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.txt)
-* One Click Demo Import By [ProteusThemes](https://wordpress.org/plugins/one-click-demo-import/)
+* Based on Underscores https://github.com/Automattic/_s,  [GPLv2 or later](https://github.com/Automattic/_s/blob/master/LICENSE)
+* Font Awesome https://github.com/FortAwesome/Font-Awesome, https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)
+* Bootstrap https://github.com/twbs/bootstrap, [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
+* Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2, (https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE)
+* WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker, [GPLv3 or later](https://github.com/wp-bootstrap/wp-bootstrap-navwalker/blob/master/LICENSE.txt)
+* One Click Demo Import By [ProteusThemes](https://wordpress.org/plugins/one-click-demo-import/), [GPLv3 or later](https://www.gnu.org/licenses/gpl-3.0.en.html)
