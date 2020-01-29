@@ -9,7 +9,6 @@
 
 	container = document.getElementById('site-navigation');
 	if (!container) {
-		console.log('nuk hyri');
 		return;
 	}
 
@@ -19,6 +18,10 @@
 	}
 
 	menu = container.getElementsByTagName('ul')[0];
+
+	if(menu.childElementCount > 5){
+		menu.className += ' long-menu';
+	}
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ('undefined' === typeof menu) {
@@ -47,7 +50,6 @@
 	links = menu.getElementsByTagName('a');
 	subMenus = menu.getElementsByTagName('ul');
 
-	// console.log(subMenus);
 	// Set menu items with submenus to aria-haspopup="true".
 	for (i = 0, len = subMenus.length; i < len; i++) {
 		subMenus[i].parentNode.setAttribute('aria-haspopup', 'true');
@@ -69,12 +71,10 @@
 
 			// On li elements toggle the class .focus.
 			if ('li' === self.tagName.toLowerCase()) {
-				if (-1 !== self.className.indexOf('focus')) {
-					if (-1 === self.className.indexOf('dropdown')) {
-						self.className = self.className.replace(' focus', '');
-					}
+				if (-1 !== self.className.indexOf('show')) {
+					self.className = self.className.replace(' show', '');
 				} else {
-					self.className += ' focus';
+					self.className += ' show';
 				}
 			}
 

@@ -50,9 +50,10 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 				$t = "\t";
 				$n = "\n";
 			}
+
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-			$classes = array( 'dropdown-menu', 'dropdown-menu-' . $depth, 'dropdown-submenu' );
+			$classes = array( 'dropdown-menu', 'dropdown-menu-' . $depth );
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -105,7 +106,6 @@ if ( ! class_exists( 'Renewable_Energy_WP_Bootstrap_Navwalker' ) ) {
 				$n = "\n";
 			}
 			$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
-
 			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
 			// Initialize some holder variables to store specially handled item

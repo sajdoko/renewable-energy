@@ -729,11 +729,12 @@ tbody.collapse.show{display:table-row-group}
 .dropdown-menu-0>li>.caret,.dropdown-menu-1 .caret{padding:0 1em!important;color:#343a40!important}
 }
 @media (min-width: 768px) {
+.long-menu a{font-size: 1.1rem !important;padding-right: .7rem !important;padding-left: .7rem !important;}
 .dropdown-menu-1,.dropdown-menu-2{left:100%;top:0}
 .dropdown-menu-0>li>.caret,.dropdown-menu-1 .caret{padding:0 1em!important;color:#343a40!important}
 .dropdown>.caret{padding:0;color:rgba(255,255,255,0.5)}
 .dropdown>a{display:inline-block;width:auto}
-.dropdown:hover>.dropdown-menu,.dropdown:focus>.dropdown-menu,.focus>.dropdown-menu{display:block;margin-top:-2px}
+.dropdown:hover>.dropdown-menu,.dropdown:focus>.dropdown-menu{display:block;margin-top:-2px}
 .navbar-expand-md{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .navbar-expand-md .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .navbar-expand-md .navbar-nav .dropdown-menu{position:absolute;width:max-content;max-width:20rem}
