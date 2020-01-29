@@ -24,7 +24,6 @@ if (!function_exists('renewable_energy_body_classes')) {
     if (!is_singular()) {
       $classes[] = 'hfeed';
     }
-
     return $classes;
   }
 }
@@ -32,7 +31,6 @@ add_filter('body_class', 'renewable_energy_body_classes');
 
 // Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
 add_filter('body_class', 'renewable_energy_adjust_body_class');
-
 if (!function_exists('renewable_energy_adjust_body_class')) {
   /**
    * Setup body classes.
@@ -42,15 +40,12 @@ if (!function_exists('renewable_energy_adjust_body_class')) {
    * @return mixed
    */
   function renewable_energy_adjust_body_class($classes) {
-
     foreach ($classes as $renewable_energy_key => $value) {
       if ('tag' == $value) {
         unset($classes[$renewable_energy_key]);
       }
     }
-
     return $classes;
-
   }
 }
 
@@ -66,11 +61,9 @@ if (!function_exists('renewable_energy_change_logo_class')) {
    * @return mixed
    */
   function renewable_energy_change_logo_class($renewable_energy_html) {
-
     $renewable_energy_html = str_replace('class="custom-logo"', 'class="img-fluid"', $renewable_energy_html);
     $renewable_energy_html = str_replace('class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $renewable_energy_html);
     $renewable_energy_html = str_replace('alt=""', 'title="Home" alt="logo"', $renewable_energy_html);
-
     return $renewable_energy_html;
   }
 }
@@ -89,21 +82,19 @@ if (!function_exists('renewable_energy_post_nav')):
       return;
     }
     ?>
-					<nav class="container navigation post-navigation">
-						<h2 class="sr-only"><?php esc_html_e('Post navigation', 'renewable-energy');?></h2>
-						<div class="row nav-links justify-content-between">
-							<?php
-
-    if (get_previous_post_link()) {
-      previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'renewable-energy'));
-    }
-    if (get_next_post_link()) {
-      next_post_link('<span class="nav-next">%link</span>', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'renewable-energy'));
-    }
-    ?>
-						</div><!-- .nav-links -->
-					</nav><!-- .navigation -->
-
-			<?php
+      <nav class="container navigation post-navigation">
+        <h2 class="sr-only"><?php esc_html_e('Post navigation', 'renewable-energy');?></h2>
+        <div class="row nav-links justify-content-between">
+          <?php
+            if (get_previous_post_link()) {
+              previous_post_link('<span class="nav-previous">%link</span>', _x('<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'renewable-energy'));
+            }
+            if (get_next_post_link()) {
+              next_post_link('<span class="nav-next">%link</span>', _x('%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'renewable-energy'));
+            }
+            ?>
+        </div><!-- .nav-links -->
+      </nav><!-- .navigation -->
+    <?php
   }
 endif;

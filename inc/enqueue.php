@@ -21,6 +21,6 @@ if ( ! function_exists('renewable_energy_scripts') ) {
 			wp_enqueue_script('comment-reply');
 		}
 	}
-} // endif function_exists('renewable_energy_scripts').
+}
 
 add_action('wp_enqueue_scripts', 'renewable_energy_scripts');
