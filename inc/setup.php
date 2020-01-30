@@ -65,17 +65,17 @@ if (!function_exists('renewable_energy_setup')):
      */
     add_theme_support('customize-selective-refresh-widgets');
 
-    /*
-     * Enable support for Post Formats.
-     * See http://codex.wordpress.org/Post_Formats
-     */
-    add_theme_support('post-formats', array(
-      'aside',
-      'image',
-      'video',
-      'quote',
-      'link',
-    ));
+    // /*
+    //  * Enable support for Post Formats.
+    //  * See http://codex.wordpress.org/Post_Formats
+    //  */
+    // add_theme_support('post-formats', array(
+    //   'aside',
+    //   'image',
+    //   'video',
+    //   'quote',
+    //   'link',
+    // ));
 
     // Set up the WordPress core custom background feature.
     add_theme_support('custom-background', apply_filters('renewable_energy_custom_background_args', array(
@@ -97,20 +97,6 @@ if (!function_exists('renewable_energy_setup')):
 endif; // renewable_energy_setup.
 add_action('after_setup_theme', 'renewable_energy_setup');
 
-if (!function_exists('renewable_energy_custom_excerpt_more')) {
-  /**
-   * Removes the ... from the excerpt read more link
-   *
-   * @param string $more The excerpt.
-   *
-   * @return string
-   */
-  function renewable_energy_custom_excerpt_more($more) {
-    return '';
-  }
-}
-add_filter('excerpt_more', 'renewable_energy_custom_excerpt_more');
-
 if (!function_exists('renewable_energy_all_excerpts_get_more_link')) {
   /**
    * Adds a custom read more link to all excerpts, manually or automatically generated
@@ -120,13 +106,17 @@ if (!function_exists('renewable_energy_all_excerpts_get_more_link')) {
    * @return string
    */
   function renewable_energy_all_excerpts_get_more_link($more) {
-    return $more . ' [...]<p><a class="btn btn-success renewable-energy-read-more-link" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __(
-      'Read More ...',
-      'renewable-energy'
-    ) . '</a></p>';
+
+    if (!is_single()) {
+      $more = ' [...]<p><a class="btn btn-success renewable-energy-read-more-link" href="' . esc_url(get_permalink(get_the_ID())) . '">' . __(
+        'Read More ...',
+        'renewable-energy'
+      ) . '</a></p>';
+    }
+    return $more;
   }
 }
-add_filter('excerpt_more', 'renewable_energy_all_excerpts_get_more_link', 999);
+add_filter('excerpt_more', 'renewable_energy_all_excerpts_get_more_link');
 
 if (!function_exists('renewable_energy_archive_title')) {
   /**
@@ -151,6 +141,6 @@ if (!function_exists('renewable_energy_archive_title')) {
  * Include a skip to content link at the top of the page so that users can bypass the menu.
  */
 function renewable_energy_skip_link() {
-	echo '<a class="skip-link screen-reader-text sr-only" href="#content">' . esc_html__( 'Skip to the content', 'renewable-energy' ) . '</a>';
+  echo '<a class="skip-link screen-reader-text sr-only" href="#content">' . esc_html__('Skip to the content', 'renewable-energy') . '</a>';
 }
-add_action( 'wp_body_open', 'renewable_energy_skip_link', 5 );
+add_action('wp_body_open', 'renewable_energy_skip_link', 5);

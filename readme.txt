@@ -1,13 +1,13 @@
 === Renewable Energy ===
 Contributors: sajdoko
 Author: Sajmir Doko
-Version: 1.2.2
+Version: 1.2.4
 Requires at least: 4.5
 Tested up to: 5.3.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: left-sidebar, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, featured-images, translation-ready, post-formats, theme-options
+Tags: left-sidebar, right-sidebar, custom-menu, custom-background, custom-logo, editor-style, featured-images, translation-ready, theme-options
 Text Domain: renewable-energy
 
 Renewable Energy is a WordPress theme designed for renewable energy and sustainable energy companies.
@@ -38,12 +38,7 @@ Renewable Energy includes support for Jetpack and Contact Form 7.
 
 == Changelog ==
 
-= 1.2.3 - Janary. 22th 2020 =
-= 1.2.2 - Janary. 21th 2020 =
-= 1.2.1 - Janary. 13th 2020 =
-= 1.2.0 - Settember. 20th 2019 =
-= 1.0.0 - June. 24th 2018 =
-* Initial release
+= 1.0.0 - Initial release
 
 == Resources ==
 
